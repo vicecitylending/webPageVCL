@@ -14,13 +14,13 @@ import { FcHome } from "react-icons/fc";
 const Homepage = props => {
   const { seo, generalInformation, menuContent, homeContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
   return<div className="overflow-x-hidden">
-          <Head
+          {/* <Head
             title={seo.data.title[0].text}
             description={seo.data.default_description[0].text}
             keywords={seo.data.default_keywords[0].text}
             url={seo.data.default_url[0].text}
             ogImage={seo.data.default_image[0].text}
-          />
+          /> */}
 
           {/* Home Section */}
           {/* <NavBar 
@@ -178,22 +178,22 @@ const Homepage = props => {
         </div>
 }
 
-const getStaticProps = async ({ params }) => {
-  return {
-      props: {
-        seo: await getPrismicData('seo'),
-        generalInformation: await getPrismicData('general_information'),
-        menuContent: await getPrismicData('menu'),
-        homeContent: await getPrismicData('homepage'),
-        WhoWeAreContent: await getPrismicData('who_we_are'),
-        OurServicesContent: await getPrismicData('our_services'),
-        FAQ: await getPrismicData('faq'), 
-        contactContent : await getPrismicData('contact'),
-        plansContent : await getPrismicData('plans'),
-        signUpContent : await getPrismicData('sign_up')
-      }
-  }
-}
+// const getStaticProps = async ({ params }) => {
+//   return {
+//       props: {
+//         seo: await getPrismicData('seo'),
+//         generalInformation: await getPrismicData('general_information'),
+//         menuContent: await getPrismicData('menu'),
+//         homeContent: await getPrismicData('homepage'),
+//         WhoWeAreContent: await getPrismicData('who_we_are'),
+//         OurServicesContent: await getPrismicData('our_services'),
+//         FAQ: await getPrismicData('faq'), 
+//         contactContent : await getPrismicData('contact'),
+//         plansContent : await getPrismicData('plans'),
+//         signUpContent : await getPrismicData('sign_up')
+//       }
+//   }
+// }
 
 // Wrapper for prismic functions
 const getPrismicData = async (name) => {
@@ -208,4 +208,4 @@ const getPrismicData = async (name) => {
 }
 
 export default Homepage
-export { getStaticProps }
+// export { getStaticProps }
