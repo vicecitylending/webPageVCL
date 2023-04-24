@@ -1,0 +1,16 @@
+@import '../colors.scss';
+
+.navbar-center{
+    flex-grow: 1; 
+    justify-content: center;
+}
+
+// .navbar-vertical-line{
+//     // //border-right-style: solid;
+//     // border-right: 2px solid;
+//     // //position: absolute;
+//     // top: 50%;
+//     // bottom: 0;
+//     //border-image: linear-gradient();
+//     border-image: linear-gradient(top, #000 50%, rgba(0,0,0,0) 50%); /* to top - at 50
+// }

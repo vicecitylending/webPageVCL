@@ -1,0 +1,165 @@
+
+    <body>
+        <div class="calculatorsection wf-section">
+            <div class="wrapper privacy-policy-wrapper">
+                <div class="rates-wrapper">
+                    <h1 class="heading-32">Mortgage Calculator</h1>
+                </div>
+                <div class="w-layout-grid mortgagecalc">
+                    <div id="w-node-a4d2adc8-692e-1d19-fcf0-6de3c49f77fa-dc46191f">
+                        <div class="form-block-4 w-form">
+                            <form id="wf-form-calculatorForm" name="wf-form-calculatorForm" data-name="calculatorForm" action="https://326b-2603-3020-1a00-5f00-1ed-65ec-1e28-4d5a.ngrok.io/api/mortgage-tools/calculator" method="post" class="form-4">
+                                <div id="calculatorForm" class="form-content">
+                                    <div class="form-content">
+                                        <div class="graph-block">
+                                            <div class="form-wrap">
+                                                <div class="field-title">Purchase Price</div>
+                                                <input type="text" class="field-input w-input" maxlength="256" name="purchaseValue" data-name="purchaseValue" placeholder="" id="homeValue" required=""/>
+                                            </div>
+                                            <div class="form-wrap">
+                                                <div data-tippy-content="The amount you can put down. This amount will reduce the amount of the  mortgage." class="tooltip fieldwithtooltip">Down Payment</div>
+                                                <input type="text" class="field-input w-input" maxlength="256" name="downPayment" data-name="downPayment" placeholder="" id="clientDownPay" required=""/>
+                                            </div>
+                                            <div class="form-wrap">
+                                                <div data-tippy-content="The loan term is the amount of time set by the lender for a buyer to pay off a mortgage. To convert a loan term to months from years, multiply the number of years by 12." class="field-title tooltip">Loan Term</div>
+                                                <select id="loanTerm" name="loanTerm" data-name="loanTerm" class="field-input w-select">
+                                                    <option value="30">30 years</option>
+                                                    <option value="5">5 years</option>
+                                                    <option value="10">10 years</option>
+                                                    <option value="15">15 years</option>
+                                                    <option value="20">20 years</option>
+                                                    <option value="25">25 years</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-wrap">
+                                                <div data-tippy-content="An interest rate on a mortgage loan is the cost you will pay each year to borrow the money, expressed as a percentage rate. It does not reflect fees or any other charges you may have to pay for the loan. For example, if the mortgage loan is for $100,000 at an interest rate of 4 percent, that consumer has agreed to pay $4,000 each year he or she borrows or owes that full amount." class="field-title tooltip">Interest Rate (%)</div>
+                                                <input type="number" class="field-input w-input" maxlength="256" name="interestRate" data-name="interestRate" placeholder="" id="interestRate" required=""/>
+                                            </div>
+                                            <div class="form-wrap">
+                                                <div data-tippy-content="The mortgage payment calculator includes estimated property taxes. The value represents an annual tax on homeowners&#x27; property and the tax amount is based on the home&#x27;s value." class="field-title tooltip">Property Tax (yearly)</div>
+                                                <input type="text" class="field-input w-input" maxlength="256" name="propertyTaxes" data-name="propertyTaxes" placeholder="" id="propertyTaxes-2"/>
+                                            </div>
+                                            <div class="form-wrap">
+                                                <div data-tippy-content="Mortgage insurance is required primarily for borrowers on a conventional loan with a down payment of less than 20% of the home&#x27;s purchase price. It protects lenders against some or most of the losses that can occur when a borrower defaults on a mortgage loan. Contact your lender for more details." class="field-title tooltip">Private Mortgage Insurance (%)</div>
+                                                <input type="number" class="field-input w-input" maxlength="256" name="clientPMI" data-name="clientPMI" placeholder="" id="clientPMI"/>
+                                            </div>
+                                            <div class="form-wrap">
+                                                <div data-tippy-content="Commonly known as hazard insurance, most lenders require insurance to provide damage protection for your home and personal property from a variety of events, including fire, lightning, burglary, vandalism, storms, explosions, and more. The personal liability coverage in standard homeowner&#x27;s insurance policies is intended to protect against lawsuits involving injuries that occur on your property. Borrowers shop for their own home insurance." class="field-title tooltip">Home Insurance (yearly)</div>
+                                                <input type="text" class="field-input w-input" maxlength="256" name="homeInsurance" data-name="homeInsurance" placeholder="" id="homeInsurance-2"/>
+                                            </div>
+                                            <div class="form-wrap">
+                                                <div data-tippy-content="Typically, owners of condominiums or townhomes are required to pay homeowners association dues (known as HOA fees), to cover common amenities or services within the property such as garbage collection, landscaping, snow removal, pool maintenance, and hazard insurance." class="field-title tooltip">Homeowners Association (monthly)</div>
+                                                <input type="text" class="field-input w-input" maxlength="256" name="hoa" data-name="hoa" placeholder="" id="hoa"/>
+                                            </div>
+                                            <input type="submit" value="Calculate" data-wait="Please wait..." id="calcPayment" class="calculator-button w-button"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="w-form-done">
+                                <div>Thank you! Your submission has been received!</div>
+                            </div>
+                            <div class="w-form-fail">
+                                <div>Oops! Something went wrong while submitting the form.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="w-node-_4a1ec452-8173-3a3b-356d-4e27ff398d84-dc46191f" class="div-block-414">
+                        <div>
+                            <div class="graph-block">
+                                <div>
+                                    <div>
+                                        <h3 class="graph__heading">Estimated monthly payments</h3>
+                                        <div class="div-block-413">
+                                            <h3 id="estMontly" class="graph__heading">$0.00</h3>
+                                            <div id="piti" class="calc_piti tooltip">Principal and Interest Only</div>
+                                        </div>
+                                    </div>
+                                    <div class="div-block-413">
+                                        <div class="calc_details">Loan Amount:</div>
+                                        <div id="loanAmount" class="calc_numbers">$0.00</div>
+                                    </div>
+                                    <div class="div-block-413">
+                                        <div class="calc_details">Down Payment:</div>
+                                        <div id="dp" class="calc_numbers">$0.00</div>
+                                    </div>
+                                    <div class="div-block-413">
+                                        <div class="calc_details">Total Interest Paid:</div>
+                                        <div id="totalInterest" class="calc_numbers">$0.00</div>
+                                    </div>
+                                    <div class="div-block-413">
+                                        <div class="calc_details">Monthly PMI:</div>
+                                        <div id="totalPMI" class="calc_numbers">$0.00</div>
+                                    </div>
+                                    <div class="div-block-413">
+                                        <div class="calc_details">Monthly Tax Payment:</div>
+                                        <div id="totalTaxes" class="calc_numbers">$0.00</div>
+                                    </div>
+                                    <div class="div-block-413">
+                                        <div class="calc_details">Monthly Home Insurance:</div>
+                                        <div id="totalHomeInsurance" class="calc_numbers">$0.00</div>
+                                    </div>
+                                    <div class="div-block-413">
+                                        <div id="totalPaymentsView" class="calc_details">Total of Payments:</div>
+                                        <div id="totalByTerm" class="calc_numbers">$0.00</div>
+                                    </div>
+                                    <div class="div-block-413">
+                                        <div class="calc_details">Loan pay-off date:</div>
+                                        <div id="loanPayOffDate" class="calc_numbers"></div>
+                                    </div>
+                                </div>
+                                <h3 class="graph__heading">Fees breakdown</h3>
+                                <div class="div-block-413">
+                                    <h3 id="totalMonthly" class="graph__heading">$0.00</h3>
+                                    <div id="pitiwithinsure" class="calc_piti tooltip">Estimated Total Monthly</div>
+                                </div>
+                                <div class="graph__columns">
+                                    <div class="graph__col mod--2">
+                                        <ul role="list" class="graph__list">
+                                            <li class="graph__list-item">
+                                                <div class="graph__list-dot">
+                                                    <div data-graph="dot4" class="graph__list-dot-border active"></div>
+                                                </div>
+                                                <div class="graph__list-txt">Principal</div>
+                                                <div id="principalPercentage" class="graph__list-numb">0.0%</div>
+                                            </li>
+                                            <li class="graph__list-item">
+                                                <div class="graph__list-dot mod--2">
+                                                    <div data-graph="dot3" class="graph__list-dot-border mod--2"></div>
+                                                </div>
+                                                <div class="graph__list-txt">Down Payment</div>
+                                                <div id="downPaymentPercentage" class="graph__list-numb">0.0%</div>
+                                            </li>
+                                            <li class="graph__list-item">
+                                                <div class="graph__list-dot mod--3">
+                                                    <div data-graph="dot2" class="graph__list-dot-border mod--3"></div>
+                                                </div>
+                                                <div class="graph__list-txt">Interest</div>
+                                                <div id="interestPercentage" class="graph__list-numb">0.0%</div>
+                                            </li>
+                                            <li class="graph__list-item">
+                                                <div class="graph__list-dot mod--4">
+                                                    <div data-graph="dot1" class="graph__list-dot-border mod--4"></div>
+                                                </div>
+                                                <div class="graph__list-txt">Taxes</div>
+                                                <div id="taxesPercentage" class="graph__list-numb">0.0%</div>
+                                            </li>
+                                            <li class="graph__list-item">
+                                                <div class="graph__list-dot mod--5">
+                                                    <div data-graph="dot5" class="graph__list-dot-border mod--5"></div>
+                                                </div>
+                                                <div class="graph__list-txt">Insurance &amp;HOA</div>
+                                                <div id="insurancePercentage" class="graph__list-numb">0.0%</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mydisclaimer">The mortgage calculator is intended to be used for educational purposes only. Actual available rates and monthly payment amounts are subject to market fluctuations and will depend on a number of factors, including geography and loan characteristics. The estimates are based on information you provide, and may not include other fees and costs that we may assess in addition to monthly principal and interest, such as taxes and insurance and the actual payment obligation may be greater. Rate Leaf, Inc.</div>
+            </div>
+        </div>
+    </body>
+</html>

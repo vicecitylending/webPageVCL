@@ -1,0 +1,9 @@
+{
+  "id": "seo",
+  "label": "SEO",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {}
+  }
+}

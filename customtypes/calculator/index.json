@@ -1,0 +1,9 @@
+{
+  "id": "calculator",
+  "label": "CALCULATOR",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {}
+  }
+}
