@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaDollarSign } from "react-icons/fa";
-import { FcHome } from "react-icons/fc";
 import FormInputGroup from "./group";
 
 function Form() {
@@ -11,6 +10,9 @@ function Form() {
   const [interestRate, setInterestRate] = useState("");
   const [loanDuration, setLoanDuration] = useState("");
   const [monthlyPayment, setMonthlyPayment] = useState(0);
+  const [totalInterestPaid, setTotalInterestPaid] = useState("");
+
+
 
   function calculateLoanAmount() {
     setLoanAmount(homeValue - downPayment);
@@ -28,14 +30,17 @@ function Form() {
       return year * 12;
     }
 
-    setMonthlyPayment(
-      (percentageToDecimal(interestRate) * loanAmount) /
-        (1 -
-          Math.pow(
-            1 + percentageToDecimal(interestRate),
-            -yearsToMonths(loanDuration)
-          ))
-    );
+    function paymenCalculator() {
+      if (interestRate != "" && loanDuration != "" && interestRate != 0 && loanDuration != 0) {
+        const mPayment = (percentageToDecimal(interestRate) * loanAmount) /(1 - Math.pow(1 + percentageToDecimal(interestRate), -yearsToMonths(loanDuration)))
+        return mPayment
+      }
+      else {
+        return 0
+      }
+    }
+
+    setMonthlyPayment(paymenCalculator);
 
     return monthlyPayment;
   }
@@ -70,12 +75,14 @@ function Form() {
         placeholder={"Enter your interest rate"}
         value={interestRate}
         onInput={(e) => setInterestRate(e.target.value)}
+        onkeyup={calculateMonthlyPayment}
       />
       <FormInputGroup
         text="Loan Duration (years)"
         placeholder={"Enter the duration of your loan in years"}
         value={loanDuration}
         onInput={(e) => setLoanDuration(e.target.value)}
+        onkeyup={calculateMonthlyPayment}
       />
       <h4 className="alert alert-info fw-bold">
         Monthly payment: <FaDollarSign />
