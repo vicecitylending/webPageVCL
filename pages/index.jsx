@@ -30,9 +30,11 @@ const Homepage = props => {
               imageHeight={generalInformation.data.small_logo_height}
               phone={contactContent.data.number_field}
             /> */}
-          <h1 className="display-1 my-5">
-          <FcHome /> Mortgage Calculator{" "}
-          </h1>
+          <div className="flex items-center justify-center mb-8">
+            <h1 className="text-3xl font-bold text-center">
+              Vice City Lending  Mortgage Calculator
+            </h1>
+          </div>
 
           <MortgageCalculator/>
 
@@ -175,6 +177,7 @@ const Homepage = props => {
                 </a>
               </div>
           </div> */}
+          <div className="flex flex-col items-center mt-10">Developed by Gluonico</div>
         </div>
 }
 
