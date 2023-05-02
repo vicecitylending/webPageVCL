@@ -288,3 +288,17 @@ table.center {
 .container {
   background-color: #f2e8ff; /* un tono suave de morado */
 }
+
+.video-background {
+  position: relative;
+  height: 100vh;
+}
+
+.video-background__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
