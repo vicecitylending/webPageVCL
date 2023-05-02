@@ -7,3 +7,5 @@
 
 - este sitio usa MAILCHIMP
 
+La ultima versión de Prismic es necesario usar Slice Machine. Sirve para crear los tipos de datos. Se pushean y se alimentan los datos de prismic.io
+

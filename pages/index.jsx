@@ -14,29 +14,45 @@ import { FcHome } from "react-icons/fc";
 const Homepage = props => {
   const { seo, generalInformation, menuContent, homeContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
   return<div className="overflow-x-hidden">
-          {/* <Head
+    {console.log(menuContent.data.menu_links.url)}
+    {console.log(generalInformation)}
+
+          <Head
             title={seo.data.title[0].text}
             description={seo.data.default_description[0].text}
             keywords={seo.data.default_keywords[0].text}
             url={seo.data.default_url[0].text}
             ogImage={seo.data.default_image[0].text}
-          /> */}
+          />
 
           {/* Home Section */}
-          {/* <NavBar 
+          <NavBar 
               content={menuContent.data.menu_links} 
               logo={generalInformation.data.small_logo.url}
               imageWidth={generalInformation.data.small_logo_width}
               imageHeight={generalInformation.data.small_logo_height}
-              phone={contactContent.data.number_field}
-            /> */}
-          <div className="flex items-center justify-center mb-8">
+              // phone={contactContent.data.number_field}
+            />
+
+          {/* <div className="flex items-center justify-center mb-8">
             <h1 className="text-3xl font-bold text-center">
               Vice City Lending  Mortgage Calculator
             </h1>
+          </div> */}
+
+          <div className="video-background">
+                <video autoPlay loop muted>
+                  <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
+                </video>
+                <div className="content">
+                Background Night
+                </div>
           </div>
 
-          <MortgageCalculator/>
+          <div className="mt-20">
+            <MortgageCalculator/>
+          </div>
+
 
           {/* What Section are this */}
           {/* <div id ="home" className="bg-cover md:bg-no-repeat md:bg-top h-full w-screen bg-right" style={{ backgroundImage: `url(${homeContent.data.background_image.url}`}}>
@@ -181,22 +197,22 @@ const Homepage = props => {
         </div>
 }
 
-// const getStaticProps = async ({ params }) => {
-//   return {
-//       props: {
-//         seo: await getPrismicData('seo'),
-//         generalInformation: await getPrismicData('general_information'),
-//         menuContent: await getPrismicData('menu'),
-//         homeContent: await getPrismicData('homepage'),
-//         WhoWeAreContent: await getPrismicData('who_we_are'),
-//         OurServicesContent: await getPrismicData('our_services'),
-//         FAQ: await getPrismicData('faq'), 
-//         contactContent : await getPrismicData('contact'),
-//         plansContent : await getPrismicData('plans'),
-//         signUpContent : await getPrismicData('sign_up')
-//       }
-//   }
-// }
+const getStaticProps = async ({ params }) => {
+  return {
+      props: {
+        seo: await getPrismicData('seo'),
+        generalInformation: await getPrismicData('general_information'),
+        menuContent: await getPrismicData('menu'),
+        // homeContent: await getPrismicData('homepage'),
+        // WhoWeAreContent: await getPrismicData('who_we_are'),
+        // OurServicesContent: await getPrismicData('our_services'),
+        // FAQ: await getPrismicData('faq'), 
+        // contactContent : await getPrismicData('contact'),
+        // plansContent : await getPrismicData('plans'),
+        // signUpContent : await getPrismicData('sign_up')
+      }
+  }
+}
 
 // Wrapper for prismic functions
 const getPrismicData = async (name) => {
@@ -211,4 +227,4 @@ const getPrismicData = async (name) => {
 }
 
 export default Homepage
-// export { getStaticProps }
+export { getStaticProps }

@@ -1,0 +1,6 @@
+{
+  "apiEndpoint": "https://vicecitylending.prismic.io/api/v2",
+  "repositoryName": "vicecitylending",
+  "adapter": "@slicemachine/adapter-next",
+  "libraries": ["./slices"]
+}

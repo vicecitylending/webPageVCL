@@ -1,0 +1,14 @@
+{
+  "id": "contact",
+  "label": "Contact",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "number_field": {
+        "type": "Text",
+        "config": { "label": "Number Field", "placeholder": "" }
+      }
+    }
+  }
+}

@@ -19,7 +19,8 @@ const NavBar = props => {
       if(index === (array.length - 1)) {
         navBarLinks.push(
           <li className="text-xl" key = {index}>
-            <a className="text-white hover:text-blue-100 bg-orange-400 pl-2 pr-10 font-semibold -mr-8" href={element.link[0].text}>{element.label[0].text} </a>
+            {/* <a className="text-white hover:text-blue-100 bg-pink-400 pl-2 pr-10 font-semibold -mr-8" href={element.link[0].text}>{element.label[0].text} </a> */}
+            <a className="text-white hover:text-blue-100 bg-pink-400 pl-2 pr-10 font-semibold -mr-8" href={element.link[0].text}>APPLY NOW </a>
           </li>
         )
       }
@@ -38,9 +39,9 @@ const NavBar = props => {
         <a href="#home" className="flex">
           <Image src={logo} width={imageWidth} height={imageHeight}/>
         </a>
-        <a className="text-white font-roboto italic font-bold text-xs md:text-xl" href="tel:+1(407)561-9818">
+        {/* <a className="text-white font-roboto italic font-bold text-xs md:text-xl" href="tel:+1(407)561-9818">
                   {RichText.render(phone)}
-                </a>
+                </a> */}
       <button  onClick={menuFlip} type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
         <span className="sr-only">Open main menu</span>
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>

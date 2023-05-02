@@ -1,0 +1,27 @@
+{
+  "id": "menu",
+  "label": "Menú",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
+      "menu_links": {
+        "type": "Group",
+        "config": {
+          "label": "Menu Links",
+          "fields": {
+            "link": {
+              "type": "Text",
+              "config": { "label": "Link", "placeholder": "" }
+            },
+            "label": {
+              "type": "Text",
+              "config": { "label": "Label", "placeholder": "" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
