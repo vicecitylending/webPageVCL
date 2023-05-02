@@ -14,11 +14,13 @@ import { FcHome } from "react-icons/fc";
 const Homepage = props => {
 
 
-  const vidRef=useRef();
-  useEffect(() => { vidRef.current.play(); },[]);
+  const vidRef = useRef();
+
+  useEffect(() => {setTimeout(()=>{vidRef.current.play()},10)}, []);
 
   const { seo, generalInformation, menuContent, homeContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
   return<div className="overflow-x-hidden">
+
     {console.log(menuContent.data.menu_links.url)}
     {console.log(generalInformation)}
 
@@ -46,7 +48,7 @@ const Homepage = props => {
           </div> */}
 
           <div className="video-background mt-28">
-                <video ref={ vidRef } autoPlay loop muted>
+                <video ref={ vidRef } loop muted playsInline controls = ''>
                   <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
                 </video>
                 <div className="content">
