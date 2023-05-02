@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useRef, useEffect } from "react";
 import Image from 'next/image'
 import { RichText } from 'prismic-reactjs';
 import Head from "../components/head";
@@ -12,6 +12,11 @@ import { FcHome } from "react-icons/fc";
 
 
 const Homepage = props => {
+
+
+  const vidRef=useRef();
+  useEffect(() => { vidRef.current.play(); },[]);
+
   const { seo, generalInformation, menuContent, homeContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
   return<div className="overflow-x-hidden">
     {console.log(menuContent.data.menu_links.url)}
@@ -41,7 +46,7 @@ const Homepage = props => {
           </div> */}
 
           <div className="video-background mt-28">
-                <video autoPlay={true} loop muted>
+                <video ref={ vidRef } autoPlay loop muted>
                   <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
                 </video>
                 <div className="content">
