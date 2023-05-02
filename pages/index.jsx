@@ -41,7 +41,7 @@ const Homepage = props => {
           </div> */}
 
           <div className="video-background mt-28">
-                <video autoPlay loop muted>
+                <video autoPlay={true} loop muted>
                   <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
                 </video>
                 <div className="content">
