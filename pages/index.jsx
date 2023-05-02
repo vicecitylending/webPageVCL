@@ -26,7 +26,7 @@ const Homepage = props => {
           />
 
           {/* Home Section */}
-          <NavBar 
+          <NavBar
               content={menuContent.data.menu_links} 
               logo={generalInformation.data.small_logo.url}
               imageWidth={generalInformation.data.small_logo_width}
@@ -40,8 +40,8 @@ const Homepage = props => {
             </h1>
           </div> */}
 
-          <div className="video-background">
-                <video autoPlay loop muted>
+          <div className="video-background mt-28">
+                <video loop muted playsInline>
                   <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
                 </video>
                 <div className="content">
@@ -49,7 +49,7 @@ const Homepage = props => {
                 </div>
           </div>
 
-          <div className="mt-20">
+          <div className="mt-5">
             <MortgageCalculator/>
           </div>
 
