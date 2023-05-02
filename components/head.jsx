@@ -9,6 +9,7 @@ const defaultOGImage = 'https://ik.imagekit.io/glunico/favicon_CIELL2u7gJ8Q.png?
 
 const Head = (props) => {
   return <NextHead>
+    {console.log(props.description)}
     <meta charSet="UTF-8" />
     <title>{props.title || ''}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />

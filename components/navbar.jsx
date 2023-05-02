@@ -20,7 +20,7 @@ const NavBar = props => {
         navBarLinks.push(
           <li className="text-xl" key = {index}>
             {/* <a className="text-white hover:text-blue-100 bg-pink-400 pl-2 pr-10 font-semibold -mr-8" href={element.link[0].text}>{element.label[0].text} </a> */}
-            <a className="text-white hover:text-blue-100 bg-pink-400 pl-2 pr-10 font-semibold -mr-8" href={element.link[0].text}>APPLY NOW </a>
+            <a className="text-white hover:text-blue-100 bg-pink-400 pl-2 pr-10 font-semibold -mr-10" href={element.link[0].text}>APPLY NOW </a>
           </li>
         )
       }
@@ -34,9 +34,9 @@ const NavBar = props => {
     })
   }
 
-  return <nav className="fixed inset-x-0 px-2 sm:px-4 py-2.5 bg-blue-400 font-roboto w-full z-50">
-    <div className="container flex flex-wrap justify-between items-center mx-auto">
-        <a href="#home" className="flex">
+  return <nav className="fixed inset-x-0 px-2 sm:px-4 py-2.5 bg-purple-100 font-roboto w-full z-50">
+    <div className="container flex flex-wrap justify-between items-center mx-auto bg-purple-100">
+        <a href="#home" className="flex bg-purple-100">
           <Image src={logo} width={imageWidth} height={imageHeight}/>
         </a>
         {/* <a className="text-white font-roboto italic font-bold text-xs md:text-xl" href="tel:+1(407)561-9818">
