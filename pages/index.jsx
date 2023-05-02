@@ -17,8 +17,10 @@ const Homepage = props => {
   const vidRef = useRef();
 
   useEffect(() => {
-    vidRef.current.play()
-  }, [vidRef]);
+    vidRef.current.addEventListener('canplaythrough', () => {
+      vidRef.current.play();
+    });
+  }, []);
 
   const { seo, generalInformation, menuContent, homeContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
   return<div className="overflow-x-hidden">
@@ -50,7 +52,7 @@ const Homepage = props => {
           </div> */}
 
           <div className="video-background mt-28">
-                <video ref={ vidRef } muted autoPlay loop playsInline control='' className="video-background__video" onCanPlay={()=> vidRef.current.play()}>
+                <video ref={ vidRef } muted autoPlay loop playsInline control='' className="video-background__video">
                   <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
                 </video>
                 <div className="content">
