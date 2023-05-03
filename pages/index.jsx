@@ -55,6 +55,11 @@ const Homepage = props => {
                 <video ref={ vidRef } muted autoPlay loop playsInline control='' className="video-background__video">
                   <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
                 </video>
+                <div className="container flex flex-wrap justify-between items-center mx-auto">
+                  <img className="imagen1" src={generalInformation.data.small_logo.url} alt="Logo Vice City Lending" />
+                  <img className="imagen2" src={generalInformation.data.small_logo.url} alt="Logo Vice City Lending" />
+                  <img className="imagen3" src={generalInformation.data.small_logo.url} alt="Logo Vice City Lending" />
+                </div>
                 <div className="content">
                 Background Night
                 </div>

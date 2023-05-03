@@ -302,3 +302,30 @@ table.center {
   height: 100%;
   object-fit: cover;
 }
+
+.imagen1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto;
+}
+
+.imagen2 {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: auto;
+}
+
+.imagen3 {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: auto;
+}
