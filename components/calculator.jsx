@@ -75,7 +75,7 @@ function Form() {
   }
 
   return (
-    <div className="container">
+    <div className="block">
     <div className="flex flex-col items-center">
       <label className="mb-2 text-lg font-bold">Home Value: {homeValue}</label>
       <div className="w-full px-4">
@@ -90,8 +90,9 @@ function Form() {
             transition: "box-shadow 0.7s",
             boxShadow: "",
             backgroundColor: 'purple',
-            height: 15,
-            width: 15,
+            height: 30,
+            width: 30,
+            marginTop: -13,
           }}
         />
         <div className="flex justify-between text-sm">
@@ -114,8 +115,9 @@ function Form() {
             transition: "box-shadow 0.7s",
             boxShadow: "",
             backgroundColor: 'purple',
-            height: 15,
-            width: 15,
+            height: 30,
+            width: 30,
+            marginTop: -13,
           }}
         />
         <div className="flex justify-between text-sm">
@@ -159,8 +161,9 @@ function Form() {
             transition: "box-shadow 0.7s",
             boxShadow: "",
             backgroundColor: 'purple',
-            height: 15,
-            width: 15,
+            height: 30,
+            width: 30,
+            marginTop: -13,
           }}
         />
         <div className="flex justify-between text-sm">
@@ -190,8 +193,9 @@ function Form() {
             transition: "box-shadow 0.7s",
             boxShadow: "",
             backgroundColor: 'purple',
-            height: 15,
-            width: 15,
+            height: 30,
+            width: 30,
+            marginTop: -13,
           }}
         />
         <div className="flex justify-between text-sm">

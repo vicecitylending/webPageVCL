@@ -51,23 +51,22 @@ const Homepage = props => {
             </h1>
           </div> */}
 
-          <div className="video-background mt-28">
-                <video ref={ vidRef } muted autoPlay loop playsInline control='' className="video-background__video">
+          <div className="video-background mt-14">
+                <video ref={ vidRef } muted autoPlay loop playsInline control='' className="fixed video-background__video">
                   <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
                 </video>
-                <div className="container flex flex-wrap justify-between items-center mx-auto">
+          </div>
+          <div className="container justify-between items-center mx-auto">
                   <img className="imagen1" src={generalInformation.data.small_logo.url} alt="Logo Vice City Lending" />
                   <img className="imagen2" src={generalInformation.data.small_logo.url} alt="Logo Vice City Lending" />
                   <img className="imagen3" src={generalInformation.data.small_logo.url} alt="Logo Vice City Lending" />
-                </div>
-                <div className="content">
-                Background Night
-                </div>
           </div>
+                <div className="container absolute">
+                  <MortgageCalculator/>
+                </div>
+                <div className="container flex flex-col items-center mt-10">Developed by Gluonico</div>
 
-          <div className="mt-5">
-            <MortgageCalculator/>
-          </div>
+
 
 
           {/* What Section are this */}
@@ -209,7 +208,6 @@ const Homepage = props => {
                 </a>
               </div>
           </div> */}
-          <div className="flex flex-col items-center mt-10">Developed by Gluonico</div>
         </div>
 }
 
