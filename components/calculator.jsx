@@ -4,7 +4,7 @@ import FormInputGroup from "./group";
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
-function Form() {
+function MortgageCalculator() {
  
   const [homeValue, setHomeValue] = useState("");
   const [downPayment, setDownPayment] = useState("");
@@ -75,9 +75,16 @@ function Form() {
   }
 
   return (
-    <div className="block">
-    <div className="flex flex-col items-center">
-      <label className="mb-2 text-lg font-bold">Home Value: {homeValue}</label>
+    <div className="bloc bg-white rounded-lg">
+    <div className="flex flex-col">
+      <div className="flex justify-between">
+        <div>
+          <label className="mb-2 text-lg font-bold">Home Value</label>
+        </div>
+        <div>
+          <label className="mb-2 text-lg font-bold">${homeValue.toLocaleString("en")}</label>
+        </div>
+      </div>
       <div className="w-full px-4">
         <Slider
           min={0}
@@ -230,4 +237,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default MortgageCalculator;

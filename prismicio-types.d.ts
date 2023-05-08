@@ -103,6 +103,124 @@ export type HomepageDocument<Lang extends string = string> =
     "homepage",
     Lang
   >;
+/** Content for Member documents */
+interface MemberDocumentData {
+  /**
+   * Name field in *Member*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name: prismicT.KeyTextField;
+  /**
+   * Surname field in *Member*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.surname
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  surname: prismicT.KeyTextField;
+  /**
+   * Position field in *Member*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.position
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  position: prismicT.KeyTextField;
+  /**
+   * NMLS field in *Member*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.nmls
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  nmls: prismicT.KeyTextField;
+  /**
+   * Email field in *Member*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.email
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  email: prismicT.KeyTextField;
+  /**
+   * Phone field in *Member*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.phone
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  phone: prismicT.KeyTextField;
+  /**
+   * Instagram field in *Member*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.instagram
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  instagram: prismicT.KeyTextField;
+  /**
+   * Photo field in *Member*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.photo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  photo: prismicT.ImageField<never>;
+  /**
+   * Slice Zone field in *Member*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismicT.SliceZone<MemberDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Member → Slice Zone*
+ *
+ */
+type MemberDocumentDataSlicesSlice = never;
+/**
+ * Member document from Prismic
+ *
+ * - **API ID**: `member`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type MemberDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<Simplify<MemberDocumentData>, "member", Lang>;
 /** Content for Menú documents */
 interface MenuDocumentData {
   /**
@@ -227,6 +345,7 @@ export type AllDocumentTypes =
   | ContactDocument
   | GeneralInformationDocument
   | HomepageDocument
+  | MemberDocument
   | MenuDocument
   | SeoDocument;
 declare module "@prismicio/client" {
@@ -244,6 +363,9 @@ declare module "@prismicio/client" {
       GeneralInformationDocument,
       HomepageDocumentData,
       HomepageDocument,
+      MemberDocumentData,
+      MemberDocumentDataSlicesSlice,
+      MemberDocument,
       MenuDocumentData,
       MenuDocumentDataMenuLinksItem,
       MenuDocument,

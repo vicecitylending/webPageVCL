@@ -7,6 +7,7 @@ import Contact from "./contact";
 import Modal from "../components/Modal";
 import Prismic from 'prismic-javascript'
 import MortgageCalculator from "../components/calculator";
+import MembersCarousel from "../components/carousel";
 import { PrismicClient } from '../prismic-configuration'
 import { FcHome } from "react-icons/fc";
 
@@ -22,11 +23,11 @@ const Homepage = props => {
     });
   }, []);
 
-  const { seo, generalInformation, menuContent, homeContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
+  const { seo, generalInformation, menuContent, members, homeContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
   return<div className="overflow-x-hidden">
 
-    {console.log(menuContent.data.menu_links.url)}
-    {console.log(generalInformation)}
+    {console.log("Miembros")}
+    {console.log(members)}
 
           <Head
             title={seo.data.title[0].text}
@@ -51,20 +52,29 @@ const Homepage = props => {
             </h1>
           </div> */}
 
-          <div className="video-background mt-14">
+          <div className="video-background mt-14 relative">
                 <video ref={ vidRef } muted autoPlay loop playsInline control='' className="fixed video-background__video">
                   <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
                 </video>
+                <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-500 opacity-70"></div>
           </div>
           <div className="container justify-between items-center mx-auto">
-                  <img className="imagen1" src={generalInformation.data.small_logo.url} alt="Logo Vice City Lending" />
+            
+                  <div className="imagen1 font-semibold text-2xl sm:text-4xl">WE WORK</div>
+                  <div className="imagen1A font-semibold text-2xl sm:text-4xl">24/7</div>
                   <img className="imagen2" src={generalInformation.data.small_logo.url} alt="Logo Vice City Lending" />
-                  <img className="imagen3" src={generalInformation.data.small_logo.url} alt="Logo Vice City Lending" />
+                  <div className="imagen3 text-xs sm:text-xl">POWERED BY</div>
+                  <div className="imagen3A text-xl sm:text-4xl font-semibold">DADELAND</div>
+                  <div className="imagen3B text-xl sm:text-4xl">DIFFERENCE</div>
           </div>
-                <div className="container absolute">
-                  <MortgageCalculator/>
-                </div>
-                <div className="container flex flex-col items-center mt-10">Developed by Gluonico</div>
+
+          <MembersCarousel
+            members={members}
+          />
+
+          <div className="container absolute"><MortgageCalculator/></div>
+
+          <div className="container flex flex-col items-center mt-10">Developed by Gluonico</div>
 
 
 
@@ -217,6 +227,7 @@ const getStaticProps = async ({ params }) => {
         seo: await getPrismicData('seo'),
         generalInformation: await getPrismicData('general_information'),
         menuContent: await getPrismicData('menu'),
+        members: await getPrismicCustomTypeData('member')
         // homeContent: await getPrismicData('homepage'),
         // WhoWeAreContent: await getPrismicData('who_we_are'),
         // OurServicesContent: await getPrismicData('our_services'),
@@ -238,6 +249,17 @@ const getPrismicData = async (name) => {
   const doc = prismicAnswer.results[0]
 
   return doc
+}
+
+const getPrismicCustomTypeData = async (name) => {
+  const prismicAnswer = await PrismicClient().query(  
+    Prismic.Predicates.at('document.type', name) 
+  )
+
+  // Get all docs of this type (there should many docs per type)
+  const CustomTypeDoc = prismicAnswer.results
+
+  return CustomTypeDoc
 }
 
 export default Homepage
