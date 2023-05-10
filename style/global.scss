@@ -145,12 +145,30 @@ table.center {
 
 .member-pic {
   position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  width: 20%;
+  width: 25%;
   height: auto;
+  left: 25%
+
 }
+
+.member-name {
+  padding-top: 60px;
+  margin: 0;
+  text-align: center;
+  margin-left: 76%;
+  width: 100%;
+}
+
+.member-info1,
+.member-info2,
+.member-info3,
+.member-info4 {
+  margin-left: 80%;
+  width: 100%;  }
+
+//   .member-info1 {
+//     padding-top: 125px;
+//   }
 
 // Pantallas Desktop Aumentadas
 .imagen1 {
@@ -448,7 +466,35 @@ table.center {
     height: 100%;
     object-fit: cover;
     background-attachment: fixed;
-  } 
+  }
+
+  .member-pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: auto;
+    color: #ffffff;
+  }
+
+  .member-name {
+    padding-top: 60px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+
+  }
+
+  .member-info1,
+  .member-info2,
+  .member-info3,
+  .member-info4 {
+    margin-left: 20%;  }
+
+    .member-info1 {
+      padding-top: 125px;
+    }
 }
 
 @media screen and (max-width: 660px) {
@@ -551,6 +597,35 @@ table.center {
     object-fit: cover;
     background-attachment: fixed;
   }
+
+  .member-pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: auto;
+    color: #ffffff;
+  }
+
+  .member-name {
+    padding-top: 60px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+
+  }
+
+  .member-info1,
+  .member-info2,
+  .member-info3,
+  .member-info4 {
+    margin-left: 20%;  }
+
+    .member-info1 {
+      padding-top: 125px;
+    }
+
 }
 
 

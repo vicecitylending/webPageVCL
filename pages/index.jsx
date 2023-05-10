@@ -68,13 +68,15 @@ const Homepage = props => {
                   <div className="imagen3B text-xl sm:text-4xl">DIFFERENCE</div>
           </div>
 
-          <div className="absolute flex flex-col items-center pt-10 text-shadow shadow-white text-white font-semibold">Meet Our Team</div>
+          <div className="absolute flex flex-col items-center  text-shadow shadow-white text-white font-semibold">Team with 10+ years of combined experience in the industry.</div>
 
           <div id="team"> 
             <MembersCarousel
               members={members}
             />
           </div>
+
+          <div className="absolute flex flex-col items-center  text-shadow shadow-white text-white font-semibold">15+ years servicing clients and building strong relationships.</div>
 
           <div className="container absolute"><MortgageCalculator/></div>
 

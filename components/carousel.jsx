@@ -7,6 +7,7 @@ const MembersCarousel = props => {
 
     const member1 = members[0].data
     const member2 = members[1].data
+    const member3 = members[2].data
 
   return (
     <Carousel className="rounded-xl" style={{ height: "350px"}}>
@@ -29,6 +30,26 @@ const MembersCarousel = props => {
             phone={member2.phone}
             instagram={member2.instagram}
             imageSrc={member2.photo.url}
+        />
+     <MemberCard
+            name={member3.name}
+            lastName={member3.surname}
+            position={member3.position}
+            nmls={member3.nmls}
+            email={member3.email}
+            phone={member3.phone}
+            instagram={member3.instagram}
+            imageSrc={member3.photo.url}
+        />
+     <MemberCard
+            name={member3.name}
+            lastName={member3.surname}
+            position={member3.position}
+            nmls={member3.nmls}
+            email={member3.email}
+            phone={member3.phone}
+            instagram={member3.instagram}
+            imageSrc={member3.photo.url}
         />
     </Carousel>
   );
