@@ -9,7 +9,7 @@ import Prismic from 'prismic-javascript'
 import MortgageCalculator from "../components/calculator";
 import MembersCarousel from "../components/carousel";
 import { PrismicClient } from '../prismic-configuration'
-import { FcHome } from "react-icons/fc";
+import Footer from "../components/footer";
 
 
 const Homepage = props => {
@@ -23,11 +23,8 @@ const Homepage = props => {
     });
   }, []);
 
-  const { seo, generalInformation, menuContent, members, homeContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
+  const { seo, generalInformation, menuContent, members, footerContent, homeContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
   return<div className="overflow-x-hidden">
-
-    {console.log("Miembros")}
-    {console.log(members)}
 
           <Head
             title={seo.data.title[0].text}
@@ -46,12 +43,6 @@ const Homepage = props => {
               // phone={contactContent.data.number_field}
             />
 
-          {/* <div className="flex items-center justify-center mb-8">
-            <h1 className="text-3xl font-bold text-center">
-              Vice City Lending  Mortgage Calculator
-            </h1>
-          </div> */}
-
           <div className="video-background mt-14 relative">
                 <video ref={ vidRef } muted autoPlay loop playsInline control='' className="fixed video-background__video">
                   <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
@@ -68,19 +59,24 @@ const Homepage = props => {
                   <div className="imagen3B text-xl sm:text-4xl">DIFFERENCE</div>
           </div>
 
-          <div className="absolute flex flex-col items-center  text-shadow shadow-white text-white font-semibold">Team with 10+ years of combined experience in the industry.</div>
+          <div id="team" className="relative mb-10">
+            <div className="absolute text-center inset-0 flex items-center justify-center text-shadow shadow-white text-white font-semibold text-2xl sm:text-4xl padding">Team with 10+ years of combined experience in the industry.</div>
+          </div>
 
-          <div id="team"> 
+          <div className="no-shadow"> 
             <MembersCarousel
+              className="no-shadow"
               members={members}
             />
           </div>
+          <div id="" className="relative mb-10">
+            <div className="absolute text-center inset-0 flex items-center justify-center text-shadow shadow-white text-white font-semibold text-2xl sm:text-4xl padding">15+ years servicing clients and building strong relationships.</div>
+          </div>
+          {/* <div className="container absolute"><MortgageCalculator/></div> */}
 
-          <div className="absolute flex flex-col items-center  text-shadow shadow-white text-white font-semibold">15+ years servicing clients and building strong relationships.</div>
+        
 
-          <div className="container absolute"><MortgageCalculator/></div>
-
-          <div className="container flex flex-col items-center mt-10">Developed by Gluonico</div>
+          <div className="footer absolute flex fixed inset-x-0 font-roboto w-full z-50"><Footer content={footerContent.data}/></div>
 
 
 
@@ -233,7 +229,8 @@ const getStaticProps = async ({ params }) => {
         seo: await getPrismicData('seo'),
         generalInformation: await getPrismicData('general_information'),
         menuContent: await getPrismicData('menu'),
-        members: await getPrismicCustomTypeData('member')
+        members: await getPrismicCustomTypeData('member'),
+        footerContent: await getPrismicData('footer')
         // homeContent: await getPrismicData('homepage'),
         // WhoWeAreContent: await getPrismicData('who_we_are'),
         // OurServicesContent: await getPrismicData('our_services'),

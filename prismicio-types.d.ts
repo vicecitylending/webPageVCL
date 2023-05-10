@@ -35,6 +35,86 @@ export type ContactDocument<Lang extends string = string> =
     "contact",
     Lang
   >;
+/** Content for Footer documents */
+interface FooterDocumentData {
+  /**
+   * Instagram field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.instagram
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  instagram: prismicT.KeyTextField;
+  /**
+   * Email field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.email
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  email: prismicT.KeyTextField;
+  /**
+   * Logo field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  logo: prismicT.ImageField<never>;
+  /**
+   * Logo2 field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.logo2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  logo2: prismicT.ImageField<never>;
+  /**
+   * Logo3 field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.logo3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  logo3: prismicT.ImageField<never>;
+  /**
+   * Team field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.team
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  team: prismicT.ImageField<never>;
+}
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<Simplify<FooterDocumentData>, "footer", Lang>;
 /** Content for General Information documents */
 interface GeneralInformationDocumentData {
   /**
@@ -343,6 +423,7 @@ export type SeoDocument<Lang extends string = string> =
   prismicT.PrismicDocumentWithUID<Simplify<SeoDocumentData>, "seo", Lang>;
 export type AllDocumentTypes =
   | ContactDocument
+  | FooterDocument
   | GeneralInformationDocument
   | HomepageDocument
   | MemberDocument
@@ -359,6 +440,8 @@ declare module "@prismicio/client" {
     export type {
       ContactDocumentData,
       ContactDocument,
+      FooterDocumentData,
+      FooterDocument,
       GeneralInformationDocumentData,
       GeneralInformationDocument,
       HomepageDocumentData,

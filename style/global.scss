@@ -23,12 +23,6 @@ $menu-item-active-background-color: $app-color1;
 @import 'swiper/components/effect-cube/effect-cube.scss';
 
 
-.swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background: $app-color1;
-}
-
 html,
 body {
   padding: 0;
@@ -53,10 +47,6 @@ body {
 
 .header-color{
   background: radial-gradient(circle, #890000, #000000);
-}
-
-.footer-color{
-  background-color: $app-color1;
 }
 
 .align-left{
@@ -84,6 +74,14 @@ body {
 
 .color-circle-size{
   font-size: 0.5rem;
+}
+
+
+.logo-footer {
+  position: relative ;
+  width: 30%;
+  height: auto;
+  top: 15%;
 }
 
 .popup {    
@@ -495,6 +493,7 @@ table.center {
     .member-info1 {
       padding-top: 125px;
     }
+
 }
 
 @media screen and (max-width: 660px) {
@@ -625,6 +624,14 @@ table.center {
     .member-info1 {
       padding-top: 125px;
     }
+
+    .logo-footer {
+      position: relative ;
+      width: 50%;
+      height: auto;
+      top: 15%;
+    }
+
 
 }
 
@@ -758,5 +765,13 @@ table.center {
     .member-info1 {
       padding-top: 125px;
     }
+
+  .logo-footer {
+    position: relative ;
+    width: 50%;
+    height: auto;
+    top: 15%;
+  }
+
 }
 

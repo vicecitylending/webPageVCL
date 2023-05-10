@@ -1,0 +1,35 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
+      "instagram": {
+        "type": "Text",
+        "config": { "label": "Instagram", "placeholder": "" }
+      },
+      "email": {
+        "type": "Text",
+        "config": { "label": "Email", "placeholder": "" }
+      },
+      "logo": {
+        "type": "Image",
+        "config": { "label": "Logo", "constraint": {}, "thumbnails": [] }
+      },
+      "logo2": {
+        "type": "Image",
+        "config": { "label": "Logo2", "constraint": {}, "thumbnails": [] }
+      },
+      "logo3": {
+        "type": "Image",
+        "config": { "label": "Logo3", "constraint": {}, "thumbnails": [] }
+      },
+      "team": {
+        "type": "Image",
+        "config": { "label": "Team", "constraint": {}, "thumbnails": [] }
+      }
+    }
+  }
+}
