@@ -124,7 +124,7 @@ function MortgageCalculator() {
     }
 
   return (
-    <div className="bloc bg-white rounded-lg">
+    <div className="bg-white rounded-lg">
     <div className="flex flex-col">
       <div className="padding flex justify-between">
         <div>

@@ -4,16 +4,17 @@ const sgMail = require('@sendgrid/mail')
 const sgClientMail = require('@sendgrid/mail')
 
 export default async function(req, res) {
-  const SENDGRID_API_KEY='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'
+  const SENDGRID_API_KEY='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'
+  
 
   sgMail.setApiKey(SENDGRID_API_KEY)
   sgClientMail.setApiKey(SENDGRID_API_KEY)
 
-  const { name, address, email, phone, bins, day, hear, questions, subject } = req.body
+  const { name, address, email, phone, questions, subject } = req.body
 
   const content = {
-    to: 'dirtybinbustersfl@gmail.com',
-    from: 'dirtybinbustersfl@gmail.com',
+    to: 'vicecitylending@gmail.com',
+    from: 'vicecitylending@gmail.com',
     subject: `${subject}`,
     text: name,
     html: `<p> <b>${name}</b> has requested to subscribe or needs more information.</p>
@@ -33,15 +34,6 @@ export default async function(req, res) {
       <b>Phone</b>
       </td>
       <td>
-      <b>Number of Bins</b>
-      </td>
-      <td>
-      <b>Collection Day</b>
-      </td>
-      <td>
-      <b>How Did you Hear</b>
-      </td>
-      <td>
       <b>Questions</b>
       </td>
     </tr>
@@ -59,15 +51,6 @@ export default async function(req, res) {
         ${phone}
       </td>
       <td>
-        ${bins}
-      </td>
-      <td>
-        ${day}
-      </td>
-      <td>
-        ${hear}
-      </td>
-      <td>
         ${questions}
       </td>
     </tr>
@@ -76,26 +59,26 @@ export default async function(req, res) {
 
   const ClientContent = {
     to: `${email}`,
-    from: 'dirtybinbustersfl@gmail.com',
-    subject: `${name}, you have a message from Dirty Bin Busters - A clean home is a happy home!`,
+    from: 'vicecitylending@gmail.com',
+    subject: `${name}, you have a message from Vice City Lending - We work 24/7!`,
     text: name,
     html: `<p> <b>${name}</b>, you have requested to subscribe or you need more information about our services.</p>
-    <p> Thank you for reaching out and expressing interest in our services at <b>Dirty Bin Busters</b> </p>
+    <p> Thank you for reaching out and expressing interest in our services at <b>Vice City Lending</b> </p>
     <p> In case you would like to have more information, we are happy to arrange a call or text message for further queries you might have. </p> 
     <p> We look forward to start working with you! </p>
-    <p> And remember, a clean home is a happy home! </p>
+    <p> And remember, We work 24/7 for you! </p>
     `
   }
-  // Send message to Company (DBB) and Client
+  // Send message to Company (VCL) and Client
   try {
-    console.log("Sending DBB and Client Mails with SendGrid ...")
+    console.log("Sending VCL and Client Mails with SendGrid ...")
     await sgMail.send(content)
     await sgClientMail.send(ClientContent)
-    res.status(200).send('DBB & Client Message sent successfully.')
+    res.status(200).send('VCL & Client Message sent successfully.')
   } catch (error) {
     console.log("ERROR sending mails with SendGrid")
     console.log('ERROR', error)
-    res.status(400).send('DBB and Client Messages not sent.')
+    res.status(400).send('VCL and Client Messages not sent.')
   }
 
   // Send message to Client

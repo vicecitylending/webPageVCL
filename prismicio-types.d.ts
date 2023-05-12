@@ -421,6 +421,90 @@ interface SeoDocumentData {
  */
 export type SeoDocument<Lang extends string = string> =
   prismicT.PrismicDocumentWithUID<Simplify<SeoDocumentData>, "seo", Lang>;
+/** Content for Sign Up documents */
+interface SignUpDocumentData {
+  /**
+   * Title field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismicT.KeyTextField;
+  /**
+   * Name field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name: prismicT.KeyTextField;
+  /**
+   * Address field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.address
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  address: prismicT.KeyTextField;
+  /**
+   * Email field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.email
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  email: prismicT.KeyTextField;
+  /**
+   * Phone field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.phone
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  phone: prismicT.KeyTextField;
+  /**
+   * Questions field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.questions
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  questions: prismicT.KeyTextField;
+}
+/**
+ * Sign Up document from Prismic
+ *
+ * - **API ID**: `sign_up`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SignUpDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<SignUpDocumentData>,
+    "sign_up",
+    Lang
+  >;
 export type AllDocumentTypes =
   | ContactDocument
   | FooterDocument
@@ -428,7 +512,8 @@ export type AllDocumentTypes =
   | HomepageDocument
   | MemberDocument
   | MenuDocument
-  | SeoDocument;
+  | SeoDocument
+  | SignUpDocument;
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -454,6 +539,8 @@ declare module "@prismicio/client" {
       MenuDocument,
       SeoDocumentData,
       SeoDocument,
+      SignUpDocumentData,
+      SignUpDocument,
       AllDocumentTypes,
     };
   }

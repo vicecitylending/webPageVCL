@@ -5,6 +5,14 @@
     justify-content: center;
 }
 
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999; /* Este número puede ser cualquier valor mayor que el z-index de los demás elementos */
+  }
+
 // .navbar-vertical-line{
 //     // //border-right-style: solid;
 //     // border-right: 2px solid;

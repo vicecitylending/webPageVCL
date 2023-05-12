@@ -6,6 +6,8 @@ import { PrismicClient } from '../prismic-configuration'
 const Contact = props => {
     const { signUpContent } = props
 
+    
+
     const [status, setStatus] = useState({
         submitted: false,
         submitting: false,

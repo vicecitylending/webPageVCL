@@ -26,7 +26,7 @@ const MembersCarousel = (props) => {
       className="rounded-xl no-shadow"
       style={{ height: "350px"}}
       autoplay={true} // activar el autoplay
-      autoplayHoverPause={false} // continuar el autoplay aunque el mouse esté encima
+      // autoplayHoverPause={false} // continuar el autoplay aunque el mouse esté encima
       loop={true} // hacer el carrusel infinito
       animation="slide" // elegir la animación de slide
     >

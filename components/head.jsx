@@ -1,15 +1,14 @@
 import NextHead from 'next/head'
 import { string } from 'prop-types'
 
-const defaultDescription = 'A Clean Home is a Happy Home!'
-const defaultKeywords = 'cleaning, bin, self-service, dirty bin, clean services'
-const defaultOGURL = 'www.dirtybinbusters.com'
+const defaultDescription = 'Lending Company'
+const defaultKeywords = 'Lending Mortgage Buy Home'
+const defaultOGURL = 'https://vicecitylending.net'
 const defaultOGImage = 'https://ik.imagekit.io/glunico/favicon_CIELL2u7gJ8Q.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643929323762'
 
 
 const Head = (props) => {
   return <NextHead>
-    {console.log(props.description)}
     <meta charSet="UTF-8" />
     <title>{props.title || ''}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
