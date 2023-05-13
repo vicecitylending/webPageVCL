@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,900;1,300;1,900&display=swap');
+@import './colors.scss';
+@import './components/navbar.scss';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import './colors.scss';
 
 $danger: $app-color1;
 $theme-shadow: $app-color1;
@@ -15,38 +16,43 @@ $navbar-item-hover-background-color: $app-hover-color;
 $navbar-item-color: $app-color1;
 $menu-item-active-background-color: $app-color1;
 
-@import './components/navbar.scss';
-
-// Import Swiper styles
-@import 'swiper/swiper.scss';
-@import 'swiper/components/pagination/pagination.scss';
-@import 'swiper/components/effect-cube/effect-cube.scss';
-
-
-html,
-body {
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
-.page {
-  margin: 20px 15px 20px 15px;
+.main {
+  width: 100%;
+  height: 100%;
 }
 
-.no-padding{
-  padding: 0rem;
+.video {
+  width: 100%;
+  height: 100vh;
+  object-fit:cover;
+  
+}
+
+.flex {
+  display: flex;
+}
+
+
+#team {
+  display: flex;
+  align-items:end;
+}
+
+.logo-size-m {
+  width: 70%;
+  height: auto;
 }
 
 .padding{
   padding: 1rem;
-}
-
-.small-padding{
-  padding: 1.2rem;
-}
-
-.header-color{
-  background: radial-gradient(circle, #890000, #000000);
 }
 
 .align-left{
@@ -61,10 +67,6 @@ body {
   text-align: center;
 }
 
-.text-size-header{
-  font-size: 1rem;
-}
-
 .round-form{
   border-radius: 1000;
   width:10;
@@ -76,7 +78,6 @@ body {
   font-size: 0.5rem;
 }
 
-
 .logo-footer {
   position: relative ;
   width: 30%;
@@ -84,62 +85,7 @@ body {
   top: 15%;
 }
 
-.popup {    
-  position: fixed; //absolute;
-  height: 65%;
-  width: 50%;
-  left: 25%;
-  right: 25%;
-  top: 25%;
-  bottom: 25%;
-  border-radius: 5px;
-  border: 1px solid grey;
-  background-color: white;
-  text-align: center;
-  z-index: 999;
-}
 
-.whatsapp-image{
-  position: fixed;
-  height: 15%;
-  width: 15%;
-  left: 95%;
-  right: 1%;
-  top: 70%;
-  bottom: 10%;
-  z-index: 999;
-}
-
-.hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid black;
-    margin: 0.5em 0;
-    padding: 0;
-    background-color: #000000;
-    color: black;
-}
-
-.phone-header-color{
-  color: white;
-}
-.phone-header-color:hover{
-  color: rgb(232, 126, 126);
-}
-
-.google-map-code{
-  text-align: center;
-}
-
-.quote-button-width{
-  width: 50%;
-}
-
-table.center {
-  margin-left:auto; 
-  margin-right:auto;
-}
 
 .member-pic {
   position: absolute;
@@ -164,305 +110,52 @@ table.center {
   margin-left: 80%;
   width: 100%;  }
 
-//   .member-info1 {
-//     padding-top: 125px;
-//   }
 
-// Pantallas Desktop Aumentadas
-.imagen1 {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: auto;
-  color: #ffffff;
-  mix-blend-mode:hard-light;
-}
-
-.imagen1A {
-  position: absolute;
-  top: 56%;
-  left: 43%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: auto;
-  color: #ffffff;
-  mix-blend-mode:hard-light;
-}
-
-.imagen2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40%;
-  height: auto;
-}
-
-.imagen3 {
-  position: absolute;
-  top: 45%;
-  left: 83%;
-  transform: translate(-50%, -50%);
-  width: 20%;
-  height: auto;
-  color: #ffffff;
-  mix-blend-mode:hard-light;
-}
-
-.imagen3A {
-  position: absolute;
-  top: 50%;
-  left: 83%;
-  transform: translate(-50%, -50%);
-  width: 20%;
-  height: auto;
-  color: #ffffff;
-  mix-blend-mode:hard-light;
-}
-
-.imagen3B {
-  position: absolute;
-  top: 55%;
-  left: 83%;
-  transform: translate(-50%, -50%);
-  width: 20%;
-  height: auto;
-  color: #ffffff;
-  mix-blend-mode:hard-light;
-}
-
-
-.video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding-top: 60px;
-}
-.video-background__video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  background-attachment: fixed;
-}
-// Fin Pantallas Aumentadas
-
-
-// Pantallas Desktop
 @media screen and (max-width: 1400px) {
-  .text-size-header{
-    font-size: 0.8rem;
-  }
-
-  .whatsapp-image{
-    position: fixed;
-    height: 15%;
-    width: 15%;
-    left: 90%;
-    right: 1%;
-    top: 50%;
-    bottom: 10%;
-    z-index: 999;
-  }
-
-  .imagen1 {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-  
-  .imagen1A {
-    position: absolute;
-    top: 56%;
-    left: 43%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-
-  .imagen2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%;
-    height: auto;
-  }
-
-  .imagen3 {
-    position: absolute;
-    top: 45%;
-    left: 83%;
-    transform: translate(-50%, -50%);
-    width: 20%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-  
-  .imagen3A {
-    position: absolute;
-    top: 50%;
-    left: 83%;
-    transform: translate(-50%, -50%);
-    width: 20%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-  
-  .imagen3B {
-    position: absolute;
-    top: 55%;
-    left: 83%;
-    transform: translate(-50%, -50%);
-    width: 20%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-
-
-  .video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding-top: 4px;
-  }
-  
-  .video-background__video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-attachment: fixed;
-  }
-}
-//Fin Pantallas Desktop
-
-@media screen and (max-width: 720px) {
-  .align-center-mobile{
-    text-align: center;
-  }
-
-  .text-size-header{
-    font-size: 0.9rem;
+  .video {
+    width: 100vw;
+    height: 100vh;
+    object-fit:cover;
   }
 
   .popup {    
-    position: fixed; //absolute;
-    height: 40%;
-    width: 90%;
-    left: 5%;
-    right: 5%;
-    top:15%;
-    bottom: 15%;
+    position: absolute; //absolute;
+    height: 65%;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%;
     border-radius: 5px;
-    background-color: white;
     border: 1px solid grey;
+    background-color: white;
     text-align: center;
     z-index: 999;
   }
 
-  .whatsapp-image{
-    position: fixed;
-    height: 15%;
-    width: 15%;
-    left: 84%;
-    right: 1%;
-    top: 70%;
-    bottom: 10%;
+
+}
+
+@media screen and (max-width: 720px) {
+  .video {
+    width: 100%;
+    height: 100vh;
+    object-fit:cover;
+  }
+
+  .popup {    
+    position: absolute; //absolute;
+    height: 65%;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%;
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color: white;
+    text-align: center;
     z-index: 999;
-  }
-  .imagen1 {
-    position: absolute;
-    top: 30%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-  
-  .imagen1A {
-    position: absolute;
-    top: 56%;
-    left: 43%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-
-  .imagen2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%;
-    height: auto;
-  }
-
-  .imagen3 {
-    position: absolute;
-    top: 45%;
-    left: 83%;
-    transform: translate(-50%, -50%);
-    width: 20%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-  
-  .imagen3A {
-    position: absolute;
-    top: 50%;
-    left: 83%;
-    transform: translate(-50%, -50%);
-    width: 20%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-  
-  .imagen3B {
-    position: absolute;
-    top: 55%;
-    left: 83%;
-    transform: translate(-50%, -50%);
-    width: 20%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-
-  .video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding-top: 4px;
-  }
-  
-  .video-background__video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-attachment: fixed;
   }
 
   .member-pic {
@@ -497,103 +190,53 @@ table.center {
 
 @media screen and (max-width: 660px) {
 
-  .quote-button-width{
+  .video {
     width: 100%;
-  }
-
-  .popup {    
-    position: fixed; //absolute;
-    height: 60%;
-    width: 90%;
-    left: 5%;
-    right: 5%;
-    top:15%;
-    bottom: 15%;
-    border-radius: 5px;
-    background-color: white;
-    border: 1px solid grey;
-    text-align: center;
-    z-index: 999;
-  }
-
-  .imagen1 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
+    height: 100vh;
+    object-fit:cover;
   }
   
-  .imagen1A {
-    position: absolute;
-    top: 24%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 13%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-
-  .imagen2 {
+  .member-pic {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
+    width: 40%;
     height: auto;
+    color: #ffffff;
   }
 
-  .imagen3 {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 25%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-  
-  .imagen3A {
-    position: absolute;
-    top: 82.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-  
-  .imagen3B {
-    position: absolute;
-    top: 85.3%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
+  .member-name {
+    padding-top: 60px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+
   }
 
-  .video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
+  .member-info1,
+  .member-info2,
+  .member-info3,
+  .member-info4 {
+    margin-left: 20%;  }
+
+    .member-info1 {
+      padding-top: 125px;
+    }
+
+    .logo-footer {
+      position: relative ;
+      width: 50%;
+      height: auto;
+      top: 15%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+  .video {
     width: 100%;
-    height: 100%;
-    padding-top: 15px;
-  }
-  
-  .video-background__video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-attachment: fixed;
+    height: 100vh;
+    object-fit:cover;
   }
 
   .member-pic {
@@ -630,147 +273,4 @@ table.center {
       height: auto;
       top: 15%;
     }
-
-
 }
-
-
-// Pantallas de celular
-@media screen and (max-width: 360px) {
-
-  .quote-button-width{
-    width: 100%;
-  }
-
-  .popup {    
-    position: fixed; //absolute;
-    height: 70%;
-    width: 90%;
-    left: 5%;
-    right: 5%;
-    top:15%;
-    bottom: 15%;
-    border-radius: 5px;
-    background-color: white;
-    border: 1px solid grey;
-    text-align: center;
-    z-index: 999;
-  }
-
-  .imagen1 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 31%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-  
-  .imagen1A {
-    position: absolute;
-    top: 24%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 13%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-
-  .imagen2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: auto;
-  }
-
-  .imagen3 {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 25%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-  
-  .imagen3A {
-    position: absolute;
-    top: 82.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-  
-  .imagen3B {
-    position: absolute;
-    top: 85.3%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    height: auto;
-    color: #ffffff;
-    mix-blend-mode:hard-light;
-  }
-
-  .video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding-top: 17px;
-  }
-  
-  .video-background__video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-attachment: fixed;
-  }
-
-  .member-pic {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%;
-    height: auto;
-    color: #ffffff;
-  }
-
-  .member-name {
-    padding-top: 60px;
-    width: 100%;
-    margin: 0;
-    text-align: center;
-
-  }
-
-  .member-info1,
-  .member-info2,
-  .member-info3,
-  .member-info4 {
-    margin-left: 20%;  }
-
-    .member-info1 {
-      padding-top: 125px;
-    }
-
-  .logo-footer {
-    position: relative ;
-    width: 50%;
-    height: auto;
-    top: 15%;
-  }
-
-}
-

@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CS
 import { config } from "@fortawesome/fontawesome-svg-core";
 import 'tailwindcss/tailwind.css'
 import { ThemeProvider } from "@material-tailwind/react";
+import NavBar from  '../components/navbar'
 
 config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 

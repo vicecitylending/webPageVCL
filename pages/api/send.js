@@ -10,14 +10,14 @@ export default async function(req, res) {
   sgMail.setApiKey(SENDGRID_API_KEY)
   sgClientMail.setApiKey(SENDGRID_API_KEY)
 
-  const { name, address, email, phone, questions, subject } = req.body
+  const { name, lastname, email, phone, subject } = req.body
 
   const content = {
     to: 'vicecitylending@gmail.com',
     from: 'vicecitylending@gmail.com',
     subject: `${subject}`,
     text: name,
-    html: `<p> <b>${name}</b> has requested to subscribe or needs more information.</p>
+    html: `<p> <b>${name}</b> <b>${lastname}</b> has requested to subscribe or needs more information.</p>
     <hr>
   <table border="1">
     <tr>
@@ -25,7 +25,7 @@ export default async function(req, res) {
        <b>Name</b>
       </td>
       <td>
-      <b>Address</b>
+      <b>Lastname</b>
       </td>
       <td>
       <b>Mail</b>
@@ -33,25 +33,19 @@ export default async function(req, res) {
       <td>
       <b>Phone</b>
       </td>
-      <td>
-      <b>Questions</b>
-      </td>
     </tr>
     <tr>
       <td>
         ${name}
       </td>
       <td>
-        ${address}
+        ${lastname}
       </td>
       <td>
         ${email}
       </td>
       <td>
         ${phone}
-      </td>
-      <td>
-        ${questions}
       </td>
     </tr>
 </table>`

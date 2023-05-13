@@ -446,16 +446,16 @@ interface SignUpDocumentData {
    */
   name: prismicT.KeyTextField;
   /**
-   * Address field in *Sign Up*
+   * Lastname field in *Sign Up*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: sign_up.address
+   * - **API ID Path**: sign_up.lastname
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
    *
    */
-  address: prismicT.KeyTextField;
+  lastname: prismicT.KeyTextField;
   /**
    * Email field in *Sign Up*
    *
@@ -478,17 +478,6 @@ interface SignUpDocumentData {
    *
    */
   phone: prismicT.KeyTextField;
-  /**
-   * Questions field in *Sign Up*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: sign_up.questions
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  questions: prismicT.KeyTextField;
 }
 /**
  * Sign Up document from Prismic

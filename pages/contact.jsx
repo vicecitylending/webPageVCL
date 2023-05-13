@@ -14,10 +14,9 @@ const Contact = props => {
     
       const [inputs, setInputs] = useState({
         name: '',
-        address: '',
+        lastname: '',
         email: '',
         phone: '',
-        questions: '',
         subject: `A NEW client has requested information - VICE CITY LENDING`
       })
 
@@ -30,10 +29,9 @@ const Contact = props => {
           })
           setInputs({
             name: '',
-            address: '',
+            lastname: '',
             email: '',
             phone: '',
-            questions: '',
             subject: 'A NEW client has requested information - VICE CITY LENDING'
           })
         } else {
@@ -72,7 +70,7 @@ const Contact = props => {
       }
 
     return <div>
-              <div className="w-full max-w-xs">
+              <div className="w-full h-full">
                 <form className="shadow-md rounded px-8 pt-6 pb-8 mb-4 italic font-roboto">
 
                   {/* Name Field */}
@@ -83,12 +81,12 @@ const Contact = props => {
                     <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Write your name"></input>
                   </div>
 
-                  {/* Address Field */}
+                  {/* Lastname Field */}
                   <div className="mb-6">
-                    <label className="block text-white text-sm font-bold mb-2" htmlFor="address">
-                      {signUpContent.address}
+                    <label className="block text-white text-sm font-bold mb-2" htmlFor="lastname">
+                      {signUpContent.lastname}
                     </label>
-                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="address" type="text" placeholder="Write yor Address"></input>
+                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastname" type="text" placeholder="Write yor Lastname"></input>
                   </div>
 
                   {/* Email Field */}
@@ -105,14 +103,6 @@ const Contact = props => {
                       {signUpContent.phone}
                     </label>
                     <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="Write yor phone"></input>
-                  </div>
-
-                  {/* Questions Field */}
-                  <div className="mb-6">
-                    <label className="block text-white text-sm font-bold mb-2" htmlFor="questions">
-                      {signUpContent.questions}
-                    </label>
-                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="questions" type="text" placeholder="Write your questions"></input>
                   </div>
 
                   {/* Button Field */}

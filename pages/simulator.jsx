@@ -22,7 +22,6 @@ const Simulator = props => {
   }, []);
 
   const { seo, generalInformation, menuContent, members, footerContent, homeContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
-
   
   return<div className="overflow-x-hidden">
 
@@ -41,19 +40,25 @@ const Simulator = props => {
               imageHeight={generalInformation.data.small_logo_height}
             />
 
-          <div className="video-background">
-                <video ref={ vidRef } muted autoPlay loop playsInline control='' className="fixed video-background__video">
+          <div className="">
+                <video ref={ vidRef } muted autoPlay loop playsInline control='' className="fixed">
                   <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
                 </video>
                 <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-500 opacity-70"></div>
           </div>
             <div id="team" className="relative text-center items-center w-screen pt-20">
-              <div className="container text-shadow shadow-white text-white font-semibold text-2xl sm:text-4xl padding">What is your power?</div>
+              <div className="container text-shadow shadow-white text-white font-semibold text-2xl sm:text-4xl padding">What is your purchasing power?</div>
             </div>
 
             <div className="padding relative w-screen pt-30">
               <div className="container justify-between items-center mx-auto"><MortgageCalculator/></div>
             </div>
+
+            <div className="padding  relative w-screen h-1/2 max-w-90vw">
+              <div className="container justify-between items-center mx-auto "><Modal className="" signUpContent={signUpContent}/></div>
+            </div>
+          
+
           </div>
 }
 

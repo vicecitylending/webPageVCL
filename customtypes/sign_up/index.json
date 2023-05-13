@@ -14,9 +14,9 @@
         "type": "Text",
         "config": { "label": "Name", "placeholder": "" }
       },
-      "address": {
+      "lastname": {
         "type": "Text",
-        "config": { "label": "Address", "placeholder": "" }
+        "config": { "label": "Lastname", "placeholder": "" }
       },
       "email": {
         "type": "Text",
@@ -25,10 +25,6 @@
       "phone": {
         "type": "Text",
         "config": { "label": "Phone", "placeholder": "" }
-      },
-      "questions": {
-        "type": "Text",
-        "config": { "label": "Questions", "placeholder": "" }
       }
     }
   }
