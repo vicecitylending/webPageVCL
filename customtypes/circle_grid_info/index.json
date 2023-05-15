@@ -1,0 +1,51 @@
+{
+  "id": "circle_grid_info",
+  "label": "Circle Grid Info",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
+      "text1": {
+        "type": "Text",
+        "config": { "label": "Text1", "placeholder": "" }
+      },
+      "text2": {
+        "type": "Text",
+        "config": { "label": "Text2", "placeholder": "" }
+      },
+      "text3": {
+        "type": "Text",
+        "config": { "label": "Text3", "placeholder": "" }
+      },
+      "text4": {
+        "type": "Text",
+        "config": { "label": "Text4", "placeholder": "" }
+      },
+      "text5": {
+        "type": "Text",
+        "config": { "label": "Text5", "placeholder": "" }
+      },
+      "text6": {
+        "type": "Text",
+        "config": { "label": "Text6", "placeholder": "" }
+      },
+      "text7": {
+        "type": "Text",
+        "config": { "label": "Text7", "placeholder": "" }
+      },
+      "text8": {
+        "type": "Text",
+        "config": { "label": "Text8", "placeholder": "" }
+      },
+      "text_central": {
+        "type": "Text",
+        "config": { "label": "Text Central", "placeholder": "" }
+      },
+      "image": {
+        "type": "Image",
+        "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+      }
+    }
+  }
+}

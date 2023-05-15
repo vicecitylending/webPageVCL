@@ -1,23 +1,27 @@
+const prismic = require("@prismicio/client");
+const sm = require("./slicemachine.config.json");
 
-// const { nextI18NextRewrites } = require('next-i18next/rewrites')
+/** @type {import('next').NextConfig} */
+const nextConfig = async () => {
+  const client = prismic.createClient(sm.repositoryName);
 
-const localeSubpaths = {}
+  const repository = await client.getRepository();
+  const locales = repository.languages.map((lang) => lang.id);
 
-module.exports = {
-  // webpack: (config) => {
-  //   config.node = {
-  //     fs: 'empty'
-  //   }
-  //   return config
-  // },
-  reactStrictMode: false,
-
-  // rewrites: async () => nextI18NextRewrites(localeSubpaths),
-  // publicRuntimeConfig: {
-  //   localeSubpaths,
-  // },
-  images: {
-    domains:['images.prismic.io'],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  },
+  return {
+    reactStrictMode: true,
+    i18n: {
+      // These are all the locales you want to support in
+      // your application
+      locales,
+      // This is the default locale you want to be used when visiting
+      // a non-locale prefixed path e.g. `/hello`
+      defaultLocale: locales[0],
+    },
+    images: {
+      domains: ['images.prismic.io'],
+    },
+  };
 };
+
+module.exports = nextConfig;

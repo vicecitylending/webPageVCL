@@ -22,6 +22,7 @@ const Contact = props => {
 
       const handleResponse = (status, msg) => {
         if (status === 200) {
+          console.log(msg)
           setStatus({
             submitted: true,
             submitting: false,
@@ -35,6 +36,8 @@ const Contact = props => {
             subject: 'A NEW client has requested information - VICE CITY LENDING'
           })
         } else {
+          console.log("ERROR")
+          console.log(msg)
           setStatus({
             info: { error: true, msg: msg }
           })
@@ -70,7 +73,7 @@ const Contact = props => {
       }
 
     return <div>
-              <div className="w-full max-w-xs">
+              <div className="w-full">
                 <form className="shadow-md rounded px-8 pt-6 pb-8 mb-4 italic font-roboto">
 
                   {/* Name Field */}

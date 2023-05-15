@@ -10,20 +10,13 @@ import MortgageCalculator from "../components/calculator";
 import MembersCarousel from "../components/carousel";
 import { PrismicClient } from '../prismic-configuration'
 import Footer from "../components/footer";
+import InfoGrid from "../components/molecules/infogrid"
 
 const Simulator = props => {
 
-  const vidRef = useRef();
-
-  useEffect(() => {
-    vidRef.current.addEventListener('canplaythrough', () => {
-      vidRef.current.play();
-    });
-  }, []);
-
-  const { seo, generalInformation, menuContent, members, footerContent, homeContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
+  const { seo, generalInformation, menuContent, members, footerContent, CirclesGridContent, homeContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
   
-  return<div className="overflow-x-hidden">
+  return<div className="main overflow-x-hidden">
 
           <Head
             title={seo.data.title}
@@ -40,24 +33,33 @@ const Simulator = props => {
               imageHeight={generalInformation.data.small_logo_height}
             />
 
-          <div className="">
-                <video ref={ vidRef } muted autoPlay loop playsInline control='' className="fixed">
+          <div className="fixed w-full">
+                <video muted autoPlay loop playsInline control='' className="video">
                   <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
                 </video>
                 <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-500 opacity-70"></div>
           </div>
-            <div id="team" className="relative text-center items-center w-screen pt-20">
-              <div className="container text-shadow shadow-white text-white font-semibold text-2xl sm:text-4xl padding">What is your purchasing power?</div>
-            </div>
+          <div id="team" className="relative text-center items-center pt-20">
+            <div className="text-shadow shadow-white text-white font-semibold text-2xl sm:text-4xl padding">What is your purchasing power?</div>
+          </div>
 
-            <div className="padding relative w-screen pt-30">
-              <div className="container justify-between items-center mx-auto"><MortgageCalculator/></div>
-            </div>
 
-            <div className="padding  relative w-screen h-1/2 max-w-90vw">
-              <div className="container justify-between items-center mx-auto "><Modal className="" signUpContent={signUpContent}/></div>
+
+          <div className="padding relative pt-30 flex flex-col w-full">
+              <div className="">
+                <MortgageCalculator/>
+              </div>
+              <div className="padding">
+                <div className="justify-between items-center mx-auto ">
+                  <Modal className="" signUpContent={signUpContent}/>
+                </div>
             </div>
+          </div>
+
+
           
+            {/* <InfoGrid image={CirclesGridContent.data.image} infoCircles={CirclesGridContent.data}/> */}
+
 
           </div>
 }
@@ -70,7 +72,8 @@ const getStaticProps = async ({ params }) => {
         menuContent: await getPrismicData('menu'),
         members: await getPrismicCustomTypeData('member'), // Different Function to query multi instances.
         footerContent: await getPrismicData('footer'),
-        signUpContent : await getPrismicData('sign_up')
+        signUpContent : await getPrismicData('sign_up'),
+        CirclesGridContent : await getPrismicData('circle_grid_info')
       }
   }
 }

@@ -6,6 +6,134 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
   [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Circle Grid Info documents */
+interface CircleGridInfoDocumentData {
+  /**
+   * Text1 field in *Circle Grid Info*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: circle_grid_info.text1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text1: prismicT.KeyTextField;
+  /**
+   * Text2 field in *Circle Grid Info*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: circle_grid_info.text2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text2: prismicT.KeyTextField;
+  /**
+   * Text3 field in *Circle Grid Info*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: circle_grid_info.text3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text3: prismicT.KeyTextField;
+  /**
+   * Text4 field in *Circle Grid Info*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: circle_grid_info.text4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text4: prismicT.KeyTextField;
+  /**
+   * Text5 field in *Circle Grid Info*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: circle_grid_info.text5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text5: prismicT.KeyTextField;
+  /**
+   * Text6 field in *Circle Grid Info*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: circle_grid_info.text6
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text6: prismicT.KeyTextField;
+  /**
+   * Text7 field in *Circle Grid Info*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: circle_grid_info.text7
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text7: prismicT.KeyTextField;
+  /**
+   * Text8 field in *Circle Grid Info*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: circle_grid_info.text8
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text8: prismicT.KeyTextField;
+  /**
+   * Text Central field in *Circle Grid Info*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: circle_grid_info.text_central
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text_central: prismicT.KeyTextField;
+  /**
+   * Image field in *Circle Grid Info*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: circle_grid_info.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismicT.ImageField<never>;
+}
+/**
+ * Circle Grid Info document from Prismic
+ *
+ * - **API ID**: `circle_grid_info`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CircleGridInfoDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<CircleGridInfoDocumentData>,
+    "circle_grid_info",
+    Lang
+  >;
 /** Content for Contact documents */
 interface ContactDocumentData {
   /**
@@ -181,6 +309,95 @@ export type HomepageDocument<Lang extends string = string> =
   prismicT.PrismicDocumentWithoutUID<
     Simplify<HomepageDocumentData>,
     "homepage",
+    Lang
+  >;
+/** Content for Meet Team documents */
+interface MeetTeamDocumentData {
+  /**
+   * Title field in *Meet Team*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: meet_team.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismicT.KeyTextField;
+  /**
+   * Subtitle field in *Meet Team*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: meet_team.subtitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  subtitle: prismicT.KeyTextField;
+  /**
+   * Text1 field in *Meet Team*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: meet_team.text1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text1: prismicT.KeyTextField;
+  /**
+   * Text2 field in *Meet Team*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: meet_team.text2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text2: prismicT.KeyTextField;
+  /**
+   * Text3 field in *Meet Team*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: meet_team.text3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text3: prismicT.KeyTextField;
+  /**
+   * Slice Zone field in *Meet Team*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: meet_team.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismicT.SliceZone<MeetTeamDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Meet Team → Slice Zone*
+ *
+ */
+type MeetTeamDocumentDataSlicesSlice = never;
+/**
+ * Meet Team document from Prismic
+ *
+ * - **API ID**: `meet_team`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type MeetTeamDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<MeetTeamDocumentData>,
+    "meet_team",
     Lang
   >;
 /** Content for Member documents */
@@ -495,10 +712,12 @@ export type SignUpDocument<Lang extends string = string> =
     Lang
   >;
 export type AllDocumentTypes =
+  | CircleGridInfoDocument
   | ContactDocument
   | FooterDocument
   | GeneralInformationDocument
   | HomepageDocument
+  | MeetTeamDocument
   | MemberDocument
   | MenuDocument
   | SeoDocument
@@ -512,6 +731,8 @@ declare module "@prismicio/client" {
   }
   namespace Content {
     export type {
+      CircleGridInfoDocumentData,
+      CircleGridInfoDocument,
       ContactDocumentData,
       ContactDocument,
       FooterDocumentData,
@@ -520,6 +741,9 @@ declare module "@prismicio/client" {
       GeneralInformationDocument,
       HomepageDocumentData,
       HomepageDocument,
+      MeetTeamDocumentData,
+      MeetTeamDocumentDataSlicesSlice,
+      MeetTeamDocument,
       MemberDocumentData,
       MemberDocumentDataSlicesSlice,
       MemberDocument,

@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import Image from 'next/image'
-import { RichText } from 'prismic-reactjs';
 import Head from "../components/head";
 import NavBar from "../components/navbar";
 import Contact from "./contact";
@@ -14,16 +13,7 @@ import Footer from "../components/footer";
 
 const Homepage = props => {
 
-
-  // const vidRef = useRef();
-
-  // useEffect(() => {
-  //   vidRef.current.addEventListener('canplaythrough', () => {
-  //     vidRef.current.play();
-  //   });
-  // }, []);
-
-  const { seo, generalInformation, menuContent, members, footerContent, homeContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
+  const { seo, generalInformation, menuContent, members, footerContent, meetTeamContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
 
   return<div className="main overflow-x-hidden">
           <Head
@@ -38,7 +28,6 @@ const Homepage = props => {
               logo={generalInformation.data.small_logo.url}
               imageWidth={generalInformation.data.small_logo_width}
               imageHeight={generalInformation.data.small_logo_height}
-              // phone={contactContent.data.number_field}
             />
 
           {/* Background */}
@@ -49,51 +38,73 @@ const Homepage = props => {
             <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-500 opacity-70"></div>
           </div>
 
-          <div className="flex flex-col w-screen">
+          <div id="home" className="flex flex-col w-full relative">
+            <div className="w-full h-screen place-items-center justify-items-stretch">
+              <div id="start" className="w-full flex flex-col md:flex-row text-white place-items-center justify-items-stretch translate-y-56">
+                  <div className="basis-1/3 flex flex-col items-center text-center">
+                    <div className="font-semibold text-2xl sm:text-4xl">WE WORK</div>
+                    <div className="font-semibold text-2xl sm:text-4xl">24/7</div>
+                  </div>
+                  <div className="basis-1/3 flex items-center justify-center">
+                    <img className="logo-size-m" src={generalInformation.data.small_logo.url} alt="Logo Vice City Lending" />
+                  </div>
+                  <div className="basis-1/3 flex flex-col items-center justify-center text-center">
+                    <div className="text-xs sm:text-xl">POWERED BY</div>
+                    <div className="text-xl sm:text-4xl font-semibold">DADELAND</div>
+                    <div className="text-xl sm:text-4xl">DIFFERENCE</div>
+                </div>
+                <div id="team"></div>
+              </div>
+            </div>
             <div>
-              <div className="pt-7 sm:pt-8 absolute flex flex-col md:flex-row w-full h-full place-items-center justify-items-stretch text-white">
-                <div className="basis-1/3 flex flex-col items-center justify-center text-center">
-                  <div className="font-semibold text-2xl sm:text-4xl">WE WORK</div>
-                  <div className="font-semibold text-2xl sm:text-4xl">24/7</div>
-                </div>
-                <div className="basis-1/3 flex items-center justify-center">
-                  <img className="logo-size-m" src={generalInformation.data.small_logo.url} alt="Logo Vice City Lending" />
-                </div>
-                <div class="basis-1/3 flex flex-col items-center justify-center text-center">
-                  <div className="text-xs sm:text-xl">POWERED BY</div>
-                  <div className="text-xl sm:text-4xl font-semibold">DADELAND</div>
-                  <div className="text-xl sm:text-4xl">DIFFERENCE</div>
+              <div className="w-full">
+                <div className="w-full h-full flex-col text-center  items-center justify-center">
+                  <div className="text-center items-center w-full">
+                    <div className="w-full text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-2xl sm:text-4xl">{meetTeamContent.data.subtitle}</div>
+                  </div>
+                  <div>
+                    <div className="text-center items-center w-full">
+                      <div className="padding w-full text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-l sm:text-2xl">{meetTeamContent.data.text1}</div>
+                    </div>
+                  </div>
+                  <div className="text-center items-center w-full sm:mt-10 mt-10">
+                    <div className="w-full text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-2xl sm:text-4xl">{meetTeamContent.data.title}</div>
+                  </div>
+                  <div className="w-full sm:mt-10 -mt-16">
+                    <MembersCarousel members={members}/>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="">
-              <div id="team" className="h-screen mt-40 text-center items-center padding">
-                <div className="text-center items-center">
-                  <div className="relative text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-2xl sm:text-4xl">Team with 10+ years of combined experience in the industry.</div>
-                </div>
+            <div>
+              <div className="text-center items-center w-full">
+                <div className="padding w-full text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
               </div>
             </div>
-            <div id ="sign-up" className="relative h-screen pt-10 w-screen">
+            <div>
+              <div className="text-center items-center w-full">
+                <div className="padding w-full text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
+              </div>
+            </div>
+            <div>
+              <Contact signUpContent={signUpContent.data}/>
+            </div>
+          </div>
+
+                      {/* <div id ="sign-up" className="relative h-screen pt-10 w-screen">
               <div className="flex flex-col text-center items-center text-white text-xl italic font-roboto font-bold ">{signUpContent.data.title}</div>
               <div className="md:flex justify-center p-8">
                 <div className="text-white text-3xl italic font-roboto pr-20 pb-6 "></div>
                 <Contact signUpContent={signUpContent.data}/>
               </div>
             </div>
-            <div className="relative"> 
-              <MembersCarousel className="" members={members}/>
-            </div>
-            <div className="footer relative flex fixed inset-x-0 font-roboto w-full z-50"><Footer content={footerContent.data}/></div>
-
-          </div>
+           
+           {/* <div className="flex inset-x-0 font-roboto w-full">
+             <Footer content={footerContent.data}/>
+           </div> */}
           {/* Landing */}
 
-            {/* <div className="absolute container">
-              <div id="otro-componente" className="relative text-center items-center w-screen pt-20">
-                <div className="container text-shadow shadow-white text-white font-semibold text-2xl sm:text-4xl padding">Este es otro componente que aparece debajo del componente "team".</div>
-              </div>
-            </div> */}
 
 
           {/* <div id="" className="">
@@ -114,7 +125,7 @@ const getStaticProps = async ({ params }) => {
         menuContent: await getPrismicData('menu'),
         members: await getPrismicCustomTypeData('member'), // Different Function to query multi instances.
         footerContent: await getPrismicData('footer'),
-        // homeContent: await getPrismicData('homepage'),
+        meetTeamContent: await getPrismicData('meet_team'),
         // WhoWeAreContent: await getPrismicData('who_we_are'),
         // OurServicesContent: await getPrismicData('our_services'),
         // FAQ: await getPrismicData('faq'), 

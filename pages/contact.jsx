@@ -22,6 +22,8 @@ const Contact = props => {
 
       const handleResponse = (status, msg) => {
         if (status === 200) {
+          console.log("EXITO")
+          console.log(msg)
           setStatus({
             submitted: true,
             submitting: false,
@@ -35,6 +37,8 @@ const Contact = props => {
             subject: 'A NEW client has requested information - VICE CITY LENDING'
           })
         } else {
+          console.log("ERROR")
+          console.log(msg)
           setStatus({
             info: { error: true, msg: msg }
           })

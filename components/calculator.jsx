@@ -124,288 +124,284 @@ function MortgageCalculator() {
     }
 
   return (
-    <div className="bg-white rounded-lg">
-    <div className="flex flex-col">
-      <div className="padding flex justify-between">
-        <div>
-          <label className="text-lg font-bold">Home Value</label>
+    <div className="padding bg-white rounded-lg">
+      <div className="flex flex-col">
+        <div className="padding flex justify-between">
+          <div>
+            <label className="text-lg font-bold">Home Value</label>
+          </div>
+          <div>
+            <label className="text-lg">${homeValue.toLocaleString("en")}</label>
+          </div>
         </div>
-        <div>
-          <label className="text-lg">${homeValue.toLocaleString("en")}</label>
-        </div>
-      </div>
-      <div className="mb-8 w-full px-4">
-        <Slider
-          min={0}
-          max={600000}
-          step={2500}
-          onChange={handleHomeValueChange}
-          className="w-full"
-          trackStyle={{ backgroundColor: 'purple', height: 5 }}
-          handleStyle={{
-            transition: "box-shadow 0.7s",
-            boxShadow: "",
-            backgroundColor: 'purple',
-            height: 30,
-            width: 30,
-            marginTop: -13,
-          }}
-        />
-        <div className="flex justify-between text-sm">
-          {/* <span>$0</span>
-          <span>$300,000</span> */}
-        </div>
-      </div>
-    </div>
-    <div className="flex flex-col">
-      <div className="padding flex justify-between">
-        <div>
-          <label className="text-lg font-bold">Down Payment</label>
-        </div>
-        <div>
-          <label className="text-lg">${downPayment.toLocaleString("en")}</label>
+        <div className="mb-8 w-full px-4">
+          <Slider
+            min={0}
+            max={600000}
+            step={2500}
+            onChange={handleHomeValueChange}
+            className="w-full"
+            trackStyle={{ backgroundColor: 'purple', height: 5 }}
+            handleStyle={{
+              transition: "box-shadow 0.7s",
+              boxShadow: "",
+              backgroundColor: 'purple',
+              height: 30,
+              width: 30,
+              marginTop: -13,
+            }}
+          />
+          <div className="flex justify-between text-sm">
+            {/* <span>$0</span>
+            <span>$300,000</span> */}
+          </div>
         </div>
       </div>
-      <div className="w-full px-4">
-        <Slider
-          min={0}
-          max={600000}
-          step={2500}
-          onChange={handleDownPaymentValueChange}
-          className="w-full"
-          trackStyle={{ backgroundColor: 'purple', height: 5 }}
-          handleStyle={{
-            transition: "box-shadow 0.7s",
-            boxShadow: "",
-            backgroundColor: 'purple',
-            height: 30,
-            width: 30,
-            marginTop: -13,
-          }}
-        />
-        <div className="flex justify-between text-sm">
-          {/* <span>$0</span>
-          <span>$300,000</span> */}
+      <div className="flex flex-col">
+        <div className="padding flex justify-between">
+          <div>
+            <label className="text-lg font-bold">Down Payment</label>
+          </div>
+          <div>
+            <label className="text-lg">${downPayment.toLocaleString("en")}</label>
+          </div>
+        </div>
+        <div className="w-full px-4">
+          <Slider
+            min={0}
+            max={600000}
+            step={2500}
+            onChange={handleDownPaymentValueChange}
+            className="w-full"
+            trackStyle={{ backgroundColor: 'purple', height: 5 }}
+            handleStyle={{
+              transition: "box-shadow 0.7s",
+              boxShadow: "",
+              backgroundColor: 'purple',
+              height: 30,
+              width: 30,
+              marginTop: -13,
+            }}
+          />
+          <div className="flex justify-between text-sm">
+            {/* <span>$0</span>
+            <span>$300,000</span> */}
+          </div>
         </div>
       </div>
-    </div>
-  <div className="flex items-center justify-center mt-8 mb-10 text-purple-500">
-    <label className="text-lg font-bold flex items-center">
-      Loan Amount: ${loanAmount.toLocaleString("en")}
-    </label>
-  </div>
-    <div className="flex flex-col">
-      <div className="padding flex justify-between">
-        <div>
-          <label className="text-lg font-bold">Interest Rate</label>
+      <div className="flex items-center justify-center mt-8 mb-10 text-purple-500">
+        <label className="text-lg font-bold flex items-center">
+          Loan Amount: ${loanAmount.toLocaleString("en")}
+        </label>
+      </div>
+      <div className="flex flex-col">
+        <div className="padding flex justify-between">
+          <div>
+            <label className="text-lg font-bold">Interest Rate</label>
+          </div>
+          <div>
+            <label className="text-lg">{interestRate}%</label>
+          </div>
         </div>
-        <div>
-          <label className="text-lg">{interestRate}%</label>
+        <div className="mb-8 w-full px-4">
+          <Slider
+            min={0}
+            max={12.00}
+            step={0.100}
+            onChange={handleInterestRateValueChange}
+            className="w-full"
+            trackStyle={{ backgroundColor: 'purple', height: 5 }}
+            handleStyle={{
+              transition: "box-shadow 0.7s",
+              boxShadow: "",
+              backgroundColor: 'purple',
+              height: 30,
+              width: 30,
+              marginTop: -13,
+            }}
+          />
+          <div className="flex justify-between text-sm">
+            {/* <span>0%</span>
+            <span>12%</span> */}
+          </div>
         </div>
       </div>
-      <div className="mb-8 w-full px-4">
-        <Slider
-          min={0}
-          max={12.00}
-          step={0.100}
-          onChange={handleInterestRateValueChange}
-          className="w-full"
-          trackStyle={{ backgroundColor: 'purple', height: 5 }}
-          handleStyle={{
-            transition: "box-shadow 0.7s",
-            boxShadow: "",
-            backgroundColor: 'purple',
-            height: 30,
-            width: 30,
-            marginTop: -13,
-          }}
-        />
-        <div className="flex justify-between text-sm">
-          {/* <span>0%</span>
-          <span>12%</span> */}
+      <div className="flex flex-col">
+        <div className="padding flex justify-between">
+          <div>
+            <label className="text-lg font-bold">Loan Duration</label>
+          </div>
+          <div>
+            <label className="text-lg">{loanDuration.toLocaleString("en")} Years</label>
+          </div>
+        </div>
+        <div className="w-full px-4">
+          <Slider
+            min={0}
+            max={30}
+            step={5}
+            onChange={handleLoanDurationChange}
+            className="w-full"
+            trackStyle={{ backgroundColor: 'purple', height: 5 }}
+            handleStyle={{
+              transition: "box-shadow 0.7s",
+              boxShadow: "",
+              backgroundColor: 'purple',
+              height: 30,
+              width: 30,
+              marginTop: -13,
+            }}
+          />
+          <div className="flex justify-between text-sm">
+            {/* <span>0</span>
+            <span>30 Years</span> */}
+          </div>
         </div>
       </div>
-    </div>
-    <div className="flex flex-col">
-      <div className="padding flex justify-between">
-        <div>
-          <label className="text-lg font-bold">Loan Duration</label>
+      <div className="flex flex-col">
+        <div className="padding flex justify-between">
+          <div>
+            <label className="text-lg font-bold">Property Tax</label>
+          </div>
+          <div>
+            <label className="text-lg">${propertyTaxValue}</label>
+          </div>
         </div>
-        <div>
-          <label className="text-lg">{loanDuration.toLocaleString("en")} Years</label>
-        </div>
-      </div>
-      <div className="w-full px-4">
-        <Slider
-          min={0}
-          max={30}
-          step={5}
-          onChange={handleLoanDurationChange}
-          className="w-full"
-          trackStyle={{ backgroundColor: 'purple', height: 5 }}
-          handleStyle={{
-            transition: "box-shadow 0.7s",
-            boxShadow: "",
-            backgroundColor: 'purple',
-            height: 30,
-            width: 30,
-            marginTop: -13,
-          }}
-        />
-        <div className="flex justify-between text-sm">
-          {/* <span>0</span>
-          <span>30 Years</span> */}
-        </div>
-      </div>
-    </div>
-    <div className="flex flex-col">
-      <div className="padding flex justify-between">
-        <div>
-          <label className="text-lg font-bold">Property Tax</label>
-        </div>
-        <div>
-          <label className="text-lg">${propertyTaxValue}</label>
+        <div className="w-full px-4">
+          <Slider
+            min={0}
+            max={10000}
+            step={25}
+            onChange={handlePropertyTaxChange}
+            className="w-full"
+            trackStyle={{ backgroundColor: 'purple', height: 5 }}
+            handleStyle={{
+              transition: "box-shadow 0.7s",
+              boxShadow: "",
+              backgroundColor: 'purple',
+              height: 30,
+              width: 30,
+              marginTop: -13,
+            }}
+          />
+          <div className="flex justify-between text-sm">
+            {/* <span>0</span>
+            <span>30 Years</span> */}
+          </div>
         </div>
       </div>
-      <div className="w-full px-4">
-        <Slider
-          min={0}
-          max={10000}
-          step={25}
-          onChange={handlePropertyTaxChange}
-          className="w-full"
-          trackStyle={{ backgroundColor: 'purple', height: 5 }}
-          handleStyle={{
-            transition: "box-shadow 0.7s",
-            boxShadow: "",
-            backgroundColor: 'purple',
-            height: 30,
-            width: 30,
-            marginTop: -13,
-          }}
-        />
-        <div className="flex justify-between text-sm">
-          {/* <span>0</span>
-          <span>30 Years</span> */}
+      <div className="flex flex-col">
+        <div className="padding flex justify-between">
+          <div>
+            <label className="text-lg font-bold">Home Insurance</label>
+          </div>
+          <div>
+            <label className="text-lg">${homeInsuranceValue}</label>
+          </div>
+        </div>
+        <div className="w-full px-4">
+          <Slider
+            min={0}
+            max={10000}
+            step={25}
+            onChange={handleHomeInsuranceValueChange}
+            className="w-full"
+            trackStyle={{ backgroundColor: 'purple', height: 5 }}
+            handleStyle={{
+              transition: "box-shadow 0.7s",
+              boxShadow: "",
+              backgroundColor: 'purple',
+              height: 30,
+              width: 30,
+              marginTop: -13,
+            }}
+          />
+          <div className="flex justify-between text-sm">
+            {/* <span>0</span>
+            <span>30 Years</span> */}
+          </div>
         </div>
       </div>
-    </div>
-    <div className="flex flex-col">
-      <div className="padding flex justify-between">
-        <div>
-          <label className="text-lg font-bold">Home Insurance</label>
+      <div className="flex flex-col">
+        <div className="padding flex justify-between">
+          <div>
+            <label className="text-lg font-bold">Private Mortgage Insurance (%)</label>
+          </div>
+          <div>
+            <label className="text-lg">${privateMortgageInsuranceValue}</label>
+          </div>
         </div>
-        <div>
-          <label className="text-lg">${homeInsuranceValue}</label>
-        </div>
-      </div>
-      <div className="w-full px-4">
-        <Slider
-          min={0}
-          max={10000}
-          step={25}
-          onChange={handleHomeInsuranceValueChange}
-          className="w-full"
-          trackStyle={{ backgroundColor: 'purple', height: 5 }}
-          handleStyle={{
-            transition: "box-shadow 0.7s",
-            boxShadow: "",
-            backgroundColor: 'purple',
-            height: 30,
-            width: 30,
-            marginTop: -13,
-          }}
-        />
-        <div className="flex justify-between text-sm">
-          {/* <span>0</span>
-          <span>30 Years</span> */}
-        </div>
-      </div>
-    </div>
-    <div className="flex flex-col">
-      <div className="padding flex justify-between">
-        <div>
-          <label className="text-lg font-bold">Private Mortgage Insurance (%)</label>
-        </div>
-        <div>
-          <label className="text-lg">${privateMortgageInsuranceValue}</label>
+        <div className="w-full px-4">
+          <Slider
+            min={0}
+            max={10000}
+            step={25}
+            onChange={handlePrivateMortgageInsuranceValueChange}
+            className="w-full"
+            trackStyle={{ backgroundColor: 'purple', height: 5 }}
+            handleStyle={{
+              transition: "box-shadow 0.7s",
+              boxShadow: "",
+              backgroundColor: 'purple',
+              height: 30,
+              width: 30,
+              marginTop: -13,
+            }}
+          />
+          <div className="flex justify-between text-sm">
+            {/* <span>0</span>
+            <span>30 Years</span> */}
+          </div>
         </div>
       </div>
-      <div className="w-full px-4">
-        <Slider
-          min={0}
-          max={10000}
-          step={25}
-          onChange={handlePrivateMortgageInsuranceValueChange}
-          className="w-full"
-          trackStyle={{ backgroundColor: 'purple', height: 5 }}
-          handleStyle={{
-            transition: "box-shadow 0.7s",
-            boxShadow: "",
-            backgroundColor: 'purple',
-            height: 30,
-            width: 30,
-            marginTop: -13,
-          }}
-        />
-        <div className="flex justify-between text-sm">
-          {/* <span>0</span>
-          <span>30 Years</span> */}
+      <div className="flex flex-col">
+        <div className="padding flex justify-between">
+          <div>
+            <label className="text-lg font-bold">Homeowners Association HOA</label>
+          </div>
+          <div>
+            <label className="text-lg">${homeownersAssociationValue}</label>
+          </div>
+        </div>
+        <div className="w-full px-4">
+          <Slider
+            min={0}
+            max={10000}
+            step={25}
+            onChange={handleHomeownersAssociationValueChange}
+            className="w-full"
+            trackStyle={{ backgroundColor: 'purple', height: 5 }}
+            handleStyle={{
+              transition: "box-shadow 0.7s",
+              boxShadow: "",
+              backgroundColor: 'purple',
+              height: 30,
+              width: 30,
+              marginTop: -13,
+            }}
+          />
+          <div className="flex justify-between text-sm">
+            {/* <span>0</span>
+            <span>30 Years</span> */}
+          </div>
         </div>
       </div>
-    </div>
-    <div className="flex flex-col">
-      <div className="padding flex justify-between">
-        <div>
-          <label className="text-lg font-bold">Homeowners Association HOA</label>
-        </div>
-        <div>
-          <label className="text-lg">${homeownersAssociationValue}</label>
-        </div>
+      <div className="flex items-center justify-center mt-6 text-purple-500">
+        <label className="text-lg font-bold flex items-center">
+          Monthly payment: ${parseFloat(monthlyPayment.toFixed(2)).toLocaleString("en")}
+        </label>
       </div>
-      <div className="w-full px-4">
-        <Slider
-          min={0}
-          max={10000}
-          step={25}
-          onChange={handleHomeownersAssociationValueChange}
-          className="w-full"
-          trackStyle={{ backgroundColor: 'purple', height: 5 }}
-          handleStyle={{
-            transition: "box-shadow 0.7s",
-            boxShadow: "",
-            backgroundColor: 'purple',
-            height: 30,
-            width: 30,
-            marginTop: -13,
-          }}
-        />
-        <div className="flex justify-between text-sm">
-          {/* <span>0</span>
-          <span>30 Years</span> */}
-        </div>
+      <div className="flex items-center justify-center mt-6 text-purple-500">
+        <label className="text-lg font-bold flex items-center">
+          Total Interest Paid: ${parseFloat(totalInterestPaid.toFixed(2)).toLocaleString("en")}
+        </label>
       </div>
-    </div>
-  <div className="flex items-center justify-center mt-6 text-purple-500">
-    <label className="text-lg font-bold flex items-center">
-      Monthly payment: ${parseFloat(monthlyPayment.toFixed(2)).toLocaleString("en")}
-    </label>
-  </div>
-  <div className="flex items-center justify-center mt-6 text-purple-500">
-    <label className="text-lg font-bold flex items-center">
-      Total Interest Paid: ${parseFloat(totalInterestPaid.toFixed(2)).toLocaleString("en")}
-    </label>
-  </div>
 
-  <div className="flex items-center justify-center mt-8 mb-10 text-purple-500">
-  <label className="text-lg font-bold flex items-center">
-    Total {loanDuration*12} Payments: ${totalPayment.toLocaleString("en")}
-  </label>
-  </div>
-    <div className="flex flex-col items-center mt-10">
- 
-    </div>
-
+      <div className="flex items-center justify-center mt-8 mb-10 text-purple-500">
+        <label className="text-lg font-bold flex items-center">
+          Total {loanDuration*12} Payments: ${totalPayment.toLocaleString("en")}
+        </label>
+      </div>
   </div>
   );
 }

@@ -1,5 +1,5 @@
 import { Carousel } from "@material-tailwind/react";
-import MemberCard from "./member";
+import MemberCard from "./atoms/member";
 
 const MembersCarousel = (props) => {
   const { members } = props;
@@ -23,8 +23,7 @@ const MembersCarousel = (props) => {
 
   return (
     <Carousel
-      className="rounded-xl no-shadow"
-      style={{ height: "350px"}}
+      className="relative rounded-xl"
       autoplay={true} // activar el autoplay
       // autoplayHoverPause={false} // continuar el autoplay aunque el mouse esté encima
       loop={true} // hacer el carrusel infinito
