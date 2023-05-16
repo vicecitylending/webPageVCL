@@ -5,7 +5,7 @@
 - crear un token de acceso privado y meterlo en accessToken
 - importar y llamar objeto PrismicClient para hacer las queries a prismic
 
-- este sitio usa MAILCHIMP
+- este sitio usa SENDGRID
 
 La ultima versión de Prismic es necesario usar Slice Machine. Sirve para crear los tipos de datos. Se pushean y se alimentan los datos de prismic.io
 
