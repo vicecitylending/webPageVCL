@@ -39,8 +39,7 @@ const Modal = ({ Texto1, Texto2, signUpContent }) => {
                 />
               </svg>
             </button>
-            <h2 className="text-2xl font-semibold mb-4">Texto1</h2>
-            <p className="text-lg mb-4">Texto2</p>
+            <h2 className="text-white -mt-9 text-xl font-semibold ">Let's connect to find out what is your purchasing power!</h2>
             {/* <input
               className="border rounded-lg px-4 py-2 w-full mb-4"
               type="text"
@@ -48,16 +47,16 @@ const Modal = ({ Texto1, Texto2, signUpContent }) => {
               value={inputValue}
               onChange={handleChange}
             /> */}
-            <div className="container h-full w-full">
+            <div className="h-full w-full">
               <Contact signUpContent={signUpContent.data}></Contact>
             </div>
-            <button
+            {/* <button
               className="bg-orange-400 text-white active:bg-orange-500 font-bold uppercase text-xl px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button"
               onClick={closePopup}
             >
               SAVE2
-            </button>
+            </button> */}
           </div>
         </div>
       )}
