@@ -7,7 +7,7 @@ const MemberCard = props => {
         <div className="flex md:flex-row flex-col items-center justify-center">
             <div className="basis 1/4"></div>
             <div className="flex basis-1/4 items-center justify-center">
-                <img className="scale-50 sm:scale-100 -translate-y-8" src={imageSrc} alt={`${name} ${lastName}`} />
+                <img className="scale-50 sm:scale-90 -translate-y-8" src={imageSrc} alt={`${name} ${lastName}`} />
             </div>
             <div className="sm:mb-0 -mb-20 flex basis-1/4 items-center justify-center sm:-translate-y-11 -translate-y-32">
                 <div className=" flex-col items-center justify-center">

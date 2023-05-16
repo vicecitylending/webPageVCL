@@ -40,7 +40,7 @@ const Homepage = props => {
 
           <div id="home" className="flex flex-col w-full relative">
             <div className="w-full h-screen place-items-center justify-items-stretch">
-              <div id="start" className="w-full flex flex-col md:flex-row text-white place-items-center justify-items-stretch translate-y-56">
+              <div id="start" className="w-full flex flex-col md:flex-row text-white place-items-center justify-items-stretch sm:translate-y-64 translate-y-44">
                   <div className="basis-1/3 flex flex-col items-center text-center">
                     <div className="font-semibold text-2xl sm:text-4xl">WE WORK</div>
                     <div className="font-semibold text-2xl sm:text-4xl">24/7</div>
