@@ -63,26 +63,17 @@ export default async function(req, res) {
     <p> And remember, We work 24/7 for you! </p>
     `
   }
+
   // Send message to Company (VCL) and Client
   try {
     console.log("Sending VCL and Client Mails with SendGrid ...")
     await sgMail.send(content)
     await sgClientMail.send(ClientContent)
     res.status(200).send('VCL & Client Message sent successfully.')
+
   } catch (error) {
     console.log("ERROR sending mails with SendGrid")
     console.log('ERROR', error)
     res.status(400).send('VCL and Client Messages not sent.')
   }
-
-  // Send message to Client
-  // try {
-  //   console.log("Sending Client Mail with SendGrid ...")
-  //   await sgClientMail.send(ClientContent)
-  //   res.status(200).send('Client Message sent successfully.')
-  // } catch (error) {
-  //   console.log("ERROR sending Client mail with SendGrid")
-  //   console.log('ERROR', error)
-  //   res.status(400).send('Client Message not sent.')
-  // }
 }

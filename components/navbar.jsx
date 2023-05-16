@@ -73,9 +73,9 @@ const NavBar = props => {
   return (
     <nav className="fixed flex inset-x-0 px-2 sm:px-4 md:py-1 bg-black font-roboto w-full z-50">
       <div className="flex translate-y-11">
-        <a href="#home" className="md:hidden">
+        <Link href="/#home" className="md:hidden">
           <Image className="" src={logo} width={imageWidth} height={imageHeight}/>
-        </a>
+        </Link>
       </div>
     <div className="padding container flex flex-wrap md:justify-center justify-end items-start mx-auto">
       <button  onClick={menuFlip} type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-3xl md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">

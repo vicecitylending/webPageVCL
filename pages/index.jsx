@@ -53,14 +53,13 @@ const Homepage = props => {
                     <div className="text-xl sm:text-4xl font-semibold">DADELAND</div>
                     <div className="text-xl sm:text-4xl">DIFFERENCE</div>
                 </div>
-                <div id="team"></div>
               </div>
             </div>
             <div>
-              <div className="w-full">
-                <div className="w-full h-full flex-col text-center  items-center justify-center">
+              <div id="team"  className="w-full h-screen">
+                <div className="w-full  flex-col text-center  items-center justify-center">
                   <div className="text-center items-center w-full">
-                    <div className="w-full text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-2xl sm:text-4xl">{meetTeamContent.data.subtitle}</div>
+                    <div  className="w-full text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-2xl sm:text-4xl">{meetTeamContent.data.subtitle}</div>
                   </div>
                   <div>
                     <div className="text-center items-center w-full">
@@ -87,9 +86,24 @@ const Homepage = props => {
                 <div className="padding w-full text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
               </div>
             </div>
-            <div>
-              <Contact signUpContent={signUpContent.data}/>
+
+            <div  className="pt-10 w-screen items-center sm:translate-x-80">
+              <div className="flex sm:flex-row flex-col  font-bold py-9">
+                <div className="padding sm:translate-x-0 translate-x-5 items-center text-white text-4xl italic font-roboto sm:w-1/4 w-full">
+                  <div id ="apply" className="">{signUpContent.data.title}</div>
+                <div className="text-white text-3xl italic font-roboto pb-6 ">{signUpContent.data.subtitle}</div>
+              </div>
+              <div className="sm:w-1/4 w-full">
+                <Contact signUpContent={signUpContent.data}/>
+              </div>
+              </div>
+
             </div>
+
+{/* 
+            <div id="contact" >
+              <Contact signUpContent={signUpContent.data}/>
+            </div> */}
           </div>
 
                       {/* <div id ="sign-up" className="relative h-screen pt-10 w-screen">
@@ -103,7 +117,7 @@ const Homepage = props => {
            {/* <div className="flex inset-x-0 font-roboto w-full">
              <Footer content={footerContent.data}/>
            </div> */}
-          {/* Landing */}
+  
 
 
 

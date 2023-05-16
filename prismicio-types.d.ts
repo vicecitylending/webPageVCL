@@ -652,6 +652,17 @@ interface SignUpDocumentData {
    */
   title: prismicT.KeyTextField;
   /**
+   * Subtitle field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.subtitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  subtitle: prismicT.KeyTextField;
+  /**
    * Name field in *Sign Up*
    *
    * - **Field Type**: Text

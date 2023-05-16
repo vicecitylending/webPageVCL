@@ -10,6 +10,10 @@
         "type": "Text",
         "config": { "label": "Title", "placeholder": "" }
       },
+      "subtitle": {
+        "type": "Text",
+        "config": { "label": "Subtitle", "placeholder": "" }
+      },
       "name": {
         "type": "Text",
         "config": { "label": "Name", "placeholder": "" }

@@ -40,17 +40,15 @@ const Simulator = props => {
                 <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-500 opacity-70"></div>
           </div>
           <div id="team" className="relative text-center items-center pt-20">
-            <div className="text-shadow shadow-white text-white font-semibold text-2xl sm:text-4xl padding">What is your purchasing power?</div>
+            <div className="text-shadow shadow-white text-white font-semibold text-2xl sm:text-4xl padding">Mortgage Calculator</div>
           </div>
-
-
 
           <div className="padding relative pt-30 flex flex-col w-full">
               <div className="">
                 <MortgageCalculator/>
               </div>
-              <div className="padding">
-                <div className="justify-between items-center mx-auto ">
+              <div className="padding w-full">
+                <div className="justify-center items-center mx-auto ">
                   <Modal className="" signUpContent={signUpContent}/>
                 </div>
             </div>
