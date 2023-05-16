@@ -16,10 +16,13 @@ function MyApp({ Component, pageProps }) {
     )
   }
 
-
-MyApp.getServerSideProps = async (appContext) => {
-  const appProps = await App.getServerSideProps(appContext)
-  return { ...appProps }
+MyApp.getInitialProps = async ({Component, appContext}) => {
+  let pageProps = {};
+  if (Component.getInitialProps) {
+    pageProps = Component.getInitialProps(appContext);
+  }
+  
+  return { pageProps };
 }
 
 export default appWithTranslation(MyApp)

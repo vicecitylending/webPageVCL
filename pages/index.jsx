@@ -14,7 +14,7 @@ import Footer from "../components/footer";
 const Homepage = props => {
 
   const { seo, generalInformation, menuContent, members, footerContent, meetTeamContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
-
+  
   return<div className="main overflow-x-hidden">
           <Head
             title={seo.data.title}
