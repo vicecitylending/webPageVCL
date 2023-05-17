@@ -10,7 +10,8 @@ module.exports = withMT({
   theme: {
     extend: {
       fontFamily: {
-        'roboto': ['Roboto', 'sans-serif']
+        'franklin': ['Franklin', 'sans-serif']
+
       },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',

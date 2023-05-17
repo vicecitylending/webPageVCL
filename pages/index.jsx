@@ -3,9 +3,7 @@ import Image from 'next/image'
 import Head from "../components/head";
 import NavBar from "../components/navbar";
 import Contact from "./contact";
-import Modal from "../components/Modal";
 import Prismic from 'prismic-javascript'
-import MortgageCalculator from "../components/calculator";
 import MembersCarousel from "../components/carousel";
 import { PrismicClient } from '../prismic-configuration'
 import Footer from "../components/footer";
@@ -14,7 +12,7 @@ import Footer from "../components/footer";
 const Homepage = props => {
 
   const { seo, generalInformation, menuContent, members, footerContent, meetTeamContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
-  
+
   return<div className="main overflow-x-hidden">
           <Head
             title={seo.data.title}
@@ -46,7 +44,13 @@ const Homepage = props => {
                     <div className="font-semibold text-2xl sm:text-4xl">24/7</div>
                   </div>
                   <div className="basis-1/3 flex items-center justify-center">
-                    <img className="logo-size-m" src={generalInformation.data.small_logo.url} alt="Logo Vice City Lending" />
+                    <Image  className="logo-size-m"
+                            src={generalInformation.data.small_logo.url}
+                            alt={generalInformation.data.small_logo.alt} 
+                            width={generalInformation.data.small_logo.dimensions.width}
+                            height={generalInformation.data.small_logo.dimensions.height}
+                            priority={true}
+                    />
                   </div>
                   <div className="basis-1/3 flex flex-col items-center justify-center text-center">
                     <div className="text-xs sm:text-xl">POWERED BY</div>
@@ -55,19 +59,20 @@ const Homepage = props => {
                 </div>
               </div>
             </div>
+
             <div>
               <div id="team"  className="w-full h-screen">
                 <div className="w-full  flex-col text-center  items-center justify-center">
                   <div className="text-center items-center w-full">
-                    <div  className="w-full text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-2xl sm:text-4xl">{meetTeamContent.data.subtitle}</div>
+                    <div  className="w-full text-center items-center text-shadow shadow-white text-white italic font-semibold text-2xl sm:text-4xl">{meetTeamContent.data.subtitle}</div>
                   </div>
                   <div>
                     <div className="text-center items-center w-full">
-                      <div className="padding w-full text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-l sm:text-2xl">{meetTeamContent.data.text1}</div>
+                      <div className="padding w-full text-center items-center shadow-white text-white italic text-l sm:text-2xl">{meetTeamContent.data.text1}</div>
                     </div>
                   </div>
                   <div className="text-center items-center w-full sm:mt-10 mt-10">
-                    <div className="w-full text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-2xl sm:text-4xl">{meetTeamContent.data.title}</div>
+                    <div className="w-full text-center items-center text-shadow shadow-white text-white italic font-semibold text-2xl sm:text-4xl">{meetTeamContent.data.title}</div>
                   </div>
                   <div className="w-full sm:mt-10 -mt-16">
                     <MembersCarousel members={members}/>
@@ -78,56 +83,30 @@ const Homepage = props => {
 
             <div>
               <div className="text-center items-center w-full">
-                <div className="padding w-full text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
+                <div className="padding w-full text-center items-center text-white italic  text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
               </div>
             </div>
             <div>
               <div className="text-center items-center w-full">
-                <div className="padding w-full text-center items-center text-shadow shadow-white text-white font-roboto italic font-semibold text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
+                <div className="padding w-full text-center items-center text-shadow shadow-white text-white italic font-semibold text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
               </div>
             </div>
 
-            <div  className="pt-10 w-screen items-center sm:translate-x-80">
+            <div className="pt-10 w-screen items-center sm:translate-x-80">
               <div className="flex sm:flex-row flex-col  font-bold py-9">
-                <div className="padding sm:translate-x-0 translate-x-5 items-center text-white text-4xl italic font-roboto sm:w-1/4 w-full">
-                  <div id ="apply" className="">{signUpContent.data.title}</div>
-                <div className="text-white text-3xl italic font-roboto pb-6 ">{signUpContent.data.subtitle}</div>
-              </div>
-              <div className="sm:w-1/4 w-full">
-                <Contact signUpContent={signUpContent.data}/>
-              </div>
-              </div>
-
-            </div>
-
-{/* 
-            <div id="contact" >
-              <Contact signUpContent={signUpContent.data}/>
-            </div> */}
-          </div>
-
-                      {/* <div id ="sign-up" className="relative h-screen pt-10 w-screen">
-              <div className="flex flex-col text-center items-center text-white text-xl italic font-roboto font-bold ">{signUpContent.data.title}</div>
-              <div className="md:flex justify-center p-8">
-                <div className="text-white text-3xl italic font-roboto pr-20 pb-6 "></div>
-                <Contact signUpContent={signUpContent.data}/>
+                <div className="padding sm:translate-x-0 translate-x-5 items-center text-white italic sm:w-1/4 w-full">
+                  <div id ="apply" className="text-4xl">{signUpContent.data.title}</div>
+                  <div className="mt-1 text-white text-xl italic pb-6 ">{signUpContent.data.subtitle}</div>
+                </div>
+                <div className="sm:w-1/4 w-full">
+                  <Contact signUpContent={signUpContent.data}/>
+                </div>
               </div>
             </div>
-           
-           {/* <div className="flex inset-x-0 font-roboto w-full">
+            <div className="flex w-full">
              <Footer content={footerContent.data}/>
-           </div> */}
-  
-
-
-
-          {/* <div id="" className="">
-            <div className="text-center inset-0 flex items-center justify-center text-shadow shadow-white text-white font-semibold text-2xl sm:text-4xl padding">15+ years servicing clients and building strong relationships.</div>
-          </div> */}
-
-          {/* Sign Up Section */}
-        
-
+           </div>
+          </div>
         </div>
 }
 

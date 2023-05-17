@@ -135,7 +135,7 @@ function MortgageCalculator() {
                 <label className="text-lg">${homeValue.toLocaleString("en")}</label>
               </div>
             </div>
-            <div className="mb-8 w-full px-4">
+            <div className="w-full px-4">
               <Slider
                 min={0}
                 max={600000}
@@ -153,8 +153,6 @@ function MortgageCalculator() {
                 }}
               />
               <div className="flex justify-between text-sm">
-                {/* <span>$0</span>
-                <span>$300,000</span> */}
               </div>
             </div>
           </div>
@@ -200,7 +198,7 @@ function MortgageCalculator() {
                 <label className="text-lg">{interestRate}%</label>
               </div>
             </div>
-            <div className="mb-8 w-full px-4">
+            <div className="w-full px-4">
               <Slider
                 min={0}
                 max={12.00}
@@ -218,8 +216,6 @@ function MortgageCalculator() {
                 }}
               />
               <div className="flex justify-between text-sm">
-                {/* <span>0%</span>
-                <span>12%</span> */}
               </div>
             </div>
           </div>
@@ -250,8 +246,6 @@ function MortgageCalculator() {
                 }}
               />
               <div className="flex justify-between text-sm">
-                {/* <span>0</span>
-                <span>30 Years</span> */}
               </div>
             </div>
           </div>
@@ -282,8 +276,6 @@ function MortgageCalculator() {
                 }}
               />
               <div className="flex justify-between text-sm">
-                {/* <span>0</span>
-                <span>30 Years</span> */}
               </div>
             </div>
           </div>
@@ -314,8 +306,6 @@ function MortgageCalculator() {
                 }}
               />
               <div className="flex justify-between text-sm">
-                {/* <span>0</span>
-                <span>30 Years</span> */}
               </div>
             </div>
           </div>
@@ -346,8 +336,6 @@ function MortgageCalculator() {
                 }}
               />
               <div className="flex justify-between text-sm">
-                {/* <span>0</span>
-                <span>30 Years</span> */}
               </div>
             </div>
           </div>
@@ -378,8 +366,6 @@ function MortgageCalculator() {
                 }}
               />
               <div className="flex justify-between text-sm">
-                {/* <span>0</span>
-                <span>30 Years</span> */}
               </div>
             </div>
           </div>
@@ -395,33 +381,33 @@ function MortgageCalculator() {
               Principal and Interes Only
             </label>
           </div>
-          <div className="flex mt-8 text-purple-500">
+          <div className="flex mt-8 text-black">
             <label className="text-lg font-bold flex items-center">
               Loan Amount: ${loanAmount.toLocaleString("en")}
             </label>
           </div>
-          <div className="flex mt-4 text-purple-500">
+          <div className="flex mt-4 text-black">
             <label className="text-lg font-bold flex items-center">
               Monthly PMI:$0
             </label>
           </div>
-          <div className="flex mt-4 text-purple-500">
+          <div className="flex mt-4 text-black">
             <label className="text-lg font-bold flex items-center">
               Monthly Tax Payment: $0
             </label>
           </div>
-          <div className="flex mt-4 text-purple-500">
+          <div className="flex mt-4 text-black">
             <label className="text-lg font-bold flex items-center">
               Monthly Home Insurance: $0
             </label>
           </div>
-          <div className="flex mt-4 text-purple-500">
+          <div className="flex mt-4 text-black">
             <label className="text-lg font-bold flex items-center">
               Total Interest Paid: ${parseFloat(totalInterestPaid.toFixed(2)).toLocaleString("en")}
             </label>
           </div>
 
-          <div className="flex mt-4 mb-5 text-purple-500">
+          <div className="flex mt-4 mb-5 text-black">
             <label className="text-lg font-bold flex items-center">
               Total {loanDuration*12} Payments: ${totalPayment.toLocaleString("en")}
             </label>

@@ -71,10 +71,10 @@ const NavBar = props => {
   }
 
   return (
-    <nav className="fixed flex inset-x-0 px-2 sm:px-4 md:py-1 bg-black font-roboto w-full z-50">
+    <nav className="fixed flex inset-x-0 px-2 sm:px-4 md:py-1 bg-black w-full z-50">
       <div className="flex translate-y-11">
         <Link href="/#home" className="md:hidden">
-          <Image className="" src={logo} width={imageWidth} height={imageHeight}/>
+          <Image className="" src={logo} width={imageWidth} height={imageHeight} alt="Vice-City-Lending-Logo"/>
         </Link>
       </div>
     <div className="padding container flex flex-wrap md:justify-center justify-end items-start mx-auto">

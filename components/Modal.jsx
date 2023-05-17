@@ -1,9 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Contact from "./contact";
 
 const Modal = ({ Texto1, Texto2, signUpContent }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [inputValue, setInputValue] = useState("");
+
+  useEffect(() => {
+    const openPopupAfterOneMinute = setTimeout(() => {
+      setShowPopup(true);
+    }, 60000); // 1 minute
+
+    const openPopupAgainAfterFiveMinutes = setTimeout(() => {
+      if (!showPopup) {
+        setShowPopup(true);
+      }
+    }, 300000); // 5 minutes
+
+    return () => {
+      clearTimeout(openPopupAfterOneMinute);
+      clearTimeout(openPopupAgainAfterFiveMinutes);
+    };
+  }, []);
 
   const openPopup = () => setShowPopup(true);
   const closePopup = () => setShowPopup(false);
@@ -40,23 +57,10 @@ const Modal = ({ Texto1, Texto2, signUpContent }) => {
               </svg>
             </button>
             <h2 className="text-white -mt-9 text-xl font-semibold ">Let's connect to find out what is your purchasing power!</h2>
-            {/* <input
-              className="border rounded-lg px-4 py-2 w-full mb-4"
-              type="text"
-              placeholder="Enter value here..."
-              value={inputValue}
-              onChange={handleChange}
-            /> */}
+
             <div className="h-full w-full">
               <Contact signUpContent={signUpContent.data}></Contact>
             </div>
-            {/* <button
-              className="bg-orange-400 text-white active:bg-orange-500 font-bold uppercase text-xl px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-              type="button"
-              onClick={closePopup}
-            >
-              SAVE2
-            </button> */}
           </div>
         </div>
       )}
