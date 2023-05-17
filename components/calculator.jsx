@@ -21,6 +21,7 @@ function MortgageCalculator() {
   const [monthlyTaxPayment, setMonthlyTaxPayment] = useState(0);
   const [monthlyHomeInsurance, setMonthlyHomeInsurance] = useState(0);
   const [totalMonthly, setTotalMonthly] = useState(0);
+  const [loanPayOffDate, setLoanPayOffDate] = useState("");
 
 
   const handleHomeValueChange = (value) => {
@@ -93,6 +94,10 @@ function MortgageCalculator() {
   useEffect(() => {
     calculateMonthlyPayment();
   }, [monthlyPayment, monthlyPMI, monthlyTaxPayment, monthlyHomeInsurance, homeownersAssociationValue]);
+
+  useEffect(() => {
+    calculateLoanPayOffDate();
+  }, [loanDuration]);
 
   function calculateLoanAmount() {
     if (downPayment > 0 && homeValue > 0) {
@@ -173,6 +178,12 @@ function MortgageCalculator() {
 
     function calculateMonthlyHOA() {
       setHomeownersAssociationValue(homeownersAssociationValue);
+    }
+
+    function calculateLoanPayOffDate() {
+      const currentDate = new Date();
+      const payOffDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + (loanDuration*12), currentDate.getDate());
+      setLoanPayOffDate(payOffDate.toLocaleDateString("en-US", { month: "long", year: "numeric" }));
     }
     
 
@@ -471,7 +482,7 @@ function MortgageCalculator() {
           </div>
           <div className="flex mt-4 mb-5 text-black">
             <label className="text-lg flex items-center">
-              Loan Pay-Off Date:
+              Loan Pay-Off Date: {loanPayOffDate}
             </label>
           </div>
           <div className="flex mt-8 mb-10 text-black">
