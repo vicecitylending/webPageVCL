@@ -6,7 +6,7 @@ function MortgageCalculator() {
  
   const [homeValue, setHomeValue] = useState(0);
   const [downPayment, setDownPayment] = useState(0);
-  const [downPaymentPercentage, setDownPaymentPercentage] = useState(0);
+  const [downPaymentPercentage, setDownPaymentPercentage] = useState(3);
   const [loanAmount, setLoanAmount] = useState(0);
   const [interestRate, setInterestRate] = useState(0);
   const [loanDuration, setLoanDuration] = useState(0);
@@ -30,12 +30,11 @@ function MortgageCalculator() {
   };
 
   const handleDownPaymentValueChange = (value) => {
-    const downPaymentPercentage = (value / homeValue) * 100;
-    if (homeValue > 0 && downPaymentPercentage < 101) {
- 
-      setDownPaymentPercentage(downPaymentPercentage)
+    const downPaymentAmount = (value / 100) * homeValue;
+    if (homeValue > 0) {
+      setDownPaymentPercentage(value)
+      setDownPayment(downPaymentAmount);
     }
-    setDownPayment(value);
     calculateLoanAmount();
   };
 
@@ -100,8 +99,19 @@ function MortgageCalculator() {
   }, [loanDuration]);
 
   function calculateLoanAmount() {
-    if (downPayment > 0 && homeValue > 0) {
+    console.log(downPayment)
+    if(homeValue == 0) {
+      setDownPayment(0)
+      setDownPaymentPercentage(3)
+      setLoanAmount(0)
+      return 
+    }
+
+    if (downPaymentPercentage > 0 && homeValue > 0) {
     setLoanAmount(homeValue - downPayment);
+    const downPaymentAmount = (downPaymentPercentage / 100) * homeValue;
+    setDownPayment(downPaymentAmount)
+
     return loanAmount;
     }
   }
@@ -202,7 +212,7 @@ function MortgageCalculator() {
             <div className="w-full px-4">
               <Slider
                 min={0}
-                max={600000}
+                max={1000000}
                 step={2500}
                 onChange={handleHomeValueChange}
                 className="w-full"
@@ -223,17 +233,19 @@ function MortgageCalculator() {
           <div className="flex flex-col">
             <div className="padding flex justify-between">
               <div>
-                <label className="text-lg font-bold">Down Payment ({downPaymentPercentage.toFixed(2)}%)</label>
-              </div>
+                <label className="text-lg font-bold">Down Payment</label>
+                <label className="text-sm"> (${downPayment.toLocaleString("en")})</label>
+              </div> 
               <div>
-                <label className="text-lg">${downPayment.toLocaleString("en")}</label>
+                <label className="text-lg">{downPaymentPercentage.toFixed(2)}%</label>
               </div>
             </div>
             <div className="w-full px-4">
               <Slider
-                min={0}
-                max={600000}
-                step={2500}
+                min={3}
+                max={50}
+                step={0.5}
+                defaultValue={3}
                 onChange={handleDownPaymentValueChange}
                 className="w-full"
                 trackStyle={{ backgroundColor: 'purple', height: 5 }}
@@ -247,8 +259,6 @@ function MortgageCalculator() {
                 }}
               />
               <div className="flex justify-between text-sm">
-                {/* <span>$0</span>
-                <span>$300,000</span> */}
               </div>
             </div>
           </div>
@@ -346,10 +356,10 @@ function MortgageCalculator() {
           <div className="flex flex-col">
             <div className="padding flex justify-between">
               <div>
-                <label className="text-lg font-bold">Private Mortgage Insurance (%)</label>
+                <label className="text-lg font-bold">Private Mortgage Insurance</label>
               </div>
               <div>
-                <label className="text-lg">%{privateMortgageInsuranceValue}</label>
+                <label className="text-lg">{privateMortgageInsuranceValue}%</label>
               </div>
             </div>
             <div className="w-full px-4">
@@ -415,7 +425,7 @@ function MortgageCalculator() {
             <div className="w-full px-4">
               <Slider
                 min={0}
-                max={10000}
+                max={1000}
                 step={25}
                 onChange={handleHomeownersAssociationValueChange}
                 className="w-full"
@@ -452,7 +462,7 @@ function MortgageCalculator() {
           </div>
           <div className="flex mt-4 text-black">
             <label className="text-lg flex items-center">
-              Down Payment:${parseFloat(downPayment.toFixed(2)).toLocaleString("en")}
+              Down Payment: ${parseFloat(downPayment.toFixed(2)).toLocaleString("en")}
             </label>
           </div>
           <div className="flex mt-4 text-black">
