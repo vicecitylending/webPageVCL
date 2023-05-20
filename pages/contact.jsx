@@ -79,7 +79,7 @@ const Contact = props => {
 
                   {/* Name Field */}
                   <div className="mb-4">
-                    <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
+                    <label className="block text-white text-sm  mb-2" htmlFor="name">
                       {signUpContent.name}
                     </label>
                     <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Write your name"></input>
@@ -87,7 +87,7 @@ const Contact = props => {
 
                   {/* Lastname Field */}
                   <div className="mb-6">
-                    <label className="block text-white text-sm font-bold mb-2" htmlFor="lastname">
+                    <label className="block text-white text-sm  mb-2" htmlFor="lastname">
                       {signUpContent.lastname}
                     </label>
                     <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastname" type="text" placeholder="Write yor Lastname"></input>
@@ -95,7 +95,7 @@ const Contact = props => {
 
                   {/* Email Field */}
                   <div className="mb-6">
-                    <label className="block text-white text-sm font-bold mb-2" htmlFor="email">
+                    <label className="block text-white text-sm  mb-2" htmlFor="email">
                       {signUpContent.email}
                     </label>
                     <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Write yor email"></input>
@@ -103,7 +103,7 @@ const Contact = props => {
 
                   {/* Phone Field */}
                   <div className="mb-6">
-                    <label className="block text-white text-sm font-bold mb-2" htmlFor="phone">
+                    <label className="block text-white text-sm  mb-2" htmlFor="phone">
                       {signUpContent.phone}
                     </label>
                     <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="Write yor phone"></input>
@@ -111,10 +111,10 @@ const Contact = props => {
 
                   {/* Button Field */}
                   <div className="flex items-center justify-between">
-                    <button onClick = {handleOnSubmit} disabled={status.submitting} className="bg-orange-400  hover:bg-orange-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-xs md:text-sm" type="button">
+                    <button onClick = {handleOnSubmit} disabled={status.submitting} className="bg-orange-400  hover:bg-orange-600 text-white  py-2 px-4 rounded focus:outline-none focus:shadow-outline text-xs md:text-sm" type="button">
                       SUBMIT
                     </button>
-                    <div className={` text-red-600  font-bold ${!status.submitted && "hidden"}`}>
+                    <div className={` text-red-600   ${!status.submitted && "hidden"}`}>
                       <p>Message sent!</p>
                     </div>
                   </div>

@@ -63,7 +63,7 @@ const Homepage = props => {
 
             <div>
               <div id="team" className="w-full h-screen">
-                <div className="w-full flex-col text-center  items-center justify-center">
+                <div className="w-full flex-col text-center items-center justify-center">
                   <div className="padding text-center items-center w-full">
                     <div  className="w-full text-center items-center text-white text-2xl sm:text-4xl">{meetTeamContent.data.subtitle}</div>
                   </div>
@@ -82,7 +82,7 @@ const Homepage = props => {
               </div>
             </div>
 
-            <div>
+            <div className="mt-10">
               <div className="text-center items-center w-full">
                 <div className="padding w-full text-center items-center text-white   text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
               </div>
@@ -99,11 +99,10 @@ const Homepage = props => {
               </div>
             </div>
 
-
-            <div className="pt-10 w-screen items-center sm:translate-x-80">
-              <div className="flex sm:flex-row flex-col font-bold py-9">
+            <div id ="apply" className="pt-10 w-full">
+              <div className="flex sm:flex-row flex-col py-9 justify-center">
                 <div className="padding sm:translate-x-0 translate-x-5 items-center text-white  sm:w-1/4 w-full">
-                  <div id ="apply" className="text-4xl">{signUpContent.data.title}</div>
+                  <div className="text-4xl">{signUpContent.data.title}</div>
                   <div className="mt-1 text-white text-xl  pb-6 ">{signUpContent.data.subtitle}</div>
                 </div>
                 <div className="sm:w-1/4 w-full">
@@ -111,9 +110,10 @@ const Homepage = props => {
                 </div>
               </div>
             </div>
+
             <div className="flex w-full">
-             <Footer content={footerContent.data}/>
-           </div>
+              <Footer content={footerContent.data}/>
+            </div>
           </div>
         </div>
 }

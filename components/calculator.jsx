@@ -36,7 +36,6 @@ function MortgageCalculator() {
       setDownPayment(downPaymentAmount);
       calculateLoanAmount();
     }
-    console.log("ALO")
     setDownPaymentPercentage(value)
     setDownPayment(0);
     calculateLoanAmount();

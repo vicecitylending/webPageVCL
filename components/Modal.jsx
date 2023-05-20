@@ -56,7 +56,7 @@ const Modal = ({ Texto1, Texto2, signUpContent }) => {
                 />
               </svg>
             </button>
-            <h2 className="text-white -mt-9 text-xl font-semibold ">Let's connect to find out what is your purchasing power!</h2>
+            <h2 className="text-white -mt-10 text-xl">Let's connect to find out what is your purchasing power!</h2>
 
             <div className="h-full w-full">
               <Contact signUpContent={signUpContent.data}></Contact>
