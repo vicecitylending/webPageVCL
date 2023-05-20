@@ -2,16 +2,17 @@ import React, { useRef, useEffect } from "react";
 import Image from 'next/image'
 import Head from "../components/head";
 import NavBar from "../components/navbar";
-import Contact from "./contact";
+import Contact from "./contact"; //Different from component/contact.jsx. <Contact> in component folder is for Popup.
 import Prismic from 'prismic-javascript'
 import MembersCarousel from "../components/carousel";
 import { PrismicClient } from '../prismic-configuration'
 import Footer from "../components/footer";
+import InfoGrid from "../components/molecules/infogrid";
 
 
 const Homepage = props => {
 
-  const { seo, generalInformation, menuContent, members, footerContent, meetTeamContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
+  const { seo, generalInformation, menuContent, members, footerContent, meetTeamContent, CirclesGridContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
 
   return<div className="main overflow-x-hidden">
           <Head
@@ -61,18 +62,18 @@ const Homepage = props => {
             </div>
 
             <div>
-              <div id="team"  className="w-full h-screen">
-                <div className="w-full  flex-col text-center  items-center justify-center">
-                  <div className="text-center items-center w-full">
-                    <div  className="w-full text-center items-center text-shadow shadow-white text-white italic font-semibold text-2xl sm:text-4xl">{meetTeamContent.data.subtitle}</div>
+              <div id="team" className="w-full h-screen">
+                <div className="w-full flex-col text-center  items-center justify-center">
+                  <div className="padding text-center items-center w-full">
+                    <div  className="w-full text-center items-center text-white text-2xl sm:text-4xl">{meetTeamContent.data.subtitle}</div>
                   </div>
                   <div>
                     <div className="text-center items-center w-full">
-                      <div className="padding w-full text-center items-center shadow-white text-white italic text-l sm:text-2xl">{meetTeamContent.data.text1}</div>
+                      <div className="padding w-full text-center items-center shadow-white text-white  text-l sm:text-2xl">{meetTeamContent.data.text1}</div>
                     </div>
                   </div>
                   <div className="text-center items-center w-full sm:mt-10 mt-10">
-                    <div className="w-full text-center items-center text-shadow shadow-white text-white italic font-semibold text-2xl sm:text-4xl">{meetTeamContent.data.title}</div>
+                    <div className="w-full text-center items-center text-white text-2xl sm:text-4xl">{meetTeamContent.data.title}</div>
                   </div>
                   <div className="w-full sm:mt-10 -mt-16">
                     <MembersCarousel members={members}/>
@@ -83,20 +84,27 @@ const Homepage = props => {
 
             <div>
               <div className="text-center items-center w-full">
-                <div className="padding w-full text-center items-center text-white italic  text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
-              </div>
-            </div>
-            <div>
-              <div className="text-center items-center w-full">
-                <div className="padding w-full text-center items-center text-shadow shadow-white text-white italic font-semibold text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
+                <div className="padding w-full text-center items-center text-white   text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
               </div>
             </div>
 
+
+            <div className="ml-20">
+              <InfoGrid image={CirclesGridContent.data.image} infoCircles={CirclesGridContent.data}/>
+            </div>
+
+            <div>
+              <div className="text-center items-center w-full">
+                <div className="padding w-full text-center items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
+              </div>
+            </div>
+
+
             <div className="pt-10 w-screen items-center sm:translate-x-80">
-              <div className="flex sm:flex-row flex-col  font-bold py-9">
-                <div className="padding sm:translate-x-0 translate-x-5 items-center text-white italic sm:w-1/4 w-full">
+              <div className="flex sm:flex-row flex-col font-bold py-9">
+                <div className="padding sm:translate-x-0 translate-x-5 items-center text-white  sm:w-1/4 w-full">
                   <div id ="apply" className="text-4xl">{signUpContent.data.title}</div>
-                  <div className="mt-1 text-white text-xl italic pb-6 ">{signUpContent.data.subtitle}</div>
+                  <div className="mt-1 text-white text-xl  pb-6 ">{signUpContent.data.subtitle}</div>
                 </div>
                 <div className="sm:w-1/4 w-full">
                   <Contact signUpContent={signUpContent.data}/>
@@ -124,7 +132,8 @@ const getStaticProps = async ({ params }) => {
         // FAQ: await getPrismicData('faq'), 
         // contactContent : await getPrismicData('contact'),
         // plansContent : await getPrismicData('plans'),
-        signUpContent : await getPrismicData('sign_up')
+        signUpContent : await getPrismicData('sign_up'),
+        CirclesGridContent : await getPrismicData('circle_grid_info')
       }
   }
 }

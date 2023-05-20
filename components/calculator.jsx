@@ -3,10 +3,10 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
 function MortgageCalculator() {
- 
+
   const [homeValue, setHomeValue] = useState(0);
   const [downPayment, setDownPayment] = useState(0);
-  const [downPaymentPercentage, setDownPaymentPercentage] = useState(3);
+  const [downPaymentPercentage, setDownPaymentPercentage] = useState(0);
   const [loanAmount, setLoanAmount] = useState(0);
   const [interestRate, setInterestRate] = useState(0);
   const [loanDuration, setLoanDuration] = useState(0);
@@ -34,8 +34,13 @@ function MortgageCalculator() {
     if (homeValue > 0) {
       setDownPaymentPercentage(value)
       setDownPayment(downPaymentAmount);
+      calculateLoanAmount();
     }
+    console.log("ALO")
+    setDownPaymentPercentage(value)
+    setDownPayment(0);
     calculateLoanAmount();
+    
   };
 
   const handleInterestRateValueChange = (value) => {
@@ -99,12 +104,10 @@ function MortgageCalculator() {
   }, [loanDuration]);
 
   function calculateLoanAmount() {
-    console.log(downPayment)
-    if(homeValue == 0) {
+    if(homeValue == 0 || downPaymentPercentage == 0) {
       setDownPayment(0)
-      setDownPaymentPercentage(3)
       setLoanAmount(0)
-      return 
+      return
     }
 
     if (downPaymentPercentage > 0 && homeValue > 0) {
@@ -242,10 +245,9 @@ function MortgageCalculator() {
             </div>
             <div className="w-full px-4">
               <Slider
-                min={3}
+                min={0}
                 max={50}
                 step={0.5}
-                defaultValue={3}
                 onChange={handleDownPaymentValueChange}
                 className="w-full"
                 trackStyle={{ backgroundColor: 'purple', height: 5 }}

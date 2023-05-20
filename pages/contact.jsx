@@ -75,7 +75,7 @@ const Contact = props => {
 
     return <div>
               <div className="w-full h-full">
-                <form className="shadow-md rounded px-8 pt-6 pb-8 mb-4 italic">
+                <form className="shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
 
                   {/* Name Field */}
                   <div className="mb-4">
@@ -114,7 +114,7 @@ const Contact = props => {
                     <button onClick = {handleOnSubmit} disabled={status.submitting} className="bg-orange-400  hover:bg-orange-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-xs md:text-sm" type="button">
                       SUBMIT
                     </button>
-                    <div className={` text-red-600 italic font-bold ${!status.submitted && "hidden"}`}>
+                    <div className={` text-red-600  font-bold ${!status.submitted && "hidden"}`}>
                       <p>Message sent!</p>
                     </div>
                   </div>
