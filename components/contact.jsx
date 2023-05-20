@@ -73,7 +73,7 @@ const Contact = props => {
       }
 
     return <div>
-              <div className="w-full">
+              <div className="w-full sm:mt-0 -mt-5">
                 <form className="shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
 
                   {/* Name Field */}
@@ -85,7 +85,7 @@ const Contact = props => {
                   </div>
 
                   {/* Lastname Field */}
-                  <div className="mb-6 text-left">
+                  <div className="mb-4 text-left">
                     <label className="block text-white text-sm mb-2" htmlFor="lastname">
                       {signUpContent.lastname}
                     </label>
@@ -93,7 +93,7 @@ const Contact = props => {
                   </div>
 
                   {/* Email Field */}
-                  <div className="mb-6 text-left">
+                  <div className="mb-4 text-left">
                     <label className="block text-white text-sm mb-2" htmlFor="email">
                       {signUpContent.email}
                     </label>
@@ -101,7 +101,7 @@ const Contact = props => {
                   </div>
 
                   {/* Phone Field */}
-                  <div className="mb-6 text-left">
+                  <div className="mb-4 text-left">
                     <label className="block text-white text-sm mb-2" htmlFor="phone">
                       {signUpContent.phone}
                     </label>

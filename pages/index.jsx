@@ -34,7 +34,7 @@ const Homepage = props => {
             <video muted autoPlay loop playsInline control='' className="video">
               <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
             </video>
-            <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-500 opacity-70"></div>
+            <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-500 opacity-70 w-full h-full"></div>
           </div>
 
           <div id="home" className="flex flex-col w-full relative">
