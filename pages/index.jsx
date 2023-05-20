@@ -89,7 +89,7 @@ const Homepage = props => {
             </div>
 
 
-            <div className="ml-20">
+            <div className="sm:ml-20 ml-0">
               <InfoGrid image={CirclesGridContent.data.image} infoCircles={CirclesGridContent.data}/>
             </div>
 

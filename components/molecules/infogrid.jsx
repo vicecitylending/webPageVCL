@@ -20,7 +20,7 @@ const InfoGrid = props => {
         <InfoCircle image={image} text={infoCircles.text6}/>
     </div>
     <InfoCircle image={image} text={infoCircles.text7}/>
-    <div className="sm:-translate-x-44 translate-x-7 sm:-translate-y-24 -translate-y-7">
+    <div className="sm:-translate-x-44 -translate-x-7 sm:-translate-y-24 -translate-y-7">
         <InfoCircle image={image} text={infoCircles.text8}/>
     </div>
   </div>
