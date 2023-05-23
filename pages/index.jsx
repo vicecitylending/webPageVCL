@@ -98,7 +98,7 @@ const Homepage = props => {
               </div>
             </div>
 
-            <div id ="apply" className="pt-10 w-full">
+            <div id ="contact" className="pt-10 w-full">
               <div className="flex sm:flex-row flex-col py-9 justify-center">
                 <div className="padding sm:translate-x-0 translate-x-5 items-center text-white  sm:w-1/4 w-full">
                   <div className="text-4xl">{signUpContent.data.title}</div>
