@@ -88,10 +88,9 @@ const Homepage = props => {
               </div>
             </div>
 
-
-            <div className="sm:ml-20 ml-0">
-              <InfoGrid image={CirclesGridContent.data.image} infoCircles={CirclesGridContent.data}/>
-            </div>
+              <div className="ml-0 sm:ml-20 circle-grid">
+                <InfoGrid image={CirclesGridContent.data.image} infoCircles={CirclesGridContent.data}/>
+              </div>
 
             <div>
               <div className="text-center items-center w-full">

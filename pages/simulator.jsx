@@ -1,16 +1,12 @@
 import React, { useRef, useEffect } from "react";
 import Image from 'next/image'
-import { RichText } from 'prismic-reactjs';
 import Head from "../components/head";
 import NavBar from "../components/navbar";
-import Contact from "./contact";
 import Modal from "../components/Modal";
 import Prismic from 'prismic-javascript'
 import MortgageCalculator from "../components/calculator";
-import MembersCarousel from "../components/carousel";
 import { PrismicClient } from '../prismic-configuration'
 import Footer from "../components/footer";
-import InfoGrid from "../components/molecules/infogrid"
 
 const Simulator = props => {
 

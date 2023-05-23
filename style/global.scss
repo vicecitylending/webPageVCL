@@ -82,6 +82,16 @@ $menu-item-active-background-color: $app-color1;
   z-index: 999;
 }
 
+.circle-grid {
+  position: relative;
+  left: 5%
+}
+
+.circle-text-ml {
+  margin-left: 2.5rem;
+}
+
+
 @media screen and (max-width: 1400px) {
   .video {
     width: 100vw;
@@ -104,6 +114,13 @@ $menu-item-active-background-color: $app-color1;
     z-index: 999;
   }
 
+  .circle-grid {
+    left: 0%;
+  }
+
+  .circle-text-ml {
+    margin-left: 4.5rem;
+  }
 
 }
 
@@ -129,8 +146,11 @@ $menu-item-active-background-color: $app-color1;
     text-align: center;
     z-index: 999;
   }
- 
+  .circle-text-ml {
+    margin-left: 1rem;
+  }
 }
+ 
 
 @media screen and (max-width: 660px) {
   .video {
@@ -159,6 +179,10 @@ $menu-item-active-background-color: $app-color1;
     background-color: white;
     text-align: center;
     z-index: 999;
+  }
+
+  .circle-text-ml {
+    margin-left: 1rem;
   }
 }
 
@@ -189,5 +213,9 @@ $menu-item-active-background-color: $app-color1;
       background-color: white;
       text-align: center;
       z-index: 999;
+    }
+
+    .circle-text-ml {
+      margin-left: 1rem;
     }
 }

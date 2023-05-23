@@ -15,9 +15,7 @@ function MortgageCalculator() {
   const [totalPayment, setTotalPayment] = useState(0);
   const [propertyTaxValue, setPropertyTaxValue] = useState(0);
   const [homeInsuranceValue, setHomeInsuranceValue] = useState(0);
-  const [privateMortgageInsuranceValue, setPrivateMortgageInsuranceValue] = useState(0);
   const [homeownersAssociationValue, setHomeownersAssociationValue] = useState(0);
-  const [monthlyPMI, setMonthlyPMI] = useState(0);
   const [monthlyTaxPayment, setMonthlyTaxPayment] = useState(0);
   const [monthlyHomeInsurance, setMonthlyHomeInsurance] = useState(0);
   const [totalMonthly, setTotalMonthly] = useState(0);
@@ -58,10 +56,6 @@ function MortgageCalculator() {
     setHomeInsuranceValue(value);
   }
 
-  const handlePrivateMortgageInsuranceValueChange = (value) => {
-    setPrivateMortgageInsuranceValue(value);
-  }
-
   const handleHomeownersAssociationValueChange = (value) => {
     setHomeownersAssociationValue(value);
   }
@@ -79,10 +73,6 @@ function MortgageCalculator() {
     }, [monthlyPayment, loanDuration]);
 
   useEffect(() => {
-    calculateMonthlyPMI();
-  }, [loanAmount, privateMortgageInsuranceValue]);
-
-  useEffect(() => {
     calculateMonthlyTaxPayment();
   }, [propertyTaxValue]);
 
@@ -96,7 +86,7 @@ function MortgageCalculator() {
 
   useEffect(() => {
     calculateMonthlyPayment();
-  }, [monthlyPayment, monthlyPMI, monthlyTaxPayment, monthlyHomeInsurance, homeownersAssociationValue]);
+  }, [monthlyPayment, monthlyTaxPayment, monthlyHomeInsurance, homeownersAssociationValue]);
 
   useEffect(() => {
     calculateLoanPayOffDate();
@@ -153,7 +143,7 @@ function MortgageCalculator() {
     setMonthlyPayment(paymenCalculator);
     calculateTotalInterestPaid()
 
-    const totalMonthly = monthlyPayment + monthlyPMI + monthlyTaxPayment + monthlyHomeInsurance + homeownersAssociationValue;
+    const totalMonthly = monthlyPayment + monthlyTaxPayment + monthlyHomeInsurance + homeownersAssociationValue;
     setTotalMonthly(totalMonthly);
 
     return monthlyPayment;
@@ -165,15 +155,6 @@ function MortgageCalculator() {
     let totalPayment = (monthlyPayment * loanDuration * 12)
     setTotalPayment(totalPayment)
     }
-    }
-
-
-    function calculateMonthlyPMI() {
-      let monthlyPMI = 0;
-      if (downPaymentPercentage < 20) {
-        monthlyPMI = (loanAmount * privateMortgageInsuranceValue) / 1200;
-      }
-      setMonthlyPMI(monthlyPMI);
     }
   
     // Función para calcular Monthly Tax Payment
@@ -357,36 +338,6 @@ function MortgageCalculator() {
           <div className="flex flex-col">
             <div className="padding flex justify-between">
               <div>
-                <label className="text-lg font-bold">Private Mortgage Insurance</label>
-              </div>
-              <div>
-                <label className="text-lg">{privateMortgageInsuranceValue}%</label>
-              </div>
-            </div>
-            <div className="w-full px-4">
-              <Slider
-                min={0}
-                max={12.00}
-                step={0.100}
-                onChange={handlePrivateMortgageInsuranceValueChange}
-                className="w-full"
-                trackStyle={{ backgroundColor: 'purple', height: 5 }}
-                handleStyle={{
-                  transition: "box-shadow 0.7s",
-                  boxShadow: "",
-                  backgroundColor: 'purple',
-                  height: 30,
-                  width: 30,
-                  marginTop: -13,
-                }}
-              />
-              <div className="flex justify-between text-sm">
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <div className="padding flex justify-between">
-              <div>
                 <label className="text-lg font-bold">Home Insurance</label>
               </div>
               <div>
@@ -469,11 +420,6 @@ function MortgageCalculator() {
           <div className="flex mt-4 text-black">
             <label className="text-lg  flex items-center">
               Total Interest Paid: ${parseFloat(totalInterestPaid.toFixed(2)).toLocaleString("en")}
-            </label>
-          </div>
-          <div className="flex mt-4 text-black">
-            <label className="text-lg flex items-center">
-              Monthly PMI: ${parseFloat(monthlyPMI.toFixed(2)).toLocaleString("en")}
             </label>
           </div>
           <div className="flex mt-4 text-black">
