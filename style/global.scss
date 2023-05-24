@@ -83,13 +83,18 @@ $menu-item-active-background-color: $app-color1;
 }
 
 .circle-grid {
-  position: relative;
+  position: sticky;
   left: 5%
 }
 
 .circle-text-ml {
   margin-left: 2.5rem;
 }
+
+// .center-why-us {
+//   position: relative;
+//   right: 15%;
+// }
 
 
 @media screen and (max-width: 1400px) {
@@ -122,6 +127,10 @@ $menu-item-active-background-color: $app-color1;
     margin-left: 4.5rem;
   }
 
+  .center-why-us {
+    position: relative;
+    right: 10%;
+  }
 }
 
 @media screen and (max-width: 720px) {
@@ -149,6 +158,12 @@ $menu-item-active-background-color: $app-color1;
   .circle-text-ml {
     margin-left: 1rem;
   }
+
+  .center-why-us {
+    position: relative;
+    right: 10%;
+  }
+
 }
  
 
@@ -184,6 +199,10 @@ $menu-item-active-background-color: $app-color1;
   .circle-text-ml {
     margin-left: 1rem;
   }
+  .center-why-us {
+    position: relative;
+    right: 0%;
+  }
 }
 
 @media screen and (max-width: 350px) {
@@ -217,5 +236,10 @@ $menu-item-active-background-color: $app-color1;
 
     .circle-text-ml {
       margin-left: 1rem;
+    }
+
+    .center-why-us {
+      position: relative;
+      right: 0%;
     }
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import Image from 'next/image'
 import Head from "../components/head";
 import NavBar from "../components/navbar";
@@ -12,7 +12,7 @@ import InfoGrid from "../components/molecules/infogrid";
 
 const Homepage = props => {
 
-  const { seo, generalInformation, menuContent, members, footerContent, meetTeamContent, CirclesGridContent, WhoWeAreContent, OurServicesContent, FAQ, contactContent, plansContent, signUpContent } = props
+  const { seo, generalInformation, menuContent, members, footerContent, meetTeamContent, CirclesGridContent, RealtorsResourceContent, PreApprovalProcessContent, BuyingRefinancingProcessContent, signUpContent } = props
 
   return<div className="main overflow-x-hidden">
           <Head
@@ -34,7 +34,7 @@ const Homepage = props => {
             <video muted autoPlay loop playsInline control='' className="video">
               <source src="/background/miami_night_1000K.mp4" type="video/mp4" />
             </video>
-            <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-500 opacity-70 w-full h-full"></div>
+            <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-500 opacity-70 w-full h-full object-fill"></div>
           </div>
 
           <div id="home" className="flex flex-col w-full relative">
@@ -63,16 +63,16 @@ const Homepage = props => {
 
             <div>
               <div id="team" className="w-full h-screen">
-                <div className="w-full flex-col text-center items-center justify-center">
+                <div className="w-full flex-col items-center justify-center">
                   <div className="padding text-center items-center w-full">
-                    <div  className="w-full text-center items-center text-white text-2xl sm:text-4xl">{meetTeamContent.data.subtitle}</div>
+                    <div className="w-full text-center items-center text-white text-2xl sm:text-4xl">{meetTeamContent.data.subtitle}</div>
                   </div>
                   <div>
-                    <div className="text-center items-center w-full">
-                      <div className="padding w-full text-center items-center shadow-white text-white  text-l sm:text-2xl">{meetTeamContent.data.text1}</div>
+                    <div className="pr-5 pl-5 items-center w-full">
+                      <div className="w-full shadow-white text-white text-l sm:text-2xl">{meetTeamContent.data.text1}</div>
                     </div>
                   </div>
-                  <div className="text-center items-center w-full sm:mt-10 mt-10">
+                  <div className="text-center items-center w-full sm:mt-10 mt-10 mb-5">
                     <div className="w-full text-center items-center text-white text-2xl sm:text-4xl">{meetTeamContent.data.title}</div>
                   </div>
                   <div className="w-full sm:mt-10 -mt-16">
@@ -82,9 +82,9 @@ const Homepage = props => {
               </div>
             </div>
 
-            <div className="mt-10">
-              <div className="text-center items-center w-full">
-                <div className="padding w-full text-center items-center text-white   text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
+            <div className="pr-5 pl-5 mt-10 ">
+              <div className="items-center w-full">
+                <div className="w-full items-center text-white   text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
               </div>
             </div>
 
@@ -93,16 +93,17 @@ const Homepage = props => {
               </div>
 
             <div>
-              <div className="text-center items-center w-full">
-                <div className="padding w-full text-center items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
+              <div className="pl-5 pr-5 items-center w-full">
+                <div className="w-full  items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
               </div>
             </div>
 
             <div id ="contact" className="pt-10 w-full">
               <div className="flex sm:flex-row flex-col py-9 justify-center">
-                <div className="padding sm:translate-x-0 translate-x-5 items-center text-white  sm:w-1/4 w-full">
+                <div className="sm:translate-x-0 translate-x-5 items-center text-white sm:w-1/4 w-full">
                   <div className="text-4xl">{signUpContent.data.title}</div>
-                  <div className="mt-1 text-white text-xl  pb-6 ">{signUpContent.data.subtitle}</div>
+                  <div className="mt-1 text-white text-xl pb-6 ">{signUpContent.data.subtitle}</div>
+                  <div className="mt-1 text-white text-sm pb-6 mr-7">{signUpContent.data.body_text}</div>
                 </div>
                 <div className="sm:w-1/4 w-full">
                   <Contact signUpContent={signUpContent.data}/>
@@ -126,11 +127,9 @@ const getStaticProps = async ({ params }) => {
         members: await getPrismicCustomTypeData('member'), // Different Function to query multi instances.
         footerContent: await getPrismicData('footer'),
         meetTeamContent: await getPrismicData('meet_team'),
-        // WhoWeAreContent: await getPrismicData('who_we_are'),
-        // OurServicesContent: await getPrismicData('our_services'),
-        // FAQ: await getPrismicData('faq'), 
-        // contactContent : await getPrismicData('contact'),
-        // plansContent : await getPrismicData('plans'),
+        RealtorsResourceContent: await getPrismicData('realtors_resource'),
+        PreApprovalProcessContent: await getPrismicData('pre_approval_process'),
+        BuyingRefinancingProcessContent: await getPrismicData('buying_refinancing_process'), 
         signUpContent : await getPrismicData('sign_up'),
         CirclesGridContent : await getPrismicData('circle_grid_info')
       }
@@ -142,10 +141,8 @@ const getPrismicData = async (name) => {
   const prismicAnswer = await PrismicClient().query(  
     Prismic.Predicates.at('document.type', name) 
   )
-
   // Get first doc of this type (there should be 1 doc per type)
   const doc = prismicAnswer.results[0]
-
   return doc
 }
 
@@ -153,10 +150,8 @@ const getPrismicCustomTypeData = async (name) => {
   const prismicAnswer = await PrismicClient().query(  
     Prismic.Predicates.at('document.type', name) 
   )
-
   // Get all docs of this type (there should many docs per type)
   const CustomTypeDoc = prismicAnswer.results
-
   return CustomTypeDoc
 }
 

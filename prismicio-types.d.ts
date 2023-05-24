@@ -6,6 +6,46 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
   [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Buying Refinancing Process documents */
+interface BuyingRefinancingProcessDocumentData {
+  /**
+   * Title field in *Buying Refinancing Process*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: buying_refinancing_process.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismicT.KeyTextField;
+  /**
+   * Text field in *Buying Refinancing Process*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: buying_refinancing_process.text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text: prismicT.KeyTextField;
+}
+/**
+ * Buying Refinancing Process document from Prismic
+ *
+ * - **API ID**: `buying_refinancing_process`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BuyingRefinancingProcessDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<BuyingRefinancingProcessDocumentData>,
+    "buying_refinancing_process",
+    Lang
+  >;
 /** Content for Circle Grid Info documents */
 interface CircleGridInfoDocumentData {
   /**
@@ -569,6 +609,86 @@ export interface MenuDocumentDataMenuLinksItem {
  */
 export type MenuDocument<Lang extends string = string> =
   prismicT.PrismicDocumentWithUID<Simplify<MenuDocumentData>, "menu", Lang>;
+/** Content for Pre Approval Process documents */
+interface PreApprovalProcessDocumentData {
+  /**
+   * Title field in *Pre Approval Process*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_approval_process.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismicT.KeyTextField;
+  /**
+   * Text field in *Pre Approval Process*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_approval_process.text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text: prismicT.KeyTextField;
+}
+/**
+ * Pre Approval Process document from Prismic
+ *
+ * - **API ID**: `pre_approval_process`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PreApprovalProcessDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<PreApprovalProcessDocumentData>,
+    "pre_approval_process",
+    Lang
+  >;
+/** Content for Realtors Resource documents */
+interface RealtorsResourceDocumentData {
+  /**
+   * Title field in *Realtors Resource*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: realtors_resource.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismicT.KeyTextField;
+  /**
+   * Text field in *Realtors Resource*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: realtors_resource.text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text: prismicT.KeyTextField;
+}
+/**
+ * Realtors Resource document from Prismic
+ *
+ * - **API ID**: `realtors_resource`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type RealtorsResourceDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<RealtorsResourceDocumentData>,
+    "realtors_resource",
+    Lang
+  >;
 /** Content for SEO documents */
 interface SeoDocumentData {
   /**
@@ -706,6 +826,17 @@ interface SignUpDocumentData {
    *
    */
   phone: prismicT.KeyTextField;
+  /**
+   * Body Text field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.body_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  body_text: prismicT.KeyTextField;
 }
 /**
  * Sign Up document from Prismic
@@ -723,6 +854,7 @@ export type SignUpDocument<Lang extends string = string> =
     Lang
   >;
 export type AllDocumentTypes =
+  | BuyingRefinancingProcessDocument
   | CircleGridInfoDocument
   | ContactDocument
   | FooterDocument
@@ -731,6 +863,8 @@ export type AllDocumentTypes =
   | MeetTeamDocument
   | MemberDocument
   | MenuDocument
+  | PreApprovalProcessDocument
+  | RealtorsResourceDocument
   | SeoDocument
   | SignUpDocument;
 declare module "@prismicio/client" {
@@ -742,6 +876,8 @@ declare module "@prismicio/client" {
   }
   namespace Content {
     export type {
+      BuyingRefinancingProcessDocumentData,
+      BuyingRefinancingProcessDocument,
       CircleGridInfoDocumentData,
       CircleGridInfoDocument,
       ContactDocumentData,
@@ -761,6 +897,10 @@ declare module "@prismicio/client" {
       MenuDocumentData,
       MenuDocumentDataMenuLinksItem,
       MenuDocument,
+      PreApprovalProcessDocumentData,
+      PreApprovalProcessDocument,
+      RealtorsResourceDocumentData,
+      RealtorsResourceDocument,
       SeoDocumentData,
       SeoDocument,
       SignUpDocumentData,

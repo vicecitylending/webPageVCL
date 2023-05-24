@@ -29,6 +29,10 @@
       "phone": {
         "type": "Text",
         "config": { "label": "Phone", "placeholder": "" }
+      },
+      "body_text": {
+        "type": "Text",
+        "config": { "label": "Body Text", "placeholder": "" }
       }
     }
   }

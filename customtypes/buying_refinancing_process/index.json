@@ -1,0 +1,19 @@
+{
+  "id": "buying_refinancing_process",
+  "label": "Buying Refinancing Process",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
+      "title": {
+        "type": "Text",
+        "config": { "label": "Title", "placeholder": "" }
+      },
+      "text": {
+        "type": "Text",
+        "config": { "label": "Text", "placeholder": "" }
+      }
+    }
+  }
+}

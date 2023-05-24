@@ -1,6 +1,5 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image"
-import { RichText } from 'prismic-reactjs';
 import { useRouter } from 'next/router';
 import Link from "next/link";
 
@@ -9,18 +8,16 @@ import Link from "next/link";
 // EXAMPLE -> https://flowbite.com/docs/components/navbar/
 
 const NavBar = props => {
-  const { content, logo, imageHeight, imageWidth, phone } = props
+
+  const { content, logo, imageHeight, imageWidth} = props
+
   let navBarLinks = []
-
-  const [isScrolling, setIsScrolling] = React.useState(false);
-  const [isOpen, setOpen] = React.useState(true);
+  const [isOpen, setOpen] = useState(true);
   const menuFlip = () => {setOpen(!isOpen)};
-
-
   const router = useRouter()
 
 
-  React.useEffect(() => {
+  useEffect(() => {
     let timeoutId;
 
     const handleScroll = () => {
@@ -38,7 +35,6 @@ const NavBar = props => {
   }, []);
 
   if (content !== undefined) {
-    // const logoURL = content.label[0].small_logo.url 
     content.forEach((element, index, array)  => {
 
       if(index  === (array.length - 1)) {
@@ -72,9 +68,9 @@ const NavBar = props => {
 
   return (
     <nav className="fixed flex inset-x-0 px-2 sm:px-4 md:py-1 bg-black w-full z-50">
-      <div className="flex translate-y-11">
+      <div className="flex translate-y-11 ml-3">
         <Link href="/#home" className="md:hidden">
-          <Image className="" src={logo} width={imageWidth} height={imageHeight} alt="Vice-City-Lending-Logo"/>
+          <Image className="scale-150" src={logo} width={imageWidth} height={imageHeight} alt="Vice-City-Lending-Logo"/>
         </Link>
       </div>
       <div className="padding container flex flex-wrap md:justify-center justify-end items-start mx-auto">

@@ -90,7 +90,7 @@ const Contact = props => {
                     <label className="block text-white text-sm  mb-2" htmlFor="lastname">
                       {signUpContent.lastname}
                     </label>
-                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastname" type="text" placeholder="Write yor Lastname"></input>
+                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastname" type="text" placeholder="Write yor lastname"></input>
                   </div>
 
                   {/* Email Field */}
@@ -98,7 +98,7 @@ const Contact = props => {
                     <label className="block text-white text-sm  mb-2" htmlFor="email">
                       {signUpContent.email}
                     </label>
-                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Write yor email"></input>
+                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Write yor email"></input>
                   </div>
 
                   {/* Phone Field */}

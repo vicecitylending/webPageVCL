@@ -21,7 +21,7 @@ function MortgageCalculator() {
   const [totalMonthly, setTotalMonthly] = useState(0);
   const [loanPayOffDate, setLoanPayOffDate] = useState("");
 
-
+  // Handlers Section //
   const handleHomeValueChange = (value) => {
     setHomeValue(value);
     calculateLoanAmount();
@@ -37,7 +37,6 @@ function MortgageCalculator() {
     setDownPaymentPercentage(value)
     setDownPayment(0);
     calculateLoanAmount();
-    
   };
 
   const handleInterestRateValueChange = (value) => {
@@ -59,7 +58,10 @@ function MortgageCalculator() {
   const handleHomeownersAssociationValueChange = (value) => {
     setHomeownersAssociationValue(value);
   }
+// End Handlers Section //
 
+
+// UseEffects Section //
   useEffect(() => {
     calculateLoanAmount();
   }, [homeValue, downPayment, downPaymentPercentage]);
@@ -91,6 +93,7 @@ function MortgageCalculator() {
   useEffect(() => {
     calculateLoanPayOffDate();
   }, [loanDuration]);
+// End UseEffects Section //
 
   function calculateLoanAmount() {
     if(homeValue == 0 || downPaymentPercentage == 0) {
@@ -108,22 +111,19 @@ function MortgageCalculator() {
     }
   }
 
+  // Monthly Payment Calculator Function
   function calculateMonthlyPayment() {
     // Percentage conversion
     function percentageToDecimal(percent) {
       return percent / 12 / 100;
     }
 
-    // years to month conversion
+    // Years to month conversion
     function yearsToMonths(year) {
       return year * 12;
     }
 
-    function yearsToMonths(year) {
-      return year * 12;
-    }
-
-    function paymenCalculator() {
+    function paymentCalculator() {
       if (interestRate != "" && loanDuration != "" && interestRate != 0 && loanDuration != 0) {
         const mPayment = (percentageToDecimal(interestRate) * loanAmount) /(1 - Math.pow(1 + percentageToDecimal(interestRate), -yearsToMonths(loanDuration)))
         return mPayment
@@ -139,30 +139,28 @@ function MortgageCalculator() {
         setTotalInterestPaid(totalInterestPaid)
       }
     }
-
-    setMonthlyPayment(paymenCalculator);
+    setMonthlyPayment(paymentCalculator);
     calculateTotalInterestPaid()
-
     const totalMonthly = monthlyPayment + monthlyTaxPayment + monthlyHomeInsurance + homeownersAssociationValue;
     setTotalMonthly(totalMonthly);
-
     return monthlyPayment;
   }
+  //End Monthly Payment Calculator Function
 
-  // Función para calcular el total del pago
+  // Función para calcular el total del pago con otros impuestos
   function calculateTotalPayment() {
     if (monthlyPayment && loanDuration && loanAmount) {
     let totalPayment = (monthlyPayment * loanDuration * 12)
     setTotalPayment(totalPayment)
     }
     }
-  
+
     // Función para calcular Monthly Tax Payment
     function calculateMonthlyTaxPayment() {
       const monthlyTaxPayment = propertyTaxValue / 12;
       setMonthlyTaxPayment(monthlyTaxPayment);
     }
-  
+
     // Función para calcular Monthly Home Insurance
     function calculateMonthlyHomeInsurance() {
       const monthlyHomeInsurance = homeInsuranceValue / 12;
@@ -178,7 +176,6 @@ function MortgageCalculator() {
       const payOffDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + (loanDuration*12), currentDate.getDate());
       setLoanPayOffDate(payOffDate.toLocaleDateString("en-US", { month: "long", year: "numeric" }));
     }
-    
 
   return (
     <div className="flex sm:flex-row flex-col justify-center">
@@ -395,8 +392,8 @@ function MortgageCalculator() {
               </div>
             </div>
           </div>
-
       </div>
+      
       <div className="basis-1/4 padding flex-col bg-white rounded-lg sm:ml-5 ml-0 sm:mt-0 mt-5">
         <div>
           <div className="flex mt-8 mb-10 text-black">
