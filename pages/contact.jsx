@@ -109,7 +109,7 @@ const Contact = props => {
 
                   {/* Button Field */}
                   <div className="flex items-center justify-between">
-                    <button onClick = {handleOnSubmit} disabled={status.submitting} className="bg-orange-400  hover:bg-orange-600 text-white  py-2 px-4 rounded focus:outline-none focus:shadow-outline text-xs md:text-sm" type="button">
+                    <button id="submitButton" onClick = {handleOnSubmit} disabled={status.submitting} className="bg-orange-400  hover:bg-orange-600 text-white  py-2 px-4 rounded focus:outline-none focus:shadow-outline text-xs md:text-sm" type="button">
                       SUBMIT
                     </button>
                     <div className={` text-white  ${!status.submitted && "hidden"}`}>

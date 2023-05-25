@@ -30,6 +30,7 @@ const Modal = ({ Texto1, Texto2, signUpContent }) => {
   return (
     <div className="">
       <button
+        id="submitButton"
         className="bg-orange-400 text-white active:bg-orange-500 font-bold uppercase text-xl px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
         onClick={openPopup}
@@ -40,6 +41,7 @@ const Modal = ({ Texto1, Texto2, signUpContent }) => {
         <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex justify-center items-center z-10 ">
           <div className="bg-black rounded-lg p-8 popup">
             <button
+              id="closeButton"
               className="bg-black text-white rounded-full relative -top-11"
               onClick={closePopup}
             >
