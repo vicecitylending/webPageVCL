@@ -9,7 +9,6 @@ import { PrismicClient } from '../prismic-configuration'
 import Footer from "../components/footer";
 import InfoGrid from "../components/molecules/infogrid";
 
-
 const Homepage = props => {
 
   const { seo, generalInformation, menuContent, members, footerContent, meetTeamContent, CirclesGridContent, RealtorsResourceContent, PreApprovalProcessContent, BuyingRefinancingProcessContent, signUpContent } = props
@@ -68,7 +67,7 @@ const Homepage = props => {
                     <div className="w-full text-center items-center text-white text-2xl sm:text-4xl">{meetTeamContent.data.subtitle}</div>
                   </div>
                   <div>
-                    <div className="pr-5 pl-5 items-center w-full">
+                    <div className="sm:pr-32 pr-5 sm:pl-32 pl-5 items-center w-full">
                       <div className="w-full shadow-white text-white text-l sm:text-2xl">{meetTeamContent.data.text1}</div>
                     </div>
                   </div>
@@ -83,7 +82,7 @@ const Homepage = props => {
             </div>
 
             <div>
-              <div id ="buying" className="pr-5 pl-5 sm:pt-20 pt-32 w-full h-screen">
+              <div id ="buying" className="sm:pr-32 pr-5 sm:pl-32 pl-5 sm:pt-20 pt-32 w-full h-screen">
                 <div className="flex flex-col justify-center">
                   <div className="text-white text-white text-2xl sm:text-4xl pb-5">{BuyingRefinancingProcessContent.data.title}</div>
                   <div className="text-white text-l sm:text-2xl">{BuyingRefinancingProcessContent.data.text}</div>
@@ -116,7 +115,7 @@ const Homepage = props => {
             <div className="pr-5 pl-5 sm:pt-20 pt-32 w-full h-full sm:pb-20 pb-0">
               <div className="flex flex-col">
                   <div className="">
-                    <div className="w-full items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
+                    <div className="sm:pr-32 pr-5 sm:pl-32 pl-5 w-full items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
                   </div>
                   <div className="">
                     <div className="ml-0 sm:ml-20 circle-grid">
@@ -124,7 +123,7 @@ const Homepage = props => {
                     </div>
                   </div>
                   <div className="">
-                    <div className="pl-5 pr-5 items-center w-full">
+                    <div className="sm:pr-32 pr-5 sm:pl-32 pl-5 items-center w-full">
                       <div className="w-full items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
                     </div>
                   </div>
@@ -134,7 +133,7 @@ const Homepage = props => {
             <div className="sm:h-screen h-1/2"></div>
 
             <div>
-              <div id ="preapproval" className="pr-5 pl-5 sm:pt-20 pt-32 w-full h-screen">
+              <div id ="preapproval" className="sm:pr-32 pr-5 sm:pl-32 pl-5 sm:pt-20 pt-32 w-full h-screen">
                 <div className="flex flex-col justify-center">
                   <div className="text-white text-white text-2xl sm:text-4xl pb-5">{PreApprovalProcessContent.data.title}</div>
                   <div className="text-white text-l sm:text-2xl">{PreApprovalProcessContent.data.text}</div>
@@ -163,7 +162,7 @@ const Homepage = props => {
             </div>
 
             <div>
-              <div id ="loan" className="pr-5 pl-5 sm:pt-20 pt-32 w-full h-screen">
+              <div id ="loan" className="sm:pr-32 pr-5 sm:pl-32 pl-5 sm:pt-20 pt-32 w-full h-screen">
                 <div className="flex flex-col justify-center">
                   <div className="text-white text-white text-2xl sm:text-4xl pb-5">{RealtorsResourceContent.data.title}</div>
                   <div className="text-white text-l sm:text-2xl">{RealtorsResourceContent.data.text}</div>
@@ -207,7 +206,7 @@ const Homepage = props => {
             </div>
 
             <div className="">
-              <div className="mobile-footer">
+              <div className="">
                 <Footer content={footerContent.data}/>
               </div>
             </div>

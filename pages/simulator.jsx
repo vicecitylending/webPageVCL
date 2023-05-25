@@ -49,7 +49,7 @@ const Simulator = props => {
               <div className="relative items-center pt-10">
                 <div className="text-white text-xs padding">The mortgage calculator is designed solely for educational purposes. The actual rates and monthly payment amounts, which are subject to market fluctuations, depend on various factors including geographical location and loan specifics. The estimates provided are based on the information provided by you and may not incorporate additional fees and costs that we may apply, such as taxes, insurance, and other related expenses. Therefore, the actual payment obligation may be higher. Vice City Lending</div>
               </div>
-              <div className="flex w-full">
+              <div className="w-full">
                 <Footer content={footerContent.data}/>
               </div>
             </div>
