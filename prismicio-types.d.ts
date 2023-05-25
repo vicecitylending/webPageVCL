@@ -30,6 +30,28 @@ interface BuyingRefinancingProcessDocumentData {
    *
    */
   text: prismicT.KeyTextField;
+  /**
+   * Icon1 field in *Buying Refinancing Process*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: buying_refinancing_process.icon1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  icon1: prismicT.ImageField<never>;
+  /**
+   * Icon2 field in *Buying Refinancing Process*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: buying_refinancing_process.icon2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  icon2: prismicT.ImageField<never>;
 }
 /**
  * Buying Refinancing Process document from Prismic
@@ -633,6 +655,28 @@ interface PreApprovalProcessDocumentData {
    *
    */
   text: prismicT.KeyTextField;
+  /**
+   * Icon1 field in *Pre Approval Process*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_approval_process.icon1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  icon1: prismicT.ImageField<never>;
+  /**
+   * Icon2 field in *Pre Approval Process*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_approval_process.icon2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  icon2: prismicT.ImageField<never>;
 }
 /**
  * Pre Approval Process document from Prismic
@@ -673,6 +717,28 @@ interface RealtorsResourceDocumentData {
    *
    */
   text: prismicT.KeyTextField;
+  /**
+   * Icon1 field in *Realtors Resource*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: realtors_resource.icon1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  icon1: prismicT.ImageField<never>;
+  /**
+   * Icon2 field in *Realtors Resource*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: realtors_resource.icon2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  icon2: prismicT.ImageField<never>;
 }
 /**
  * Realtors Resource document from Prismic

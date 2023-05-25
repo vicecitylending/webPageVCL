@@ -13,6 +13,14 @@
       "text": {
         "type": "Text",
         "config": { "label": "Text", "placeholder": "" }
+      },
+      "icon1": {
+        "type": "Image",
+        "config": { "label": "Icon1", "constraint": {}, "thumbnails": [] }
+      },
+      "icon2": {
+        "type": "Image",
+        "config": { "label": "Icon2", "constraint": {}, "thumbnails": [] }
       }
     }
   }

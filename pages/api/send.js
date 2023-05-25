@@ -1,5 +1,3 @@
-import mail from '@sendgrid/mail'
-
 const sgMail = require('@sendgrid/mail')
 const sgClientMail = require('@sendgrid/mail')
 

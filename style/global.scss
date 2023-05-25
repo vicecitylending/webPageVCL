@@ -203,6 +203,7 @@ $menu-item-active-background-color: $app-color1;
     position: relative;
     right: 0%;
   }
+
 }
 
 @media screen and (max-width: 350px) {
@@ -213,7 +214,6 @@ $menu-item-active-background-color: $app-color1;
   }
 
     .logo-footer {
-      position: relative ;
       width: 50%;
       height: auto;
       top: 15%;
@@ -242,4 +242,5 @@ $menu-item-active-background-color: $app-color1;
       position: relative;
       right: 0%;
     }
+
 }

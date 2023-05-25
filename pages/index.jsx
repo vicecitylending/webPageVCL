@@ -13,7 +13,7 @@ import InfoGrid from "../components/molecules/infogrid";
 const Homepage = props => {
 
   const { seo, generalInformation, menuContent, members, footerContent, meetTeamContent, CirclesGridContent, RealtorsResourceContent, PreApprovalProcessContent, BuyingRefinancingProcessContent, signUpContent } = props
-
+  
   return<div className="main overflow-x-hidden">
           <Head
             title={seo.data.title}
@@ -62,7 +62,7 @@ const Homepage = props => {
             </div>
 
             <div>
-              <div id="team" className="w-full h-screen">
+              <div id="team" className="w-full h-screen sm:pt-20 pt-24 mb-10">
                 <div className="w-full flex-col items-center justify-center">
                   <div className="padding text-center items-center w-full">
                     <div className="w-full text-center items-center text-white text-2xl sm:text-4xl">{meetTeamContent.data.subtitle}</div>
@@ -82,38 +82,142 @@ const Homepage = props => {
               </div>
             </div>
 
-            <div className="pr-5 pl-5 mt-10 ">
-              <div className="items-center w-full">
-                <div className="w-full items-center text-white   text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
+            <div>
+              <div id ="buying" className="pr-5 pl-5 sm:pt-20 pt-32 w-full h-screen">
+                <div className="flex flex-col justify-center">
+                  <div className="text-white text-white text-2xl sm:text-4xl pb-5">{BuyingRefinancingProcessContent.data.title}</div>
+                  <div className="text-white text-l sm:text-2xl">{BuyingRefinancingProcessContent.data.text}</div>
+                  <div className="self-center">
+                    <div className="flex">
+                      <div className="pt-10 sm:pr-32 pr-5">
+                        <Image  
+                          className=""
+                          src={BuyingRefinancingProcessContent.data.icon1.url}
+                          alt={BuyingRefinancingProcessContent.data.icon1.alt} 
+                          width={200}
+                          height={200}
+                          priority={true}
+                        />
+                      </div>
+                      <div className="pt-10 sm:pl-32 pl-5">
+                        <Image 
+                          className=""
+                          src={BuyingRefinancingProcessContent.data.icon2.url}
+                          alt={BuyingRefinancingProcessContent.data.icon2.alt} 
+                          width={200}
+                          height={200}
+                          priority={true}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-              <div className="ml-0 sm:ml-20 circle-grid">
-                <InfoGrid image={CirclesGridContent.data.image} infoCircles={CirclesGridContent.data}/>
+            <div className="pr-5 pl-5 sm:pt-20 pt-32 w-full h-full sm:pb-20 pb-0">
+              <div className="flex flex-col">
+                  <div className="">
+                    <div className="w-full items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
+                  </div>
+                  <div className="">
+                    <div className="ml-0 sm:ml-20 circle-grid">
+                      <InfoGrid image={CirclesGridContent.data.image} infoCircles={CirclesGridContent.data}/>
+                    </div>
+                  </div>
+                  <div className="">
+                    <div className="pl-5 pr-5 items-center w-full">
+                      <div className="w-full items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
+                    </div>
+                  </div>
               </div>
+            </div>
+
+            <div className="sm:h-screen h-1/2"></div>
 
             <div>
-              <div className="pl-5 pr-5 items-center w-full">
-                <div className="w-full  items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
+              <div id ="preapproval" className="pr-5 pl-5 sm:pt-20 pt-32 w-full h-screen">
+                <div className="flex flex-col justify-center">
+                  <div className="text-white text-white text-2xl sm:text-4xl pb-5">{PreApprovalProcessContent.data.title}</div>
+                  <div className="text-white text-l sm:text-2xl">{PreApprovalProcessContent.data.text}</div>
+                  <div className="self-center">
+                    <div className="flex">
+                      <div className="pt-10 sm:pr-32 pr-5">
+                        <Image  className=""
+                                src={PreApprovalProcessContent.data.icon1.url}
+                                alt={PreApprovalProcessContent.data.icon1.alt} 
+                                width={200}
+                                height={200}
+                                priority={true}
+                          />
+                      </div>
+                      <div className="pt-10 sm:pl-32 pl-5">
+                        <Image  className=""
+                                src={PreApprovalProcessContent.data.icon2.url}
+                                alt={PreApprovalProcessContent.data.icon2.alt} 
+                                width={200}
+                                height={200}
+                                priority={true}
+                          />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div id ="contact" className="pt-10 w-full">
-              <div className="flex sm:flex-row flex-col py-9 justify-center">
-                <div className="sm:translate-x-0 translate-x-5 items-center text-white sm:w-1/4 w-full">
-                  <div className="text-4xl">{signUpContent.data.title}</div>
-                  <div className="mt-1 text-white text-xl pb-6 ">{signUpContent.data.subtitle}</div>
-                  <div className="mt-1 text-white text-sm pb-6 mr-7">{signUpContent.data.body_text}</div>
-                </div>
-                <div className="sm:w-1/4 w-full">
-                  <Contact signUpContent={signUpContent.data}/>
+            <div>
+              <div id ="loan" className="pr-5 pl-5 sm:pt-20 pt-32 w-full h-screen">
+                <div className="flex flex-col justify-center">
+                  <div className="text-white text-white text-2xl sm:text-4xl pb-5">{RealtorsResourceContent.data.title}</div>
+                  <div className="text-white text-l sm:text-2xl">{RealtorsResourceContent.data.text}</div>
+                  <div className="self-center">
+                    <div className="flex">
+                      <div className="pt-10 sm:pr-32 pr-5">
+                        <Image  className=""
+                                src={RealtorsResourceContent.data.icon1.url}
+                                alt={RealtorsResourceContent.data.icon1.alt} 
+                                width={200}
+                                height={200}
+                                priority={true}
+                          />
+                      </div>
+                      <div className="pt-10 sm:pl-32 pl-5">
+                        <Image  className=""
+                                src={RealtorsResourceContent.data.icon2.url}
+                                alt={RealtorsResourceContent.data.icon2.alt} 
+                                width={200}
+                                height={200}
+                                priority={true}
+                          />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="flex w-full">
-              <Footer content={footerContent.data}/>
+            <div className="w-full h-full">
+              <div id ="contact" className="pr-5 pl-5 sm:pt-20 pt-32">
+                <div className="flex sm:flex-row flex-col justify-center">
+                  <div className="sm:translate-x-0 translate-x-5 items-center text-white sm:w-1/4 w-full">
+                    <div className="text-4xl">{signUpContent.data.title}</div>
+                    <div className="mt-1 text-white text-xl pb-6 ">{signUpContent.data.subtitle}</div>
+                    <div className="mt-1 text-white text-sm pb-6 mr-7">{signUpContent.data.body_text}</div>
+                  </div>
+                  <div className="">
+                    <Contact signUpContent={signUpContent.data}/>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <div className="">
+              <div className="mobile-footer">
+                <Footer content={footerContent.data}/>
+              </div>
+            </div>
+
           </div>
         </div>
 }
