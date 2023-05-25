@@ -96,7 +96,6 @@ const Homepage = props => {
                           alt={BuyingRefinancingProcessContent.data.icon1.alt} 
                           width={200}
                           height={200}
-                          priority={true}
                         />
                       </div>
                       <div className="pt-10 sm:pl-32 pl-5">
@@ -106,7 +105,6 @@ const Homepage = props => {
                           alt={BuyingRefinancingProcessContent.data.icon2.alt} 
                           width={200}
                           height={200}
-                          priority={true}
                         />
                       </div>
                     </div>
@@ -148,7 +146,6 @@ const Homepage = props => {
                                 alt={PreApprovalProcessContent.data.icon1.alt} 
                                 width={200}
                                 height={200}
-                                priority={true}
                           />
                       </div>
                       <div className="pt-10 sm:pl-32 pl-5">
@@ -157,7 +154,6 @@ const Homepage = props => {
                                 alt={PreApprovalProcessContent.data.icon2.alt} 
                                 width={200}
                                 height={200}
-                                priority={true}
                           />
                       </div>
                     </div>
@@ -179,7 +175,6 @@ const Homepage = props => {
                                 alt={RealtorsResourceContent.data.icon1.alt} 
                                 width={200}
                                 height={200}
-                                priority={true}
                           />
                       </div>
                       <div className="pt-10 sm:pl-32 pl-5">
@@ -188,7 +183,6 @@ const Homepage = props => {
                                 alt={RealtorsResourceContent.data.icon2.alt} 
                                 width={200}
                                 height={200}
-                                priority={true}
                           />
                       </div>
                     </div>

@@ -14,7 +14,6 @@ const MemberCard = props => {
                             alt={`${name} ${lastName}`} 
                             width={700}
                             height={700}
-                            priority={true}
                     />
             </div>
             <div className="sm:mb-0 -mb-20 flex basis-1/4 items-center justify-center sm:-translate-y-11 -translate-y-32">

@@ -19,7 +19,6 @@ const Footer = (props) => {
             alt={content.logo2.alt} 
             width={200}
             height={200}
-            priority={true}
           />
           <Image 
             className=""
@@ -27,7 +26,6 @@ const Footer = (props) => {
             alt={content.logo3.alt} 
             width={200}
             height={200}
-            priority={true}
           />
         </div>
         <Image 
@@ -36,7 +34,6 @@ const Footer = (props) => {
           alt={content.logo.alt} 
           width={300}
           height={300}
-          priority={true}
         />
         <Image 
           className=""
@@ -44,7 +41,6 @@ const Footer = (props) => {
           alt={content.team.alt} 
           width={400}
           height={400}
-          priority={true}
         />
         <div className="bg-pink-500 py-4 w-full text-white text-center font-semibold">
           INTEGRITY | SPEED |  EFFICIENCY

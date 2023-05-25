@@ -113,7 +113,7 @@ const Contact = props => {
                     <button onClick = {handleOnSubmit} disabled={status.submitting} className="bg-orange-400  hover:bg-orange-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline text-xs md:text-sm" type="button">
                       SUBMIT
                     </button>
-                    <div className={` text-red-600 ${!status.submitted && "hidden"}`}>
+                    <div className={` text-white ${!status.submitted && "hidden"}`}>
                       <p>Message sent!</p>
                     </div>
                   </div>
