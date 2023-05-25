@@ -48,8 +48,8 @@ const Homepage = props => {
                     <Image  className="logo-size-m"
                             src={generalInformation.data.small_logo.url}
                             alt={generalInformation.data.small_logo.alt} 
-                            width={generalInformation.data.small_logo.dimensions.width}
-                            height={generalInformation.data.small_logo.dimensions.height}
+                            width={290}
+                            height={290}
                             priority={true}
                     />
                   </div>

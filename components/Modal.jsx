@@ -34,6 +34,7 @@ const Modal = ({ Texto1, Texto2, signUpContent }) => {
         className="bg-orange-400 text-white active:bg-orange-500 font-bold uppercase text-xl px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
         onClick={openPopup}
+        aria-label="Submit"
       >
         Get your Loan
       </button>
@@ -44,6 +45,7 @@ const Modal = ({ Texto1, Texto2, signUpContent }) => {
               id="closeButton"
               className="bg-black text-white rounded-full relative -top-11"
               onClick={closePopup}
+              aria-label="Close"
             >
             <span className="sr-only">Close</span>
               <svg
