@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import { NumericFormat, NumberFormatBase } from 'react-number-format';
 
 function MortgageCalculator() {
 
@@ -21,10 +22,19 @@ function MortgageCalculator() {
   const [totalMonthly, setTotalMonthly] = useState(0);
   const [loanPayOffDate, setLoanPayOffDate] = useState("");
 
+
+  //useRef Section
+  // const sliderRef = useRef(null);
+
+
   // Handlers Section //
   const handleHomeValueChange = (value) => {
+    // const formattedValue = value > 1000000 ? 1000000 : value;
     setHomeValue(value);
     calculateLoanAmount();
+    // if (sliderRef.current) {
+    //   sliderRef.current.value = value;
+    // }
   };
 
   const handleDownPaymentValueChange = (value) => {
@@ -185,12 +195,45 @@ function MortgageCalculator() {
               <div>
                 <label className="text-lg font-bold">Home Value</label>
               </div>
-              <div>
-                <label className="text-lg">${homeValue.toLocaleString("en")}</label>
+              <div className="w-1/2">
+                {/* <input
+                  type="number"
+                  min={0}
+                  max={1000000}
+                  id="home-value"
+                  className="text-lg"
+                  value={homeValue}
+                  onChange={(e) => handleHomeValueChange(Number(e.target.value))}
+                /> */}
+                <NumericFormat
+                  thousandSeparator={true}
+                  prefix={'$'}
+                  decimalScale={0}
+                  fixedDecimalScale={true}
+                  allowNegative={false}
+                  min={0}
+                  max={1000000}
+                  isAllowed={(values) => {
+                    const { floatValue } = values;
+                    return floatValue <= 1000000;
+                  }}
+                  // format={(value) => {
+                  //   if (value > 1000000) {
+                  //     return '1,000,000';
+                  //   }
+                  //   return value;
+                  // }}
+                  id="home-value"
+                  className="text-lg w-full text-right"
+                  value={homeValue}
+                  onValueChange={(values) => handleHomeValueChange(values.floatValue)}
+                  // onValueChange={(values) => console.log(values.floatValue)}
+                />
               </div>
             </div>
             <div className="w-full px-4">
               <Slider
+                value={homeValue}
                 min={0}
                 max={1000000}
                 step={2500}
@@ -217,7 +260,7 @@ function MortgageCalculator() {
                 <label className="text-sm"> (${downPayment.toLocaleString("en")})</label>
               </div> 
               <div>
-                <label className="text-lg">{downPaymentPercentage.toFixed(2)}%</label>
+                <label id=""className="text-lg">{downPaymentPercentage.toFixed(2)}%</label>
               </div>
             </div>
             <div className="w-full px-4">
