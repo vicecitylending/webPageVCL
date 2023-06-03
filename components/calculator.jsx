@@ -29,6 +29,7 @@ function MortgageCalculator() {
 
   // Handlers Section //
   const handleHomeValueChange = (value) => {
+    if (value === null || value === undefined) setHomeValue(0)
     // const formattedValue = value > 1000000 ? 1000000 : value;
     setHomeValue(value);
     calculateLoanAmount();
@@ -215,9 +216,8 @@ function MortgageCalculator() {
                   max={1000000}
                   isAllowed={(values) => {
                     const { floatValue } = values;
-                    return floatValue <= 1000000;
-                  }}
-                  // format={(value) => {
+                    return floatValue === null || floatValue === undefined || floatValue <= 1000000;
+                  }}                  // format={(value) => {
                   //   if (value > 1000000) {
                   //     return '1,000,000';
                   //   }
