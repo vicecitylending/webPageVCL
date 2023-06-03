@@ -301,12 +301,29 @@ function MortgageCalculator() {
               <div>
                 <label className="text-lg font-bold">Interest Rate</label>
               </div>
-              <div>
-                <label className="text-lg">{interestRate}%</label>
+              <div className="w-1/4">
+                <NumericFormat
+                  thousandSeparator={true}
+                  suffix={'%'}
+                  decimalScale={1}
+                  fixedDecimalScale={true}
+                  allowNegative={false}
+                  min={0}
+                  max={12}
+                  isAllowed={(values) => {
+                    const { floatValue } = values;
+                    return floatValue === null || floatValue === undefined || floatValue <= 12;
+                  }}
+                  id="interest-rate"
+                  className="text-lg w-full text-right"
+                  value={interestRate}
+                  onValueChange={(values) => handleInterestRateValueChange(values.floatValue)}
+                />
               </div>
             </div>
             <div className="w-full px-4">
               <Slider
+                value={interestRate}
                 min={0}
                 max={12.00}
                 step={0.100}
@@ -331,12 +348,29 @@ function MortgageCalculator() {
               <div>
                 <label className="text-lg font-bold">Loan Duration</label>
               </div>
-              <div>
-                <label className="text-lg">{loanDuration.toLocaleString("en")} Years</label>
+              <div className="w-1/4">
+                <NumericFormat
+                  thousandSeparator={true}
+                  suffix={' Years'}
+                  decimalScale={0}
+                  fixedDecimalScale={true}
+                  allowNegative={false}
+                  min={0}
+                  max={30}
+                  isAllowed={(values) => {
+                    const { floatValue } = values;
+                    return floatValue === null || floatValue === undefined || floatValue <= 30;
+                  }}
+                  id="loan-duration"
+                  className="text-lg w-full text-right"
+                  value={loanDuration}
+                  onValueChange={(values) => handleLoanDurationChange(values.floatValue)}
+                />
               </div>
             </div>
             <div className="w-full px-4">
               <Slider
+                value={loanDuration}
                 min={0}
                 max={30}
                 step={5}
@@ -361,12 +395,33 @@ function MortgageCalculator() {
               <div>
                 <label className="text-lg font-bold">Property Tax</label>
               </div>
-              <div>
+              {/* <div>
                 <label className="text-lg">${propertyTaxValue}/yr.</label>
+              </div> */}
+              <div className="w-1/4">
+                <NumericFormat
+                  thousandSeparator={true}
+                  prefix={'$'}
+                  suffix={'/yr.'}
+                  decimalScale={0}
+                  fixedDecimalScale={true}
+                  allowNegative={false}
+                  min={0}
+                  max={10000}
+                  isAllowed={(values) => {
+                    const { floatValue } = values;
+                    return floatValue === null || floatValue === undefined || floatValue <= 10000;
+                  }}
+                  id="property-tax"
+                  className="text-lg w-full text-right"
+                  value={propertyTaxValue}
+                  onValueChange={(values) => handlePropertyTaxChange(values.floatValue)}
+                />
               </div>
             </div>
             <div className="w-full px-4">
               <Slider
+                value={propertyTaxValue}
                 min={0}
                 max={10000}
                 step={25}
@@ -391,12 +446,30 @@ function MortgageCalculator() {
               <div>
                 <label className="text-lg font-bold">Home Insurance</label>
               </div>
-              <div>
-                <label className="text-lg">${homeInsuranceValue}/yr.</label>
+              <div className="w-1/4">
+                <NumericFormat
+                  thousandSeparator={true}
+                  prefix={'$'}
+                  suffix={'/yr.'}
+                  decimalScale={0}
+                  fixedDecimalScale={true}
+                  allowNegative={false}
+                  min={0}
+                  max={10000}
+                  isAllowed={(values) => {
+                    const { floatValue } = values;
+                    return floatValue === null || floatValue === undefined || floatValue <= 10000;
+                  }}
+                  id="home-insurance"
+                  className="text-lg w-full text-right"
+                  value={homeInsuranceValue}
+                  onValueChange={(values) => handleHomeInsuranceValueChange(values.floatValue)}
+                />
               </div>
             </div>
             <div className="w-full px-4">
               <Slider
+                value={homeInsuranceValue}
                 min={0}
                 max={10000}
                 step={25}
@@ -421,12 +494,30 @@ function MortgageCalculator() {
               <div>
                 <label className="text-lg font-bold">Homeowners Association HOA</label>
               </div>
-              <div>
-                <label className="text-lg">${homeownersAssociationValue}/mo.</label>
+              <div className="w-1/4">
+                <NumericFormat
+                  thousandSeparator={true}
+                  prefix={'$'}
+                  suffix={'/mo.'}
+                  decimalScale={0}
+                  fixedDecimalScale={true}
+                  allowNegative={false}
+                  min={0}
+                  max={1000}
+                  isAllowed={(values) => {
+                    const { floatValue } = values;
+                    return floatValue === null || floatValue === undefined || floatValue <= 1000;
+                  }}
+                  id="homeowners-association"
+                  className="sm:text-lg text-xs w-full text-right"
+                  value={homeownersAssociationValue}
+                  onValueChange={(values) => handleHomeownersAssociationValueChange(values.floatValue)}
+                />
               </div>
             </div>
             <div className="w-full px-4">
               <Slider
+                value={homeownersAssociationValue}
                 min={0}
                 max={1000}
                 step={25}
