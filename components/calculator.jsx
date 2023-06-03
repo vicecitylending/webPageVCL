@@ -492,7 +492,7 @@ function MortgageCalculator() {
           <div className="flex flex-col">
             <div className="padding flex justify-between">
               <div>
-                <label className="text-lg font-bold">Homeowners Association HOA</label>
+                <label className="sm:text-lg text-xs font-bold">Homeowners Association HOA</label>
               </div>
               <div className="w-1/4">
                 <NumericFormat
@@ -509,7 +509,7 @@ function MortgageCalculator() {
                     return floatValue === null || floatValue === undefined || floatValue <= 1000;
                   }}
                   id="homeowners-association"
-                  className="sm:text-lg text-xs w-full text-right"
+                  className="text-lg w-full text-right"
                   value={homeownersAssociationValue}
                   onValueChange={(values) => handleHomeownersAssociationValueChange(values.floatValue)}
                 />
