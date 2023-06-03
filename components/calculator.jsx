@@ -251,7 +251,7 @@ function MortgageCalculator() {
             <div className="padding flex justify-between">
               <div>
                 <label className="text-lg font-bold">Down Payment</label>
-                <label className="sm:text-xs text-sm"> (${downPayment.toLocaleString("en")})</label>
+                <label className="text-xs"> (${downPayment.toLocaleString("en")})</label>
               </div> 
               <div className="w-1/4">
                 <NumericFormat
