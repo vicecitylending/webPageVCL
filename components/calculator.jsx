@@ -29,7 +29,7 @@ function MortgageCalculator() {
 
   // Handlers Section //
   const handleHomeValueChange = (value) => {
-    if (value === null || value === undefined) setHomeValue(0)
+    if (value === null || value === undefined || value === '') setHomeValue(0)
     // const formattedValue = value > 1000000 ? 1000000 : value;
     setHomeValue(value);
     calculateLoanAmount();
@@ -217,17 +217,11 @@ function MortgageCalculator() {
                   isAllowed={(values) => {
                     const { floatValue } = values;
                     return floatValue === null || floatValue === undefined || floatValue <= 1000000;
-                  }}                  // format={(value) => {
-                  //   if (value > 1000000) {
-                  //     return '1,000,000';
-                  //   }
-                  //   return value;
-                  // }}
+                  }}
                   id="home-value"
                   className="text-lg w-full text-right"
                   value={homeValue}
                   onValueChange={(values) => handleHomeValueChange(values.floatValue)}
-                  // onValueChange={(values) => console.log(values.floatValue)}
                 />
               </div>
             </div>
@@ -257,14 +251,31 @@ function MortgageCalculator() {
             <div className="padding flex justify-between">
               <div>
                 <label className="text-lg font-bold">Down Payment</label>
-                <label className="text-sm"> (${downPayment.toLocaleString("en")})</label>
+                <label className="sm:text-xs text-sm"> (${downPayment.toLocaleString("en")})</label>
               </div> 
-              <div>
-                <label id=""className="text-lg">{downPaymentPercentage.toFixed(2)}%</label>
+              <div className="w-1/4">
+                <NumericFormat
+                  thousandSeparator={true}
+                  suffix={'%'}
+                  decimalScale={1}
+                  fixedDecimalScale={true}
+                  allowNegative={false}
+                  min={0}
+                  max={50}
+                  isAllowed={(values) => {
+                    const { floatValue } = values;
+                    return floatValue === null || floatValue === undefined || floatValue <= 50;
+                  }}
+                  id="down-payment"
+                  className="text-lg w-full text-right"
+                  value={downPaymentPercentage}
+                  onValueChange={(values) => handleDownPaymentValueChange(values.floatValue)}
+                />
               </div>
             </div>
             <div className="w-full px-4">
               <Slider
+                value={downPaymentPercentage}
                 min={0}
                 max={50}
                 step={0.5}
