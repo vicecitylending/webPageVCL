@@ -492,9 +492,9 @@ function MortgageCalculator() {
           <div className="flex flex-col">
             <div className="padding flex justify-between">
               <div>
-                <label className="sm:text-lg text-xs font-bold">Homeowners Association HOA</label>
+                <label className="sm:text-base text-xs font-bold">Homeowners Association HOA</label>
               </div>
-              <div className="w-1/4">
+              <div className="w-1/3">
                 <NumericFormat
                   thousandSeparator={true}
                   prefix={'$'}
