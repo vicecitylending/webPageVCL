@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { NumericFormat, NumberFormatBase } from 'react-number-format';
+import InfoCirclePopup from '../components/atoms/infoCirclePopup'
 
 function MortgageCalculator() {
 
@@ -194,6 +195,7 @@ function MortgageCalculator() {
           <div className="flex flex-col">
             <div className="padding flex justify-between">
               <div>
+                {/* <InfoCirclePopup/> */}
                 <label className="text-lg font-bold">Home Value</label>
               </div>
               <div className="w-1/2">

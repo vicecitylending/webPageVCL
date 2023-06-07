@@ -8,11 +8,14 @@ import MembersCarousel from "../components/carousel";
 import { PrismicClient } from '../prismic-configuration'
 import Footer from "../components/footer";
 import InfoGrid from "../components/molecules/infogrid";
+import { getLocales } from "../lib/getLocales";
+import { createClient } from "../prismicio"
+
 
 const Homepage = props => {
-
-  const { seo, generalInformation, menuContent, members, footerContent, meetTeamContent, CirclesGridContent, RealtorsResourceContent, PreApprovalProcessContent, BuyingRefinancingProcessContent, signUpContent } = props
-  
+    
+  const { locales, seo, generalInformation, menuContent, members, footerContent, meetTeamContent, CirclesGridContent, RealtorsResourceContent, PreApprovalProcessContent, BuyingRefinancingProcessContent, signUpContent } = props
+  console.log(locales)
   return<div className="main overflow-x-hidden">
           <Head
             title={seo.data.title}
@@ -26,6 +29,7 @@ const Homepage = props => {
               logo={generalInformation.data.small_logo.url}
               imageWidth={generalInformation.data.small_logo_width}
               imageHeight={generalInformation.data.small_logo_height}
+              locales={locales}
             />
 
           {/* Background */}
@@ -215,37 +219,42 @@ const Homepage = props => {
         </div>
 }
 
-const getStaticProps = async ({ params }) => {
+const getStaticProps = async ({ params, locale, previewData }) => {
+  const client = createClient({ previewData });
+  const locales = await getLocales(client)
   return {
       props: {
-        seo: await getPrismicData('seo'),
-        generalInformation: await getPrismicData('general_information'),
-        menuContent: await getPrismicData('menu'),
-        members: await getPrismicCustomTypeData('member'), // Different Function to query multi instances.
-        footerContent: await getPrismicData('footer'),
-        meetTeamContent: await getPrismicData('meet_team'),
-        RealtorsResourceContent: await getPrismicData('realtors_resource'),
-        PreApprovalProcessContent: await getPrismicData('pre_approval_process'),
-        BuyingRefinancingProcessContent: await getPrismicData('buying_refinancing_process'), 
-        signUpContent : await getPrismicData('sign_up'),
-        CirclesGridContent : await getPrismicData('circle_grid_info')
+        seo: await getPrismicData('seo', locale),
+        generalInformation: await getPrismicData('general_information', locale),
+        menuContent: await getPrismicData('menu', locale),
+        members: await getPrismicCustomTypeData('member', locale), // Different Function to query multi instances.
+        footerContent: await getPrismicData('footer', locale),
+        meetTeamContent: await getPrismicData('meet_team', locale),
+        RealtorsResourceContent: await getPrismicData('realtors_resource', locale),
+        PreApprovalProcessContent: await getPrismicData('pre_approval_process', locale),
+        BuyingRefinancingProcessContent: await getPrismicData('buying_refinancing_process', locale), 
+        signUpContent : await getPrismicData('sign_up', locale),
+        CirclesGridContent : await getPrismicData('circle_grid_info', locale),
+        locales: locales,
+        // client: createClient({ previewData }),
+        // menuContentTEST: await client.getPrismicData('menu', params.uid ,{ lang: locale}),
       }
   }
 }
 
 // Wrapper for prismic functions
-const getPrismicData = async (name) => {
+const getPrismicData = async (name, lang) => {
   const prismicAnswer = await PrismicClient().query(  
-    Prismic.Predicates.at('document.type', name) 
+    Prismic.Predicates.at('document.type', name),{ lang } 
   )
   // Get first doc of this type (there should be 1 doc per type)
   const doc = prismicAnswer.results[0]
   return doc
 }
 
-const getPrismicCustomTypeData = async (name) => {
+const getPrismicCustomTypeData = async (name, lang) => {
   const prismicAnswer = await PrismicClient().query(  
-    Prismic.Predicates.at('document.type', name) 
+    Prismic.Predicates.at('document.type', name), { lang }  
   )
   // Get all docs of this type (there should many docs per type)
   const CustomTypeDoc = prismicAnswer.results

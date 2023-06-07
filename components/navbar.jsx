@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image"
 import { useRouter } from 'next/router';
 import Link from "next/link";
+import { PrismicNextLink } from '@prismicio/next'
 
 
 // This NavBar component is built with Prismic Type Information
@@ -9,8 +10,7 @@ import Link from "next/link";
 
 const NavBar = props => {
 
-  const { content, logo, imageHeight, imageWidth} = props
-
+  const { content, logo, imageHeight, imageWidth, locales} = props
   let navBarLinks = []
   const [isOpen, setOpen] = useState(true);
   const menuFlip = () => {setOpen(!isOpen)};
@@ -46,7 +46,9 @@ const NavBar = props => {
               <Link href={`/${element.link}`}>
                 <div className="text-shadow shadow-white text-white hover:text-blue-100 bg-pink-400 pl-2 pr-10 font-semibold -mr-10 " >APPLY NOW </div>
               </Link>
-              )}
+              )
+              
+              }
               </li>
         )
       }
@@ -63,7 +65,8 @@ const NavBar = props => {
           </li>
         )
       }
-    })
+    }
+    )
   }
 
   return (
@@ -82,6 +85,17 @@ const NavBar = props => {
         <div className={`w-full md:block md:w-auto ${isOpen && "hidden"}`} id="mobile-menu">
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium items-end md:items-start">
             {navBarLinks}
+            <div className="pl-10">
+                {locales.map((locale) => (
+                  <div key={locale.id}>
+                    <PrismicNextLink href={locale.id}>
+                      <div className="text-shadow shadow-white text-white hover:text-blue-100 bg-pink-400 pl-2 pr-10 font-semibold -mr-10 ">
+                        {locale.name}
+                      </div>
+                    </PrismicNextLink>
+                  </div>
+                ))}
+              </div>
           </ul>
         </div>
       </div>

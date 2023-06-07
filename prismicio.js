@@ -1,6 +1,7 @@
 import * as prismic from "@prismicio/client";
-import * as prismicH from "@prismicio/helpers";
 import * as prismicNext from "@prismicio/next";
+
+import sm from "./slicemachine.config.json";
 
 /**
  * The project's Prismic repository name.
@@ -8,26 +9,25 @@ import * as prismicNext from "@prismicio/next";
 export const { repositoryName } = sm;
 
 /**
- * The project's Prismic Link Resolver. This function determines the URL for a
- * given Prismic document.
+ * A list of Route Resolver objects that define how a document's \`url\` field
+ * is resolved.
  *
- * A Link Resolver is used rather than a Route Resolver because we need to
- * resolve URLs for documents' `alternate_languages` items. The
- * `alternate_languages` array does not include URLs.
+ * {@link https://prismic.io/docs/route-resolver#route-resolver}
  *
- * @type {prismicH.LinkResolverFunction}
+ * @type {prismic.ClientConfig["routes"]}
  */
-export const linkResolver = (doc) => {
-  if (doc.type === "page") {
-    if (doc.uid === "home") {
-      return "/";
-    } else {
-      return `/${doc.uid}`;
-    }
-  }
-
-  return "/";
-};
+export const routes = [
+  {
+    type: "homepage",
+    uid: "home",
+    path: "/:lang?",
+  },
+  {
+    type: "page",
+    uid: "simulator",
+    path: "/:lang?/simulator",
+  },
+];
 
 /**
  * Creates a Prismic client for the project's repository. The client is used to
@@ -36,7 +36,10 @@ export const linkResolver = (doc) => {
  * @param config {prismicNext.CreateClientConfig} - A configuration object to
  */
 export const createClient = ({ previewData, req, ...config } = {}) => {
-  const client = prismic.createClient(sm.repositoryName, config);
+  const client = prismic.createClient(repositoryName, {
+    routes,
+    ...config,
+  });
 
   prismicNext.enableAutoPreviews({ client, previewData, req });
 
