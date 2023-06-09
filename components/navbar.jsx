@@ -10,7 +10,8 @@ import { PrismicNextLink } from '@prismicio/next'
 
 const NavBar = props => {
 
-  const { content, logo, imageHeight, imageWidth, locales} = props
+  const { content, logo, imageHeight, imageWidth, locales, actualLocale} = props
+
   let navBarLinks = []
   const [isOpen, setOpen] = useState(true);
   const menuFlip = () => {setOpen(!isOpen)};
@@ -40,28 +41,18 @@ const NavBar = props => {
       if(index  === (array.length - 1)) {
         navBarLinks.push(
           <li className="" key = {index}>
-            {router.pathname === '/' ?  (
-            <a className="text-shadow shadow-white text-white hover:text-blue-100 bg-pink-400 pl-2 pr-10 font-semibold -mr-10 " href={element.link} >{element.label}</a>
-            ) : (
-              <Link href={`/${element.link}`}>
-                <div className="text-shadow shadow-white text-white hover:text-blue-100 bg-pink-400 pl-2 pr-10 font-semibold -mr-10 " >APPLY NOW </div>
-              </Link>
-              )
-              
-              }
-              </li>
+              <PrismicNextLink href={`/${element.link}`}>
+                <div className="text-shadow shadow-white text-white hover:text-blue-100 bg-pink-400 font-semibold sm:pl-1 sm:pr-1" >{element.label}</div>
+              </PrismicNextLink>
+          </li>
         )
       }
       else {
         navBarLinks.push(
           <li className="" key = {index}>
-            {router.pathname === '/' ? (
-              <a className="text-shadow shadow-white text-white hover:text-blue-100 font-semibold " href={element.link}>{element.label}</a>
-            ) : (
-              <Link href={`/${element.link}`}>
+              <PrismicNextLink href={`/${element.link}`}>
                 <div className="text-shadow shadow-white text-white hover:text-blue-100 font-semibold ">{element.label}</div>
-              </Link>
-            )}
+              </PrismicNextLink>
           </li>
         )
       }
@@ -72,9 +63,9 @@ const NavBar = props => {
   return (
     <nav className="fixed flex inset-x-0 px-2 sm:px-4 md:py-1 bg-black w-full z-50">
       <div className="flex translate-y-11 ml-3">
-        <Link href="/#home" className="md:hidden">
+        <PrismicNextLink href="/#home" className="md:hidden">
           <Image className="scale-150" src={logo} width={imageWidth} height={imageHeight} alt="Vice-City-Lending-Logo"/>
-        </Link>
+        </PrismicNextLink>
       </div>
       <div className="padding container flex flex-wrap md:justify-center justify-end items-start mx-auto">
         <button aria-label="Flip" id="flipButton" onClick={menuFlip} type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-3xl md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
@@ -85,12 +76,12 @@ const NavBar = props => {
         <div className={`w-full md:block md:w-auto ${isOpen && "hidden"}`} id="mobile-menu">
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium items-end md:items-start">
             {navBarLinks}
-            <div className="pl-10">
+            <div className="pl-5 flex flex-row">
                 {locales.map((locale) => (
-                  <div key={locale.id}>
-                    <PrismicNextLink href={locale.id}>
-                      <div className="text-shadow shadow-white text-white hover:text-blue-100 bg-pink-400 pl-2 pr-10 font-semibold -mr-10 ">
-                        {locale.name}
+                  <div className="" key={locale.id}>
+                    <PrismicNextLink href={`/${locale.id}${router.pathname}`}>
+                      <div className="shadow-white text-white hover:text-blue-100 font-semibold pl-1 pr-1">
+                      {locale.id === 'en-us' ? 'English' : locale.id === 'es-co' ? 'Español' : locale.id}
                       </div>
                     </PrismicNextLink>
                   </div>

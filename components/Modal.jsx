@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Contact from "./contact";
 
-const Modal = ({ Texto1, Texto2, signUpContent }) => {
+const Modal = ({ buttonText, signUpContent }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [inputValue, setInputValue] = useState("");
 
@@ -36,7 +36,7 @@ const Modal = ({ Texto1, Texto2, signUpContent }) => {
         onClick={openPopup}
         aria-label="Submit"
       >
-        Get your Loan
+        {buttonText}
       </button>
       {showPopup && (
         <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex justify-center items-center z-10 ">
@@ -60,7 +60,7 @@ const Modal = ({ Texto1, Texto2, signUpContent }) => {
                 />
               </svg>
             </button>
-            <h2 className="text-white -mt-10 text-xl">Let's connect to find out what is your purchasing power!</h2>
+            <h2 className="text-white -mt-10 text-xl">{signUpContent.data.subtitle}</h2>
 
             <div className="h-full w-full">
               <Contact signUpContent={signUpContent.data}></Contact>

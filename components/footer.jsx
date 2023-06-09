@@ -43,7 +43,7 @@ const Footer = (props) => {
           height={400}
         />
         <div className="bg-pink-500 py-4 w-full text-white text-center font-semibold">
-          INTEGRITY | SPEED |  EFFICIENCY
+          {content.footer_text}
         </div>
       </div>
   );

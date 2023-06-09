@@ -11,7 +11,7 @@ import { createClient } from "../prismicio"
 
 const Simulator = props => {
 
-  const { locales, seo, generalInformation, menuContent, footerContent, signUpContent } = props
+  const { locale, locales, seo, generalInformation, menuContent, footerContent, signUpContent, SimulatorContent } = props
   
   return<div className="main overflow-x-hidden">
             <Head
@@ -37,21 +37,21 @@ const Simulator = props => {
               <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-500 opacity-70 object-fill"></div>
             </div>
             <div id="team" className="relative text-center items-center pt-20">
-              <div className="text-shadow shadow-white text-white font-semibold text-2xl sm:text-4xl padding">Mortgage Calculator</div>
+              <div className="text-shadow shadow-white text-white font-semibold text-2xl sm:text-4xl padding">{SimulatorContent.data.title}</div>
             </div>
 
             <div className="relative pt-30 flex flex-col w-full">
               <div className="padding">
-                <MortgageCalculator/>
+                <MortgageCalculator CalculatorContent={SimulatorContent.data}/>
               </div>
               <div className="flex padding w-full">
                 <div className="justify-center items-center mx-auto ">
-                  <Modal className="" signUpContent={signUpContent}/>
+                  <Modal className="" signUpContent={signUpContent} buttonText={SimulatorContent.data.get_your_loan_text}/>
                 </div>
               </div>
               <div className="flex flex-col items-center">
                 <div className="relative pr-5 pl-5  sm:w-1/2 w-full">
-                  <div className="text-white text-xs padding">The mortgage calculator is designed solely for educational purposes. The actual rates and monthly payment amounts, which are subject to market fluctuations, depend on various factors including geographical location and loan specifics. The estimates provided are based on the information provided by you and may not incorporate additional fees and costs that we may apply, such as taxes, insurance, and other related expenses. Therefore, the actual payment obligation may be higher. Vice City Lending</div>
+                  <div className="text-white text-xs padding">{SimulatorContent.data.bottom_message_text}</div>
                 </div>
               </div>
               <div className="w-full">
@@ -77,9 +77,9 @@ const getStaticProps = async ({ params, locale, previewData }) => {
         BuyingRefinancingProcessContent: await getPrismicData('buying_refinancing_process', locale), 
         signUpContent : await getPrismicData('sign_up', locale),
         CirclesGridContent : await getPrismicData('circle_grid_info', locale),
+        SimulatorContent : await getPrismicData('simulator', locale),
         locales: locales,
-        // client: createClient({ previewData }),
-        // menuContentTEST: await client.getPrismicData('menu', params.uid ,{ lang: locale}),
+        locale:locale
       }
   }
 }

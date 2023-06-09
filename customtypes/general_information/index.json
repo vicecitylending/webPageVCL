@@ -17,6 +17,26 @@
       "small_logo_height": {
         "type": "Text",
         "config": { "label": "Small Logo Height", "placeholder": "" }
+      },
+      "we_work_text": {
+        "type": "Text",
+        "config": { "label": "We Work Text", "placeholder": "" }
+      },
+      "twentyfourseven_text": {
+        "type": "Text",
+        "config": { "label": "Twentyfourseven Text", "placeholder": "" }
+      },
+      "powered_text": {
+        "type": "Text",
+        "config": { "label": "Powered Text", "placeholder": "" }
+      },
+      "dadeland_text": {
+        "type": "Text",
+        "config": { "label": "Dadeland Text", "placeholder": "" }
+      },
+      "difference_text": {
+        "type": "Text",
+        "config": { "label": "Difference Text", "placeholder": "" }
       }
     }
   }

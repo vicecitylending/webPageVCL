@@ -293,6 +293,17 @@ interface FooterDocumentData {
    *
    */
   team: prismicT.ImageField<never>;
+  /**
+   * Footer Text field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footer_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  footer_text: prismicT.KeyTextField;
 }
 /**
  * Footer document from Prismic
@@ -340,6 +351,61 @@ interface GeneralInformationDocumentData {
    *
    */
   small_logo_height: prismicT.KeyTextField;
+  /**
+   * We Work Text field in *General Information*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: general_information.we_work_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  we_work_text: prismicT.KeyTextField;
+  /**
+   * Twentyfourseven Text field in *General Information*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: general_information.twentyfourseven_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  twentyfourseven_text: prismicT.KeyTextField;
+  /**
+   * Powered Text field in *General Information*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: general_information.powered_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  powered_text: prismicT.KeyTextField;
+  /**
+   * Dadeland Text field in *General Information*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: general_information.dadeland_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  dadeland_text: prismicT.KeyTextField;
+  /**
+   * Difference Text field in *General Information*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: general_information.difference_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  difference_text: prismicT.KeyTextField;
 }
 /**
  * General Information document from Prismic
@@ -860,6 +926,17 @@ interface SignUpDocumentData {
    */
   name: prismicT.KeyTextField;
   /**
+   * Name Placeholder field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.name_placeholder
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name_placeholder: prismicT.KeyTextField;
+  /**
    * Lastname field in *Sign Up*
    *
    * - **Field Type**: Text
@@ -870,6 +947,17 @@ interface SignUpDocumentData {
    *
    */
   lastname: prismicT.KeyTextField;
+  /**
+   * Lastname Placeholder field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.lastname_placeholder
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  lastname_placeholder: prismicT.KeyTextField;
   /**
    * Email field in *Sign Up*
    *
@@ -882,6 +970,17 @@ interface SignUpDocumentData {
    */
   email: prismicT.KeyTextField;
   /**
+   * Email Placeholder field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.email_placeholder
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  email_placeholder: prismicT.KeyTextField;
+  /**
    * Phone field in *Sign Up*
    *
    * - **Field Type**: Text
@@ -893,6 +992,17 @@ interface SignUpDocumentData {
    */
   phone: prismicT.KeyTextField;
   /**
+   * Phone Placeholder field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.phone_placeholder
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  phone_placeholder: prismicT.KeyTextField;
+  /**
    * Body Text field in *Sign Up*
    *
    * - **Field Type**: Text
@@ -903,6 +1013,28 @@ interface SignUpDocumentData {
    *
    */
   body_text: prismicT.KeyTextField;
+  /**
+   * Submit Text field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.submit_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  submit_text: prismicT.KeyTextField;
+  /**
+   * Sent Message Text field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.sent_message_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  sent_message_text: prismicT.KeyTextField;
 }
 /**
  * Sign Up document from Prismic
@@ -919,6 +1051,233 @@ export type SignUpDocument<Lang extends string = string> =
     "sign_up",
     Lang
   >;
+/** Content for Simulator documents */
+interface SimulatorDocumentData {
+  /**
+   * Title field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismicT.KeyTextField;
+  /**
+   * Home Value Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.home_value_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  home_value_text: prismicT.KeyTextField;
+  /**
+   * Down Payment Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.down_payment_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  down_payment_text: prismicT.KeyTextField;
+  /**
+   * Interest Rate Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.interest_rate_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  interest_rate_text: prismicT.KeyTextField;
+  /**
+   * Loan Duration Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.loan_duration_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan_duration_text: prismicT.KeyTextField;
+  /**
+   * Property Tax Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.property_tax_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  property_tax_text: prismicT.KeyTextField;
+  /**
+   * Home Insurance Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.home_insurance_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  home_insurance_text: prismicT.KeyTextField;
+  /**
+   * Homeowners Association Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.homeowners_association_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  homeowners_association_text: prismicT.KeyTextField;
+  /**
+   * Principal Interest Only Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.principal_interest_only_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  principal_interest_only_text: prismicT.KeyTextField;
+  /**
+   * Loan Amount Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.loan_amount_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan_amount_text: prismicT.KeyTextField;
+  /**
+   * Total Interest Paid Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.total_interest_paid_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  total_interest_paid_text: prismicT.KeyTextField;
+  /**
+   * Monthly Tax Payment Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.monthly_tax_payment_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  monthly_tax_payment_text: prismicT.KeyTextField;
+  /**
+   * Monthly Home Insurance Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.monthly_home_insurance_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  monthly_home_insurance_text: prismicT.KeyTextField;
+  /**
+   * Total Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.total_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  total_text: prismicT.KeyTextField;
+  /**
+   * Payments Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.payments_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  payments_text: prismicT.KeyTextField;
+  /**
+   * Loan PayOff Date Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.loan_payoff_date_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan_payoff_date_text: prismicT.KeyTextField;
+  /**
+   * Estimated Total Monthly Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.estimated_total_monthly_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  estimated_total_monthly_text: prismicT.KeyTextField;
+  /**
+   * Get Your Loan Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.get_your_loan_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  get_your_loan_text: prismicT.KeyTextField;
+  /**
+   * Bottom Message Text field in *Simulator*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: simulator.bottom_message_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  bottom_message_text: prismicT.KeyTextField;
+}
+/**
+ * Simulator document from Prismic
+ *
+ * - **API ID**: `simulator`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SimulatorDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<SimulatorDocumentData>,
+    "simulator",
+    Lang
+  >;
 export type AllDocumentTypes =
   | BuyingRefinancingProcessDocument
   | CircleGridInfoDocument
@@ -932,7 +1291,8 @@ export type AllDocumentTypes =
   | PreApprovalProcessDocument
   | RealtorsResourceDocument
   | SeoDocument
-  | SignUpDocument;
+  | SignUpDocument
+  | SimulatorDocument;
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -971,6 +1331,8 @@ declare module "@prismicio/client" {
       SeoDocument,
       SignUpDocumentData,
       SignUpDocument,
+      SimulatorDocumentData,
+      SimulatorDocument,
       AllDocumentTypes,
     };
   }

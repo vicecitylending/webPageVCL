@@ -29,6 +29,10 @@
       "team": {
         "type": "Image",
         "config": { "label": "Team", "constraint": {}, "thumbnails": [] }
+      },
+      "footer_text": {
+        "type": "Text",
+        "config": { "label": "Footer Text", "placeholder": "" }
       }
     }
   }

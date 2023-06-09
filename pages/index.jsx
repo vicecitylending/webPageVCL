@@ -14,8 +14,7 @@ import { createClient } from "../prismicio"
 
 const Homepage = props => {
     
-  const { locales, seo, generalInformation, menuContent, members, footerContent, meetTeamContent, CirclesGridContent, RealtorsResourceContent, PreApprovalProcessContent, BuyingRefinancingProcessContent, signUpContent } = props
-  console.log(locales)
+  const { actualLocale, locales, seo, generalInformation, menuContent, members, footerContent, meetTeamContent, CirclesGridContent, RealtorsResourceContent, PreApprovalProcessContent, BuyingRefinancingProcessContent, signUpContent } = props
   return<div className="main overflow-x-hidden">
           <Head
             title={seo.data.title}
@@ -30,6 +29,7 @@ const Homepage = props => {
               imageWidth={generalInformation.data.small_logo_width}
               imageHeight={generalInformation.data.small_logo_height}
               locales={locales}
+              actualLocale={actualLocale}
             />
 
           {/* Background */}
@@ -44,8 +44,8 @@ const Homepage = props => {
             <div className="w-full h-screen place-items-center justify-items-stretch">
               <div id="start" className="w-full flex flex-col md:flex-row text-white place-items-center justify-items-stretch sm:translate-y-64 translate-y-44">
                   <div className="basis-1/3 flex flex-col items-center text-center">
-                    <div className="font-semibold text-2xl sm:text-4xl">WE WORK</div>
-                    <div className="font-semibold text-2xl sm:text-4xl">24/7</div>
+                    <div className="font-semibold text-2xl sm:text-4xl">{generalInformation.data.we_work_text}</div>
+                    <div className="font-semibold text-2xl sm:text-4xl">{generalInformation.data.twentyfourseven_text}</div>
                   </div>
                   <div className="basis-1/3 flex items-center justify-center">
                     <Image  className="logo-size-m"
@@ -57,38 +57,38 @@ const Homepage = props => {
                     />
                   </div>
                   <div className="basis-1/3 flex flex-col items-center justify-center text-center">
-                    <div className="text-xs sm:text-xl">POWERED BY</div>
-                    <div className="text-xl sm:text-4xl font-semibold">DADELAND</div>
-                    <div className="text-xl sm:text-4xl">DIFFERENCE</div>
+                    <div className="text-xs sm:text-xl">{generalInformation.data.powered_text}</div>
+                    <div className="text-xl sm:text-4xl font-semibold">{generalInformation.data.dadeland_text}</div>
+                    <div className="text-xl sm:text-4xl">{generalInformation.data.difference_text}</div>
                 </div>
               </div>
             </div>
 
-            <div>
-              <div id="team" className="w-full h-screen sm:pt-20 pt-24 mb-10">
-                <div className="w-full flex-col items-center justify-center">
-                  <div className="padding text-center items-center w-full">
-                    <div className="w-full text-center items-center text-white text-2xl sm:text-4xl">{meetTeamContent.data.subtitle}</div>
+            <div className="flex flex-col items-center h-screen mb-32">
+              <div id="team" className="sm:pr-5 pr-5 sm:pl-5 pl-5 sm:pt-20 pt-32 sm:w-1/2 w-full">
+                <div className="w-full flex-col justify-center">
+                  <div className="w-full">
+                    <div className="text-white text-2xl sm:text-4xl font-semibold pb-5">{meetTeamContent.data.subtitle}</div>
                   </div>
                   <div>
-                    <div className="sm:pr-32 pr-5 sm:pl-32 pl-5 items-center w-full">
+                    <div className="">
                       <div className="w-full shadow-white text-white text-l sm:text-2xl">{meetTeamContent.data.text1}</div>
                     </div>
                   </div>
-                  <div className="text-center items-center w-full sm:mt-10 mt-10 mb-5">
-                    <div className="w-full text-center items-center text-white text-2xl sm:text-4xl">{meetTeamContent.data.title}</div>
-                  </div>
-                  <div className="w-full sm:mt-10 -mt-16">
-                    <MembersCarousel members={members}/>
+                  <div className="text-center items-center w-full sm:mt-16 mt-10">
+                    <div className="w-full text-center items-center text-white text-2xl sm:text-4xl font-semibold">{meetTeamContent.data.title}</div>
                   </div>
                 </div>
               </div>
+              <div className="w-full sm:mt-16 -mt-16 items-center">
+                <MembersCarousel members={members}/>
+              </div>
             </div>
   
-              <div className="flex flex-col items-center">
-                <div id ="buying" className="sm:pr-5 pr-5 sm:pl-5 pl-5 sm:pt-20 pt-32 sm:w-1/2 w-full h-screen">
+              <div className="flex flex-col items-center h-screen sm:mb-52">
+                <div id ="buying" className="sm:pr-5 pr-5 sm:pl-5 pl-5 sm:pt-52 pt-32 sm:w-1/2 w-full sm:mt-52 sm:mb-52">
                   <div className="flex flex-col justify-center">
-                    <div className="text-white text-white text-2xl sm:text-4xl pb-5">{BuyingRefinancingProcessContent.data.title}</div>
+                    <div className="text-white text-white text-2xl sm:text-4xl pb-5 font-semibold">{BuyingRefinancingProcessContent.data.title}</div>
                     <div className="text-white text-l sm:text-2xl">{BuyingRefinancingProcessContent.data.text}</div>
                     <div className="self-center">
                       <div className="flex">
@@ -116,10 +116,14 @@ const Homepage = props => {
                 </div>
               </div>
 
-            <div className="pr-5 pl-5 sm:pt-20 pt-32 w-full h-screen sm:pb-20 pb-0">
+              <div className="sm:mt-32"></div>
+
+            <div className="pr-5 pl-5 sm:mt-60 mt-32 w-full h-screen sm:mb-32 mb-0 h-screen">
               <div className="flex flex-col">
-                  <div className="">
-                    <div className="sm:pr-32 pr-5 sm:pl-32 pl-5 w-full items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
+                  <div className="flex flex-col items-center">
+                    <div className="pr-5 pl-5 items-center sm:w-1/2 w-full">
+                      <div className="w-full items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
+                    </div>
                   </div>
                   <div className="">
                     <div className="ml-0 sm:ml-20 circle-grid">
@@ -139,7 +143,7 @@ const Homepage = props => {
             <div className="flex flex-col items-center h-screen sm:mb-32 mb-0">
               <div id ="preapproval" className="pr-5 pl-5 sm:pt-20 pt-32 sm:w-1/2 w-full h-screen">
                 <div className="flex flex-col justify-center">
-                  <div className="text-white text-white text-2xl sm:text-4xl pb-5">{PreApprovalProcessContent.data.title}</div>
+                  <div className="text-white text-white text-2xl sm:text-4xl pb-5 font-semibold">{PreApprovalProcessContent.data.title}</div>
                   <div className="text-white text-l sm:text-2xl">{PreApprovalProcessContent.data.text}</div>
                   <div className="self-center">
                     <div className="flex">
@@ -168,7 +172,7 @@ const Homepage = props => {
             <div className="flex flex-col items-center h-screen sm:mb-32 mb-0">
               <div id ="loan" className="pr-5 pl-5 sm:pt-20 pt-32 sm:w-1/2 w-full h-screen">
                 <div className="flex flex-col justify-center">
-                  <div className="text-white text-white text-2xl sm:text-4xl pb-5">{RealtorsResourceContent.data.title}</div>
+                  <div className="text-white text-white text-2xl sm:text-4xl pb-5 font-semibold">{RealtorsResourceContent.data.title}</div>
                   <div className="text-white text-l sm:text-2xl">{RealtorsResourceContent.data.text}</div>
                   <div className="self-center">
                     <div className="flex">
@@ -236,8 +240,7 @@ const getStaticProps = async ({ params, locale, previewData }) => {
         signUpContent : await getPrismicData('sign_up', locale),
         CirclesGridContent : await getPrismicData('circle_grid_info', locale),
         locales: locales,
-        // client: createClient({ previewData }),
-        // menuContentTEST: await client.getPrismicData('menu', params.uid ,{ lang: locale}),
+        actualLocale: locale
       }
   }
 }

@@ -1,0 +1,87 @@
+{
+  "id": "simulator",
+  "label": "Simulator",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
+      "title": {
+        "type": "Text",
+        "config": { "label": "Title", "placeholder": "" }
+      },
+      "home_value_text": {
+        "type": "Text",
+        "config": { "label": "Home Value Text", "placeholder": "" }
+      },
+      "down_payment_text": {
+        "type": "Text",
+        "config": { "label": "Down Payment Text", "placeholder": "" }
+      },
+      "interest_rate_text": {
+        "type": "Text",
+        "config": { "label": "Interest Rate Text", "placeholder": "" }
+      },
+      "loan_duration_text": {
+        "type": "Text",
+        "config": { "label": "Loan Duration Text", "placeholder": "" }
+      },
+      "property_tax_text": {
+        "type": "Text",
+        "config": { "label": "Property Tax Text", "placeholder": "" }
+      },
+      "home_insurance_text": {
+        "type": "Text",
+        "config": { "label": "Home Insurance Text", "placeholder": "" }
+      },
+      "homeowners_association_text": {
+        "type": "Text",
+        "config": { "label": "Homeowners Association Text", "placeholder": "" }
+      },
+      "principal_interest_only_text": {
+        "type": "Text",
+        "config": { "label": "Principal Interest Only Text", "placeholder": "" }
+      },
+      "loan_amount_text": {
+        "type": "Text",
+        "config": { "label": "Loan Amount Text", "placeholder": "" }
+      },
+      "total_interest_paid_text": {
+        "type": "Text",
+        "config": { "label": "Total Interest Paid Text", "placeholder": "" }
+      },
+      "monthly_tax_payment_text": {
+        "type": "Text",
+        "config": { "label": "Monthly Tax Payment Text", "placeholder": "" }
+      },
+      "monthly_home_insurance_text": {
+        "type": "Text",
+        "config": { "label": "Monthly Home Insurance Text", "placeholder": "" }
+      },
+      "total_text": {
+        "type": "Text",
+        "config": { "label": "Total Text", "placeholder": "" }
+      },
+      "payments_text": {
+        "type": "Text",
+        "config": { "label": "Payments Text", "placeholder": "" }
+      },
+      "loan_payoff_date_text": {
+        "type": "Text",
+        "config": { "label": "Loan PayOff Date Text", "placeholder": "" }
+      },
+      "estimated_total_monthly_text": {
+        "type": "Text",
+        "config": { "label": "Estimated Total Monthly Text", "placeholder": "" }
+      },
+      "get_your_loan_text": {
+        "type": "Text",
+        "config": { "label": "Get Your Loan Text", "placeholder": "" }
+      },
+      "bottom_message_text": {
+        "type": "Text",
+        "config": { "label": "Bottom Message Text", "placeholder": "" }
+      }
+    }
+  }
+}

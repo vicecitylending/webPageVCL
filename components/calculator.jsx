@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
-import { NumericFormat, NumberFormatBase } from 'react-number-format';
+import { NumericFormat } from 'react-number-format';
 import InfoCirclePopup from '../components/atoms/infoCirclePopup'
 
-function MortgageCalculator() {
+const MortgageCalculator = props => {
+  const { CalculatorContent } = props
+
+  console.log(CalculatorContent)
 
   const [homeValue, setHomeValue] = useState(0);
   const [downPayment, setDownPayment] = useState(0);
@@ -196,18 +199,9 @@ function MortgageCalculator() {
             <div className="padding flex justify-between">
               <div>
                 {/* <InfoCirclePopup/> */}
-                <label className="text-lg font-bold">Home Value</label>
+                <label className="text-lg font-bold">{CalculatorContent.home_value_text}</label>
               </div>
               <div className="w-1/2">
-                {/* <input
-                  type="number"
-                  min={0}
-                  max={1000000}
-                  id="home-value"
-                  className="text-lg"
-                  value={homeValue}
-                  onChange={(e) => handleHomeValueChange(Number(e.target.value))}
-                /> */}
                 <NumericFormat
                   thousandSeparator={true}
                   prefix={'$'}
@@ -252,7 +246,7 @@ function MortgageCalculator() {
           <div className="flex flex-col">
             <div className="padding flex justify-between">
               <div>
-                <label className="text-lg font-bold">Down Payment</label>
+                <label className="text-lg font-bold">{CalculatorContent.down_payment_text}</label>
                 <label className="text-xs"> (${downPayment.toLocaleString("en")})</label>
               </div> 
               <div className="w-1/4">
@@ -301,7 +295,7 @@ function MortgageCalculator() {
           <div className="flex flex-col">
             <div className="padding flex justify-between">
               <div>
-                <label className="text-lg font-bold">Interest Rate</label>
+                <label className="text-lg font-bold">{CalculatorContent.interest_rate_text}</label>
               </div>
               <div className="w-1/4">
                 <NumericFormat
@@ -348,7 +342,7 @@ function MortgageCalculator() {
           <div className="flex flex-col">
             <div className="padding flex justify-between">
               <div>
-                <label className="text-lg font-bold">Loan Duration</label>
+                <label className="text-lg font-bold">{CalculatorContent.loan_duration_text}</label>
               </div>
               <div className="w-1/4">
                 <NumericFormat
@@ -395,11 +389,8 @@ function MortgageCalculator() {
           <div className="flex flex-col">
             <div className="padding flex justify-between">
               <div>
-                <label className="text-lg font-bold">Property Tax</label>
+                <label className="text-lg font-bold">{CalculatorContent.property_tax_text}</label>
               </div>
-              {/* <div>
-                <label className="text-lg">${propertyTaxValue}/yr.</label>
-              </div> */}
               <div className="w-1/4">
                 <NumericFormat
                   thousandSeparator={true}
@@ -446,7 +437,7 @@ function MortgageCalculator() {
           <div className="flex flex-col">
             <div className="padding flex justify-between">
               <div>
-                <label className="text-lg font-bold">Home Insurance</label>
+                <label className="text-lg font-bold">{CalculatorContent.home_insurance_text}</label>
               </div>
               <div className="w-1/4">
                 <NumericFormat
@@ -494,7 +485,7 @@ function MortgageCalculator() {
           <div className="flex flex-col">
             <div className="padding flex justify-between">
               <div>
-                <label className="sm:text-base text-xs font-bold">Homeowners Association HOA</label>
+                <label className="sm:text-base text-xs font-bold">{CalculatorContent.homeowners_association_text}</label>
               </div>
               <div className="w-1/3">
                 <NumericFormat
@@ -548,42 +539,42 @@ function MortgageCalculator() {
              ${parseFloat(monthlyPayment.toFixed(2)).toLocaleString("en")}
             </label>
             <label className=" ml-3 text-sm text-left font-bold flex items-center">
-              Principal and Interes Only
+              {CalculatorContent.principal_interest_only_text}
             </label>
           </div>
           <div className="flex mt-8 text-black">
             <label className="text-lg  flex items-center">
-              Loan Amount: ${loanAmount.toLocaleString("en")}
+              {CalculatorContent.loan_amount_text}: ${loanAmount.toLocaleString("en")}
             </label>
           </div>
           <div className="flex mt-4 text-black">
             <label className="text-lg flex items-center">
-              Down Payment: ${parseFloat(downPayment.toFixed(2)).toLocaleString("en")}
+              {CalculatorContent.down_payment_text}: ${parseFloat(downPayment.toFixed(2)).toLocaleString("en")}
             </label>
           </div>
           <div className="flex mt-4 text-black">
             <label className="text-lg  flex items-center">
-              Total Interest Paid: ${parseFloat(totalInterestPaid.toFixed(2)).toLocaleString("en")}
+              {CalculatorContent.total_interest_paid_text}: ${parseFloat(totalInterestPaid.toFixed(2)).toLocaleString("en")}
             </label>
           </div>
           <div className="flex mt-4 text-black">
             <label className="text-lg flex items-center">
-              Monthly Tax Payment: ${parseFloat(monthlyTaxPayment.toFixed(2)).toLocaleString("en")}
+              {CalculatorContent.monthly_tax_payment_text}: ${parseFloat(monthlyTaxPayment.toFixed(2)).toLocaleString("en")}
             </label>
           </div>
           <div className="flex mt-4 text-black">
             <label className="text-lg flex items-center">
-              Monthly Home Insurance: ${parseFloat(monthlyHomeInsurance.toFixed(2)).toLocaleString("en")}
+              {CalculatorContent.monthly_home_insurance_text}: ${parseFloat(monthlyHomeInsurance.toFixed(2)).toLocaleString("en")}
             </label>
           </div>
           <div className="flex mt-4 text-black">
             <label className="text-lg flex items-center">
-              Total {loanDuration*12} Payments: ${parseFloat(totalPayment.toFixed(2)).toLocaleString("en")}
+              {CalculatorContent.total_text} {loanDuration*12} {CalculatorContent.payments_text}: ${parseFloat(totalPayment.toFixed(2)).toLocaleString("en")}
             </label>
           </div>
           <div className="flex mt-4 mb-5 text-black">
             <label className="text-lg flex items-center">
-              Loan Pay-Off Date: {loanPayOffDate}
+              {CalculatorContent.loan_payoff_date_text}: {loanPayOffDate}
             </label>
           </div>
           <div className="flex mt-8 mb-10 text-black">
@@ -591,7 +582,7 @@ function MortgageCalculator() {
               ${parseFloat(totalMonthly.toFixed(2)).toLocaleString("en")}
             </label>
             <label className=" ml-3 text-sm text-left font-bold flex items-center">
-              Estimated Total Monthly
+              {CalculatorContent.estimated_total_monthly_text}
             </label>
           </div>
         </div>

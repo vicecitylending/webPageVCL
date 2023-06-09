@@ -1,7 +1,5 @@
 import * as React from "react";
 import { useState } from "react";
-import Prismic from 'prismic-javascript'
-import { PrismicClient } from '../prismic-configuration'
   
 const Contact = props => {
     const { signUpContent } = props
@@ -81,7 +79,7 @@ const Contact = props => {
                     <label className="block text-white text-sm mb-2" htmlFor="name">
                       {signUpContent.name}
                     </label>
-                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Write your name"></input>
+                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder={signUpContent.name_placeholder}></input>
                   </div>
 
                   {/* Lastname Field */}
@@ -89,7 +87,7 @@ const Contact = props => {
                     <label className="block text-white text-sm mb-2" htmlFor="lastname">
                       {signUpContent.lastname}
                     </label>
-                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastname" type="text" placeholder="Write yor lastname"></input>
+                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastname" type="text" placeholder={signUpContent.lastname_placeholder}></input>
                   </div>
 
                   {/* Email Field */}
@@ -97,7 +95,7 @@ const Contact = props => {
                     <label className="block text-white text-sm mb-2" htmlFor="email">
                       {signUpContent.email}
                     </label>
-                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Write yor email"></input>
+                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder={signUpContent.email_placeholder}></input>
                   </div>
 
                   {/* Phone Field */}
@@ -105,16 +103,16 @@ const Contact = props => {
                     <label className="block text-white text-sm mb-2" htmlFor="phone">
                       {signUpContent.phone}
                     </label>
-                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="Write yor phone"></input>
+                    <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder={signUpContent.phone_placeholder}></input>
                   </div>
 
                   {/* Button Field */}
                   <div className="items-center justify-between">
                     <button aria-label="Submit" id="submitButton" onClick = {handleOnSubmit} disabled={status.submitting} className="bg-orange-400  hover:bg-orange-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline text-xs md:text-sm" type="button">
-                      SUBMIT
+                      {signUpContent.submit_text}
                     </button>
                     <div className={` text-white ${!status.submitted && "hidden"}`}>
-                      <p>Message sent!</p>
+                      <p>{signUpContent.sent_message_text}</p>
                     </div>
                   </div>
                 </form>
