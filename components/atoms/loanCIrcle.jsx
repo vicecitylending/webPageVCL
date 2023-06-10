@@ -3,20 +3,29 @@ import Image from 'next/image'
 
 
 const LoanCircle = props => {
-    const { content } = props
+    const { imageSource, imageAlt, title, description } = props
+
+    console.log(title)
   return (
-<div className="relative">
-  {/* <Image  className="sm:scale-100 scale-110 sm:w-80 w-[32rem] h-auto"
-                            src={image.url}
-                            alt={image.alt} 
-                            width={200}
-                            height={200}
-                    /> */}
-  <div className="absolute inset-0 flex items-center w-2/4 w-auto">
-    <div className="circle-text-ml text-white text-center md:text-xl sm:text-xs text-xs break-words sm:w-2/5 w-3/4">{text}</div>
-  </div>
+<div className="w-full h-full">
+  <div className="flex flex-row">
+    <div>
+      <Image  className="sm:scale-100 scale-110 sm:w-80 w-[32rem] h-auto"
+                                src={imageSource}
+                                alt={imageAlt} 
+                                width={200}
+                                height={200}
+                        />
+    </div>
+    <div className="items-center w-auto">
+      <div className="">
+        <div className="text-left text-white text-sm break-words font-bold">{title}</div>
+        <div className="text-left  text-white text-xs break-words xl:w-1/4 w-1/2 ">{description}</div>
+      </div>
+    </div>
+  </div> 
 </div>
   );
 };
 
-export default InfoCircle;
+export default LoanCircle;

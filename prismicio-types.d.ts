@@ -781,6 +781,205 @@ export type PreApprovalProcessDocument<Lang extends string = string> =
     "pre_approval_process",
     Lang
   >;
+/** Content for QM LOANS documents */
+interface QmLoansDocumentData {
+  /**
+   * Loan1 Image field in *QM LOANS*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan1_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  loan1_image: prismicT.ImageField<never>;
+  /**
+   * Loan1 Title field in *QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan1_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan1_title: prismicT.KeyTextField;
+  /**
+   * Loan1 Description field in *QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan1_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan1_description: prismicT.KeyTextField;
+  /**
+   * Loan2 Image field in *QM LOANS*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan2_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  loan2_image: prismicT.ImageField<never>;
+  /**
+   * Loan2 Title field in *QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan2_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan2_title: prismicT.KeyTextField;
+  /**
+   * Loan2 Description field in *QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan2_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan2_description: prismicT.KeyTextField;
+  /**
+   * Loan3 Image field in *QM LOANS*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan3_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  loan3_image: prismicT.ImageField<never>;
+  /**
+   * Loan3 Title field in *QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan3_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan3_title: prismicT.KeyTextField;
+  /**
+   * Loan3 Description field in *QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan3_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan3_description: prismicT.KeyTextField;
+  /**
+   * Loan4 Image field in *QM LOANS*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan4_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  loan4_image: prismicT.ImageField<never>;
+  /**
+   * Loan4 Title field in *QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan4_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan4_title: prismicT.KeyTextField;
+  /**
+   * Loan4 Description field in *QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan4_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan4_description: prismicT.KeyTextField;
+  /**
+   * Loan5 Image field in *QM LOANS*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan5_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  loan5_image: prismicT.ImageField<never>;
+  /**
+   * Loan5 Title field in *QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan5_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan5_title: prismicT.KeyTextField;
+  /**
+   * Loan5 Description field in *QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.loan5_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan5_description: prismicT.KeyTextField;
+  /**
+   * Slice Zone field in *QM LOANS*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismicT.SliceZone<QmLoansDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *QM LOANS → Slice Zone*
+ *
+ */
+type QmLoansDocumentDataSlicesSlice = never;
+/**
+ * QM LOANS document from Prismic
+ *
+ * - **API ID**: `qm_loans`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type QmLoansDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<QmLoansDocumentData>,
+    "qm_loans",
+    Lang
+  >;
 /** Content for Realtors Resource documents */
 interface RealtorsResourceDocumentData {
   /**
@@ -1311,6 +1510,7 @@ export type AllDocumentTypes =
   | MemberDocument
   | MenuDocument
   | PreApprovalProcessDocument
+  | QmLoansDocument
   | RealtorsResourceDocument
   | SeoDocument
   | SignUpDocument
@@ -1347,6 +1547,9 @@ declare module "@prismicio/client" {
       MenuDocument,
       PreApprovalProcessDocumentData,
       PreApprovalProcessDocument,
+      QmLoansDocumentData,
+      QmLoansDocumentDataSlicesSlice,
+      QmLoansDocument,
       RealtorsResourceDocumentData,
       RealtorsResourceDocument,
       SeoDocumentData,

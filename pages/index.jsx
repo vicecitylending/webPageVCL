@@ -18,7 +18,7 @@ import { createClient } from "../prismicio"
 
 const Homepage = props => {
     
-  const { actualLocale, locales, seo, generalInformation, menuContent, members, footerContent, meetTeamContent, CirclesGridContent, RealtorsResourceContent, PreApprovalProcessContent, BuyingRefinancingProcessContent, signUpContent } = props
+  const { QmLoansContent, actualLocale, locales, seo, generalInformation, menuContent, members, footerContent, meetTeamContent, CirclesGridContent, RealtorsResourceContent, PreApprovalProcessContent, BuyingRefinancingProcessContent, signUpContent } = props
   return<div className="main overflow-x-hidden">
           <Head
             title={seo.data.title}
@@ -184,7 +184,7 @@ const Homepage = props => {
               <ViceButton className="" buttonText={generalInformation.data.button_message} actualLanguage={actualLocale}/>
             </div>
 
-            <LoansSection RealtorsContent={RealtorsResourceContent}/>
+            <LoansSection RealtorsContent={RealtorsResourceContent} QmLoans={QmLoansContent}/>
 
 
             <div className="w-full h-full">
@@ -228,6 +228,7 @@ const getStaticProps = async ({ params, locale, previewData }) => {
         BuyingRefinancingProcessContent: await getPrismicData('buying_refinancing_process', locale), 
         signUpContent : await getPrismicData('sign_up', locale),
         CirclesGridContent : await getPrismicData('circle_grid_info', locale),
+        QmLoansContent : await getPrismicData('qm_loans', locale),
         locales: locales,
         actualLocale: locale
       }
