@@ -42,7 +42,7 @@ const Footer = (props) => {
           width={400}
           height={400}
         />
-        <div className="bg-pink-500 py-4 w-full text-white text-center font-semibold">
+        <div className="bg-pink-400 py-4 w-full text-white text-center font-semibold">
           {content.footer_text}
         </div>
       </div>

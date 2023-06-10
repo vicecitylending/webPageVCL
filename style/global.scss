@@ -90,11 +90,17 @@ $menu-item-active-background-color: $app-color1;
   margin-left: 2.5rem;
 }
 
-// .center-why-us {
-//   position: relative;
-//   right: 15%;
-// }
 
+
+@media screen and (max-width: 1920px) {
+  .circle-grid-xl {
+    position: relative;
+    left:5%
+  }
+
+
+
+}
 
 @media screen and (max-width: 1400px) {
   .video {
@@ -130,6 +136,16 @@ $menu-item-active-background-color: $app-color1;
     position: relative;
     right: 10%;
   }
+
+  .circle-grid-xl {
+    position: relative;
+    left: 0%
+  }
+
+  .hard-mt-62 {
+    margin-top: 16rem; /* 256px */
+  }
+
 }
 
 @media screen and (max-width: 720px) {
@@ -161,6 +177,11 @@ $menu-item-active-background-color: $app-color1;
   .center-why-us {
     position: relative;
     right: 10%;
+  }
+
+  .circle-grid-xl {
+    position: inherit;
+    left: 0%
   }
 
 }
@@ -203,6 +224,11 @@ $menu-item-active-background-color: $app-color1;
     right: 0%;
   }
 
+  .circle-grid-xl {
+    position: inherit;
+    left: 0%
+  }
+
 }
 
 @media screen and (max-width: 350px) {
@@ -240,6 +266,11 @@ $menu-item-active-background-color: $app-color1;
     .center-why-us {
       position: relative;
       right: 0%;
+    }
+
+    .circle-grid-xl {
+      position: inherit;
+      left: 0%
     }
 
 }

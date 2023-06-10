@@ -406,6 +406,17 @@ interface GeneralInformationDocumentData {
    *
    */
   difference_text: prismicT.KeyTextField;
+  /**
+   * Upside Button Message field in *General Information*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: general_information.upside_button_message
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  upside_button_message: prismicT.KeyTextField;
 }
 /**
  * General Information document from Prismic

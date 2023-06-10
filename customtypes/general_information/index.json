@@ -37,6 +37,10 @@
       "difference_text": {
         "type": "Text",
         "config": { "label": "Difference Text", "placeholder": "" }
+      },
+      "upside_button_message": {
+        "type": "Text",
+        "config": { "label": "Upside Button Message", "placeholder": "" }
       }
     }
   }

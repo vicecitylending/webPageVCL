@@ -3,6 +3,10 @@ import Image from 'next/image'
 import Head from "../components/head";
 import NavBar from "../components/navbar";
 import Contact from "./contact"; //Different from component/contact.jsx. <Contact> in component folder is for Popup.
+import LoansSection from "../components/loansSection";
+import ViceButton from "../components/molecules/viceButton";
+
+
 import Prismic from 'prismic-javascript'
 import MembersCarousel from "../components/carousel";
 import { PrismicClient } from '../prismic-configuration'
@@ -42,7 +46,7 @@ const Homepage = props => {
 
           <div id="home" className="flex flex-col w-full relative">
             <div className="w-full h-screen place-items-center justify-items-stretch">
-              <div id="start" className="w-full flex flex-col md:flex-row text-white place-items-center justify-items-stretch sm:translate-y-64 translate-y-44">
+              <div id="start" className="w-full flex flex-col md:flex-row text-white place-items-center justify-items-stretch 2xl:translate-y-62 xl:translate-y-64 translate-y-44">
                   <div className="basis-1/3 flex flex-col items-center text-center">
                     <div className="font-semibold text-2xl sm:text-4xl">{generalInformation.data.we_work_text}</div>
                     <div className="font-semibold text-2xl sm:text-4xl">{generalInformation.data.twentyfourseven_text}</div>
@@ -92,22 +96,22 @@ const Homepage = props => {
                     <div className="text-white text-l sm:text-2xl">{BuyingRefinancingProcessContent.data.text}</div>
                     <div className="self-center">
                       <div className="flex">
-                        <div className="pt-10 sm:pr-32 pr-5">
+                        <div className="">
                           <Image  
                             className=""
                             src={BuyingRefinancingProcessContent.data.icon1.url}
                             alt={BuyingRefinancingProcessContent.data.icon1.alt} 
-                            width={200}
-                            height={200}
+                            width={300}
+                            height={300}
                           />
                         </div>
-                        <div className="pt-10 sm:pl-32 pl-5">
+                        <div className="">
                           <Image 
                             className=""
                             src={BuyingRefinancingProcessContent.data.icon2.url}
                             alt={BuyingRefinancingProcessContent.data.icon2.alt} 
-                            width={200}
-                            height={200}
+                            width={300}
+                            height={300}
                           />
                         </div>
                       </div>
@@ -125,9 +129,13 @@ const Homepage = props => {
                       <div className="w-full items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
                     </div>
                   </div>
-                  <div className="">
+                  <div className="circle-grid-xl">
                     <div className="ml-0 sm:ml-20 circle-grid">
-                      <InfoGrid image={CirclesGridContent.data.image} infoCircles={CirclesGridContent.data}/>
+                      <InfoGrid
+                        image={CirclesGridContent.data.image}
+                        infoCircles={CirclesGridContent.data}
+                        className=""
+                      />
                     </div>
                   </div>
                   <div className="flex flex-col items-center">
@@ -151,52 +159,34 @@ const Homepage = props => {
                         <Image  className=""
                                 src={PreApprovalProcessContent.data.icon1.url}
                                 alt={PreApprovalProcessContent.data.icon1.alt} 
-                                width={200}
-                                height={200}
+                                width={400}
+                                height={400}
                           />
                       </div>
-                      <div className="pt-10 sm:pl-32 pl-5">
+                      <div className="pt-10 sm:pl-32 pl-5 2xl:mt-10 mt-5">
                         <Image  className=""
                                 src={PreApprovalProcessContent.data.icon2.url}
                                 alt={PreApprovalProcessContent.data.icon2.alt} 
-                                width={200}
-                                height={200}
+                                width={300}
+                                height={300}
                           />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            
+            <div className="flex flex-col items-center 2xl:mt-0 xl:mt-64 mt-32 mb-0 text-white hard-mt-62 ">
+              <div className="mb-2">
+               {generalInformation.data.upside_button_message}
+              </div>
+          
+              <ViceButton className="" buttonText={"Simulate Your Loan"} actualLanguage={actualLocale}/>
             </div>
 
-            <div className="flex flex-col items-center h-screen sm:mb-32 mb-0">
-              <div id ="loan" className="pr-5 pl-5 sm:pt-20 pt-32 sm:w-1/2 w-full h-screen">
-                <div className="flex flex-col justify-center">
-                  <div className="text-white text-white text-2xl sm:text-4xl pb-5 font-semibold">{RealtorsResourceContent.data.title}</div>
-                  <div className="text-white text-l sm:text-2xl">{RealtorsResourceContent.data.text}</div>
-                  <div className="self-center">
-                    <div className="flex">
-                      <div className="pt-10 sm:pr-32 pr-5">
-                        <Image  className=""
-                                src={RealtorsResourceContent.data.icon1.url}
-                                alt={RealtorsResourceContent.data.icon1.alt} 
-                                width={200}
-                                height={200}
-                          />
-                      </div>
-                      <div className="pt-10 sm:pl-32 pl-5">
-                        <Image  className=""
-                                src={RealtorsResourceContent.data.icon2.url}
-                                alt={RealtorsResourceContent.data.icon2.alt} 
-                                width={200}
-                                height={200}
-                          />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <LoansSection RealtorsContent={RealtorsResourceContent}/>
+
 
             <div className="w-full h-full">
               <div id ="contact" className="pr-5 pl-5 sm:pt-20 pt-32">
