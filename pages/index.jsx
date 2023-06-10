@@ -177,7 +177,7 @@ const Homepage = props => {
               </div>
             </div>
             
-            <div className="flex flex-col items-center 2xl:mt-0 xl:mt-64 mt-32 mb-0 text-white hard-mt-62 ">
+            <div className="flex flex-col items-center 2xl:mt-0 xl:mt-64 mt-42 mb-0 text-white hard-mt-62 ">
               <div className="mb-2">
                {generalInformation.data.upside_button_message}
               </div>
