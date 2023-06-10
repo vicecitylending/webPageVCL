@@ -719,6 +719,255 @@ export interface MenuDocumentDataMenuLinksItem {
  */
 export type MenuDocument<Lang extends string = string> =
   prismicT.PrismicDocumentWithUID<Simplify<MenuDocumentData>, "menu", Lang>;
+/** Content for NON QM LOANS documents */
+interface NonQmLoansDocumentData {
+  /**
+   * Loan1 Image field in *NON QM LOANS*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan1_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  loan1_image: prismicT.ImageField<never>;
+  /**
+   * Loan1 Title field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan1_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan1_title: prismicT.KeyTextField;
+  /**
+   * Loan1 Description field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan1_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan1_description: prismicT.KeyTextField;
+  /**
+   * Loan2 Image field in *NON QM LOANS*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan2_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  loan2_image: prismicT.ImageField<never>;
+  /**
+   * Loan2 Title field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan2_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan2_title: prismicT.KeyTextField;
+  /**
+   * Loan2 Description field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan2_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan2_description: prismicT.KeyTextField;
+  /**
+   * Loan3 Image field in *NON QM LOANS*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan3_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  loan3_image: prismicT.ImageField<never>;
+  /**
+   * Loan3 Title field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan3_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan3_title: prismicT.KeyTextField;
+  /**
+   * Loan3 Description field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan3_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan3_description: prismicT.KeyTextField;
+  /**
+   * Loan4 Image field in *NON QM LOANS*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan4_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  loan4_image: prismicT.ImageField<never>;
+  /**
+   * Loan4 Title field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan4_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan4_title: prismicT.KeyTextField;
+  /**
+   * Loan4 Description field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan4_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan4_description: prismicT.KeyTextField;
+  /**
+   * Loan5 Image field in *NON QM LOANS*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan5_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  loan5_image: prismicT.ImageField<never>;
+  /**
+   * Loan5 Title field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan5_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan5_title: prismicT.KeyTextField;
+  /**
+   * Loan5 Description field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan5_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan5_description: prismicT.KeyTextField;
+  /**
+   * Loan6 Image field in *NON QM LOANS*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan6_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  loan6_image: prismicT.ImageField<never>;
+  /**
+   * Loan6 Title field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan6_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan6_title: prismicT.KeyTextField;
+  /**
+   * Loan6 Description field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan6_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan6_description: prismicT.KeyTextField;
+  /**
+   * Loan7 Image field in *NON QM LOANS*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan7_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  loan7_image: prismicT.ImageField<never>;
+  /**
+   * Loan7 Title field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan7_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan7_title: prismicT.KeyTextField;
+  /**
+   * Loan7Description field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.loan7_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  loan7_description: prismicT.KeyTextField;
+}
+/**
+ * NON QM LOANS document from Prismic
+ *
+ * - **API ID**: `non_qm_loans`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NonQmLoansDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<NonQmLoansDocumentData>,
+    "non_qm_loans",
+    Lang
+  >;
 /** Content for Pre Approval Process documents */
 interface PreApprovalProcessDocumentData {
   /**
@@ -1509,6 +1758,7 @@ export type AllDocumentTypes =
   | MeetTeamDocument
   | MemberDocument
   | MenuDocument
+  | NonQmLoansDocument
   | PreApprovalProcessDocument
   | QmLoansDocument
   | RealtorsResourceDocument
@@ -1545,6 +1795,8 @@ declare module "@prismicio/client" {
       MenuDocumentData,
       MenuDocumentDataMenuLinksItem,
       MenuDocument,
+      NonQmLoansDocumentData,
+      NonQmLoansDocument,
       PreApprovalProcessDocumentData,
       PreApprovalProcessDocument,
       QmLoansDocumentData,

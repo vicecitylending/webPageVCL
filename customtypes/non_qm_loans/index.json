@@ -1,0 +1,95 @@
+{
+  "id": "non_qm_loans",
+  "label": "NON QM LOANS",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
+      "loan1_image": {
+        "type": "Image",
+        "config": { "label": "Loan1 Image", "constraint": {}, "thumbnails": [] }
+      },
+      "loan1_title": {
+        "type": "Text",
+        "config": { "label": "Loan1 Title", "placeholder": "" }
+      },
+      "loan1_description": {
+        "type": "Text",
+        "config": { "label": "Loan1 Description", "placeholder": "" }
+      },
+      "loan2_image": {
+        "type": "Image",
+        "config": { "label": "Loan2 Image", "constraint": {}, "thumbnails": [] }
+      },
+      "loan2_title": {
+        "type": "Text",
+        "config": { "label": "Loan2 Title", "placeholder": "" }
+      },
+      "loan2_description": {
+        "type": "Text",
+        "config": { "label": "Loan2 Description", "placeholder": "" }
+      },
+      "loan3_image": {
+        "type": "Image",
+        "config": { "label": "Loan3 Image", "constraint": {}, "thumbnails": [] }
+      },
+      "loan3_title": {
+        "type": "Text",
+        "config": { "label": "Loan3 Title", "placeholder": "" }
+      },
+      "loan3_description": {
+        "type": "Text",
+        "config": { "label": "Loan3 Description", "placeholder": "" }
+      },
+      "loan4_image": {
+        "type": "Image",
+        "config": { "label": "Loan4 Image", "constraint": {}, "thumbnails": [] }
+      },
+      "loan4_title": {
+        "type": "Text",
+        "config": { "label": "Loan4 Title", "placeholder": "" }
+      },
+      "loan4_description": {
+        "type": "Text",
+        "config": { "label": "Loan4 Description", "placeholder": "" }
+      },
+      "loan5_image": {
+        "type": "Image",
+        "config": { "label": "Loan5 Image", "constraint": {}, "thumbnails": [] }
+      },
+      "loan5_title": {
+        "type": "Text",
+        "config": { "label": "Loan5 Title", "placeholder": "" }
+      },
+      "loan5_description": {
+        "type": "Text",
+        "config": { "label": "Loan5 Description", "placeholder": "" }
+      },
+      "loan6_image": {
+        "type": "Image",
+        "config": { "label": "Loan6 Image", "constraint": {}, "thumbnails": [] }
+      },
+      "loan6_title": {
+        "type": "Text",
+        "config": { "label": "Loan6 Title", "placeholder": "" }
+      },
+      "loan6_description": {
+        "type": "Text",
+        "config": { "label": "Loan6 Description", "placeholder": "" }
+      },
+      "loan7_image": {
+        "type": "Image",
+        "config": { "label": "Loan7 Image", "constraint": {}, "thumbnails": [] }
+      },
+      "loan7_title": {
+        "type": "Text",
+        "config": { "label": "Loan7 Title", "placeholder": "" }
+      },
+      "loan7_description": {
+        "type": "Text",
+        "config": { "label": "Loan7Description", "placeholder": "" }
+      }
+    }
+  }
+}

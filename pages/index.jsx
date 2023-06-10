@@ -163,12 +163,12 @@ const Homepage = props => {
                                 height={400}
                           />
                       </div>
-                      <div className="pt-10 sm:pl-32 pl-5 2xl:mt-10 mt-5">
+                      <div className="pt-10 sm:pl-32 pl-5 2xl:mt-8 xl:mt-5 mt-3">
                         <Image  className=""
                                 src={PreApprovalProcessContent.data.icon2.url}
                                 alt={PreApprovalProcessContent.data.icon2.alt} 
-                                width={300}
-                                height={300}
+                                width={350}
+                                height={350}
                           />
                       </div>
                     </div>
@@ -184,11 +184,14 @@ const Homepage = props => {
               <ViceButton className="" buttonText={generalInformation.data.button_message} actualLanguage={actualLocale}/>
             </div>
 
-            <LoansSection RealtorsContent={RealtorsResourceContent} QmLoans={QmLoansContent}/>
+            <div className="mb-40 w-full h-full">
+              <LoansSection RealtorsContent={RealtorsResourceContent} QmLoans={QmLoansContent}/>
+            </div>
 
-
-            <div className="w-full h-full">
-              <div id ="contact" className="pr-5 pl-5 sm:pt-20 pt-32">
+            <div className="h-screen"></div>
+            
+            <div className="w-full h-full mt-60">
+              <div id ="contact" className="pr-5 pl-5 sm:pt-20 pt-32 mt-60">
                 <div className="flex sm:flex-row flex-col justify-center">
                   <div className="sm:translate-x-0 translate-x-5 items-center text-white sm:w-1/4 w-full">
                     <div className="text-4xl">{signUpContent.data.title}</div>

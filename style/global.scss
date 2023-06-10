@@ -236,6 +236,10 @@ $menu-item-active-background-color: $app-color1;
     left: 0%
   }
 
+  .hard-pr {
+    left: 0%
+  }
+
 }
 
 @media screen and (max-width: 350px) {
@@ -278,6 +282,11 @@ $menu-item-active-background-color: $app-color1;
     .circle-grid-xl {
       position: inherit;
       left: 0%
+    }
+
+    .hard-pr {
+      left: 0%
+  
     }
 
 }
