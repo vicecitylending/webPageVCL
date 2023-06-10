@@ -14,7 +14,7 @@ const InfoGrid = props => {
         <InfoCircle image={image} text={infoCircles.text3}/>
     </div>
     <InfoCircle image={image} text={infoCircles.text4}/>
-    <div className="2xl:mr-60 text-center self-center text-2xl font-bold mb-4 text-white center-why-us">{infoCircles.text_central}</div>
+    <div className="hard-pr 2xl:mr-60 text-center self-center text-2xl font-bold mb-4 text-white center-why-us">{infoCircles.text_central}</div>
     <InfoCircle image={image} text={infoCircles.text5}/>
     <div className="sm:translate-x-44 translate-x-7 sm:-translate-y-24 -translate-y-7">
         <InfoCircle image={image} text={infoCircles.text6}/>

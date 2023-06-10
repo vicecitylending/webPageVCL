@@ -41,6 +41,10 @@
       "upside_button_message": {
         "type": "Text",
         "config": { "label": "Upside Button Message", "placeholder": "" }
+      },
+      "button_message": {
+        "type": "Text",
+        "config": { "label": "Button Message", "placeholder": "" }
       }
     }
   }
