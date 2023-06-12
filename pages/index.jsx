@@ -5,6 +5,7 @@ import NavBar from "../components/navbar";
 import Contact from "./contact"; //Different from component/contact.jsx. <Contact> in component folder is for Popup.
 import LoansSection from "../components/loansSection";
 import ViceButton from "../components/molecules/viceButton";
+import HomeSection from "../components/homeSection";
 
 
 import Prismic from 'prismic-javascript'
@@ -45,28 +46,8 @@ const Homepage = props => {
           </div>
 
           <div id="home" className="flex flex-col w-full relative">
-            <div className="w-full h-screen place-items-center justify-items-stretch">
-              <div id="start" className="w-full flex flex-col md:flex-row text-white place-items-center justify-items-stretch 2xl:translate-y-62 xl:translate-y-64 translate-y-44">
-                  <div className="basis-1/3 flex flex-col items-center text-center">
-                    <div className="font-semibold text-2xl sm:text-4xl">{generalInformation.data.we_work_text}</div>
-                    <div className="font-semibold text-2xl sm:text-4xl">{generalInformation.data.twentyfourseven_text}</div>
-                  </div>
-                  <div className="basis-1/3 flex items-center justify-center">
-                    <Image  className="logo-size-m"
-                            src={generalInformation.data.small_logo.url}
-                            alt={generalInformation.data.small_logo.alt} 
-                            width={290}
-                            height={290}
-                            priority={true}
-                    />
-                  </div>
-                  <div className="basis-1/3 flex flex-col items-center justify-center text-center">
-                    <div className="text-xs sm:text-xl">{generalInformation.data.powered_text}</div>
-                    <div className="text-xl sm:text-4xl font-semibold">{generalInformation.data.dadeland_text}</div>
-                    <div className="text-xl sm:text-4xl">{generalInformation.data.difference_text}</div>
-                </div>
-              </div>
-            </div>
+
+            <HomeSection generalInformation={generalInformation.data}/>
 
             <div className="flex flex-col items-center h-screen mb-32">
               <div id="team" className="sm:pr-5 pr-5 sm:pl-5 pl-5 sm:pt-20 pt-32 sm:w-1/2 w-full">
@@ -84,7 +65,7 @@ const Homepage = props => {
                   </div>
                 </div>
               </div>
-              <div className="w-full sm:mt-16 -mt-16 items-center">
+              <div className="w-full sm:mt-16 items-center">
                 <MembersCarousel members={members}/>
               </div>
             </div>
