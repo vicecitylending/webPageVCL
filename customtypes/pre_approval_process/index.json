@@ -21,6 +21,14 @@
       "icon2": {
         "type": "Image",
         "config": { "label": "Icon2", "constraint": {}, "thumbnails": [] }
+      },
+      "second_text": {
+        "type": "Text",
+        "config": { "label": "Second Text", "placeholder": "" }
+      },
+      "third_text": {
+        "type": "Text",
+        "config": { "label": "third_text", "placeholder": "" }
       }
     }
   }

@@ -14,6 +14,14 @@
         "type": "Text",
         "config": { "label": "Text", "placeholder": "" }
       },
+      "second_text": {
+        "type": "Text",
+        "config": { "label": "Second Text", "placeholder": "" }
+      },
+      "third_text": {
+        "type": "Text",
+        "config": { "label": "third_text", "placeholder": "" }
+      },
       "icon1": {
         "type": "Image",
         "config": { "label": "Icon1", "constraint": {}, "thumbnails": [] }

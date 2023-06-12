@@ -6,6 +6,8 @@ import Contact from "./contact"; //Different from component/contact.jsx. <Contac
 import LoansSection from "../components/loansSection";
 import ViceButton from "../components/molecules/viceButton";
 import HomeSection from "../components/homeSection";
+import BuyingSection from "../components/buyingSection";
+import PreapprovalSection from "../components/preapprovalSection";
 
 
 import Prismic from 'prismic-javascript'
@@ -36,7 +38,6 @@ const Homepage = props => {
               locales={locales}
               actualLocale={actualLocale}
             />
-
           {/* Background */}
           <div className="fixed w-full">
             <video muted autoPlay loop playsInline control='' className="video">
@@ -69,39 +70,10 @@ const Homepage = props => {
                 <MembersCarousel members={members}/>
               </div>
             </div>
-  
-              <div className="flex flex-col items-center h-screen sm:mb-52">
-                <div id ="buying" className="sm:pr-5 pr-5 sm:pl-5 pl-5 sm:pt-52 pt-32 sm:w-1/2 w-full sm:mt-52 sm:mb-52">
-                  <div className="flex flex-col justify-center">
-                    <div className="text-white text-white text-2xl sm:text-4xl pb-5 font-semibold">{BuyingRefinancingProcessContent.data.title}</div>
-                    <div className="text-white text-l sm:text-2xl">{BuyingRefinancingProcessContent.data.text}</div>
-                    <div className="self-center">
-                      <div className="flex">
-                        <div className="">
-                          <Image  
-                            className=""
-                            src={BuyingRefinancingProcessContent.data.icon1.url}
-                            alt={BuyingRefinancingProcessContent.data.icon1.alt} 
-                            width={300}
-                            height={300}
-                          />
-                        </div>
-                        <div className="">
-                          <Image 
-                            className=""
-                            src={BuyingRefinancingProcessContent.data.icon2.url}
-                            alt={BuyingRefinancingProcessContent.data.icon2.alt} 
-                            width={300}
-                            height={300}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <div className="sm:mt-32"></div>
+            <BuyingSection BuyingRefinancingContent={ BuyingRefinancingProcessContent}/>
+
+            <div className="sm:mt-32"></div>
 
             <div className="pr-5 pl-5 sm:mt-60 mt-32 w-full h-screen sm:mb-32 mb-0 h-screen">
               <div className="flex flex-col">
@@ -129,34 +101,7 @@ const Homepage = props => {
 
             <div className="sm:h-screen h-1/2"></div>
 
-            <div className="flex flex-col items-center h-screen sm:mb-32 mb-0">
-              <div id ="preapproval" className="pr-5 pl-5 sm:pt-20 pt-32 sm:w-1/2 w-full h-screen">
-                <div className="flex flex-col justify-center">
-                  <div className="text-white text-white text-2xl sm:text-4xl pb-5 font-semibold">{PreApprovalProcessContent.data.title}</div>
-                  <div className="text-white text-l sm:text-2xl">{PreApprovalProcessContent.data.text}</div>
-                  <div className="self-center">
-                    <div className="flex">
-                      <div className="pt-10 sm:pr-32 pr-5">
-                        <Image  className=""
-                                src={PreApprovalProcessContent.data.icon1.url}
-                                alt={PreApprovalProcessContent.data.icon1.alt} 
-                                width={400}
-                                height={400}
-                          />
-                      </div>
-                      <div className="pt-10 sm:pl-32 pl-5 2xl:mt-8 xl:mt-5 mt-3">
-                        <Image  className=""
-                                src={PreApprovalProcessContent.data.icon2.url}
-                                alt={PreApprovalProcessContent.data.icon2.alt} 
-                                width={350}
-                                height={350}
-                          />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <PreapprovalSection PreapprovalContent={PreApprovalProcessContent}/>
             
             <div className="flex flex-col items-center mt-72 mb-0 text-white ">
               <div className="mb-2">

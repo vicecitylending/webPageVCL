@@ -31,6 +31,28 @@ interface BuyingRefinancingProcessDocumentData {
    */
   text: prismicT.KeyTextField;
   /**
+   * Second Text field in *Buying Refinancing Process*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: buying_refinancing_process.second_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  second_text: prismicT.KeyTextField;
+  /**
+   * third_text field in *Buying Refinancing Process*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: buying_refinancing_process.third_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  third_text: prismicT.KeyTextField;
+  /**
    * Icon1 field in *Buying Refinancing Process*
    *
    * - **Field Type**: Image
@@ -1014,6 +1036,28 @@ interface PreApprovalProcessDocumentData {
    *
    */
   icon2: prismicT.ImageField<never>;
+  /**
+   * Second Text field in *Pre Approval Process*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_approval_process.second_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  second_text: prismicT.KeyTextField;
+  /**
+   * third_text field in *Pre Approval Process*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_approval_process.third_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  third_text: prismicT.KeyTextField;
 }
 /**
  * Pre Approval Process document from Prismic
