@@ -73,12 +73,12 @@ const Homepage = props => {
 
             <BuyingSection BuyingRefinancingContent={ BuyingRefinancingProcessContent}/>
 
-            <div className="sm:mt-32"></div>
+            <div className="mt-32"></div>
 
-            <div className="pr-5 pl-5 sm:mt-60 mt-32 w-full h-screen sm:mb-32 mb-0 h-screen">
+            <div className="pr-5 pl-5 sm:mt-60 xl:mt-80 2xl:-60 mt-32 w-full h-screen 2xl:mb-80 xl:mb-80 sm:mb-32 mb-0 h-screen">
               <div className="flex flex-col">
                   <div className="flex flex-col items-center">
-                    <div className="pr-5 pl-5 items-center sm:w-1/2 w-full">
+                    <div className="items-center sm:w-1/2 w-full">
                       <div className="w-full items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
                     </div>
                   </div>
@@ -92,14 +92,14 @@ const Homepage = props => {
                     </div>
                   </div>
                   <div className="flex flex-col items-center">
-                    <div className="pr-5 pl-5 items-center sm:w-1/2 w-full">
+                    <div className="items-center sm:w-1/2 w-full">
                       <div className="w-full items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
                     </div>
                   </div>
               </div>
             </div>
 
-            <div className="sm:h-screen h-1/2"></div>
+            <div className="h-1/2 2xl_mt-0 xl:mt-80"></div>
 
             <PreapprovalSection PreapprovalContent={PreApprovalProcessContent}/>
             
@@ -110,11 +110,11 @@ const Homepage = props => {
               <ViceButton className="" buttonText={generalInformation.data.button_message} actualLanguage={actualLocale}/>
             </div>
 
-            <div className="mb-40 w-full h-full">
+            <div className="xl:mb-40 xl:mb-80 mb-40 w-full h-full">
               <LoansSection RealtorsContent={RealtorsResourceContent} QmLoans={QmLoansContent}/>
             </div>
 
-            <div className="h-screen"></div>
+            <div className="h-screen "></div>
             
             <div className="w-full h-full mt-60">
               <div id ="contact" className="pr-5 pl-5 sm:pt-20 pt-32 mt-60">

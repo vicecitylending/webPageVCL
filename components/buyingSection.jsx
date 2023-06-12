@@ -15,13 +15,13 @@ const BuyingSection = props => {
         <div className="self-center">
           <div className="flex">
           
-            <div className="">
+            <div className="pr-2">
               <GeneralCircle imageSource={BuyingRefinancingContent.data.icon1.url}
                       imageAlt={BuyingRefinancingContent.data.icon1.alt}
                       text={BuyingRefinancingContent.data.second_text}
                       />
             </div>
-            <div className="">
+            <div className="pl-2">
               <GeneralCircle imageSource={BuyingRefinancingContent.data.icon2.url}
                           imageAlt={BuyingRefinancingContent.data.icon2.alt}
                           text={BuyingRefinancingContent.data.third_text}

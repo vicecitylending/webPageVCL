@@ -31,13 +31,13 @@ const PreapprovalSection = props => {
                 />
             </div> */}
 
-            <div className="">
+            <div className="pr-2">
               <GeneralCircle imageSource={PreapprovalContent.data.icon1.url}
                       imageAlt={PreapprovalContent.data.icon1.alt}
                       text={PreapprovalContent.data.second_text}
                       />
             </div>
-            <div className="">
+            <div className="pr-2">
               <GeneralCircle imageSource={PreapprovalContent.data.icon2.url}
                           imageAlt={PreapprovalContent.data.icon2.alt}
                           text={PreapprovalContent.data.third_text}
