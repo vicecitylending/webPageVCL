@@ -17,7 +17,7 @@ const GeneralCircle = props => {
             </div>
             <div className="items-center w-auto">
               <div className="">
-                <div className="text-left  text-md text-white break-words ">{text}</div>
+                <div className="text-left  sm:text-2xl text-white break-words ">{text}</div>
               </div>
             </div>
           </div> 

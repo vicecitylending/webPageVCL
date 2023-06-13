@@ -19,11 +19,11 @@ const MemberCard = props => {
             <div className="sm:mb-0 -mb-20 flex basis-1/4 items-center justify-center sm:-translate-y-11 -translate-y-32">
                 <div className=" flex-col items-center justify-center">
                     <div className="basis-1/6 text-xl sm:text-3xl text-cyan-300">{`${name} ${lastName}`}</div>
-                    <div className="basis-1/6 text-xs sm:text-sm text-white">{`${position}`}</div>
-                    <div className="basis-1/6 text-xs sm:text-sm text-white">{`NMLS:${nmls}`}</div>
-                    <div className="basis-1/6 text-xs sm:text-sm text-white">{`${email}`}</div>
-                    <div className="basis-1/6 text-xs sm:text-sm text-white">{`${phone}`}</div>
-                    <div className="basis-1/6 text-xs sm:text-sm text-white">{`${instagram}`}</div>
+                    <div className="basis-1/6 text-xs sm:text-lg text-white">{`${position}`}</div>
+                    <div className="basis-1/6 text-xs sm:text-lg text-white">{`NMLS:${nmls}`}</div>
+                    <div className="basis-1/6 text-xs sm:text-lg text-white">{`${email}`}</div>
+                    <div className="basis-1/6 text-xs sm:text-lg text-white">{`${phone}`}</div>
+                    <div className="basis-1/6 text-xs sm:text-lg text-white">{`${instagram}`}</div>
                 </div>
             </div>
             <div className="basis 1/4"></div>

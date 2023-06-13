@@ -17,8 +17,8 @@ const LoanCircle = props => {
             </div>
             <div className="items-center w-auto">
               <div className="">
-                <div className="text-left text-white text-sm break-words font-bold">{title}</div>
-                <div className="text-left  text-white text-xs break-words ">{description}</div>
+                <div className="text-left text-white sm:text-2xl break-words font-bold">{title}</div>
+                <div className="text-left  text-white sm:text-2xl break-words ">{description}</div>
               </div>
             </div>
           </div> 

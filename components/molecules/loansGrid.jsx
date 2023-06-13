@@ -7,10 +7,10 @@ const LoansGrid = props => {
   return (
     <div className="flex w-full h-full items-center mt-10 mb-20">
     <div className="flex flex-col">
-      <div className="text-white text-lg font-bold">
+      <div className="text-white sm:text-2xl font-bold">
         {"QM QUALIFIED MORTGAGE LOANS "}
       </div>
-      <div className="text-white text-xs mb-10">
+      <div className="text-white sm:text-2xl mb-10">
         {"A QM loan is a type of mortgage loan that meets certain standards and requirements set by the Consumer Financial Protection Bureau (CFPB) in the United States. These loans are designed to ensure the borrower's ability to repay and provide consumer protection."}
       </div>
       <div className="grid grid-cols-2 gap-2">

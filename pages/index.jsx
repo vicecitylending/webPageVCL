@@ -50,7 +50,7 @@ const Homepage = props => {
 
             <HomeSection generalInformation={generalInformation.data}/>
 
-            <div className="flex flex-col items-center h-screen sm:mb-32 mb-60">
+            <div className="flex flex-col items-center h-full">
               <div id="team" className="sm:pr-5 pr-5 sm:pl-5 pl-5 sm:pt-20 pt-32 sm:w-1/2 w-full">
                 <div className="w-full flex-col justify-center">
                   <div className="w-full">
@@ -73,9 +73,8 @@ const Homepage = props => {
 
             <BuyingSection BuyingRefinancingContent={ BuyingRefinancingProcessContent}/>
 
-            <div className="mt-32"></div>
 
-            <div className="pr-5 pl-5 sm:mt-60 xl:mt-80 2xl:-60 mt-32 w-full h-screen 2xl:mb-80 xl:mb-80 sm:mb-32 mb-0 h-screen">
+            <div className="pr-5 pl-5 sm:mt-60 mt-32 w-full h-full 2xl:mb-20 xl:mb-20 sm:mb-32 mb-0">
               <div className="flex flex-col">
                   <div className="flex flex-col items-center">
                     <div className="items-center sm:w-1/2 w-full">
@@ -110,14 +109,12 @@ const Homepage = props => {
               <ViceButton className="" buttonText={generalInformation.data.button_message} actualLanguage={actualLocale}/>
             </div>
 
-            <div className="xl:mb-40 xl:mb-80 mb-40 w-full h-full">
+            <div className="w-full h-auto">
               <LoansSection RealtorsContent={RealtorsResourceContent} QmLoans={QmLoansContent}/>
             </div>
-
-            <div className="h-screen "></div>
             
-            <div className="w-full h-full mt-60">
-              <div id ="contact" className="pr-5 pl-5 sm:pt-20 pt-32 mt-60">
+            <div className="w-full h-full">
+              <div id ="contact" className="pr-5 pl-5 sm:pt-20 pt-32">
                 <div className="flex sm:flex-row flex-col justify-center">
                   <div className="sm:translate-x-0 translate-x-5 items-center text-white sm:w-1/4 w-full">
                     <div className="text-4xl">{signUpContent.data.title}</div>

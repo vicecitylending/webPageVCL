@@ -23,7 +23,7 @@ const MembersCarousel = (props) => {
 
   return (
     <Carousel
-      className="rounded-xl z-1"
+      className="rounded-xl"
       autoplay={true} // activar el autoplay
       // autoplayHoverPause={false} // continuar el autoplay aunque el mouse esté encima
       loop={true} // hacer el carrusel infinito
