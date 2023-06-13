@@ -40,7 +40,7 @@ const Modal = ({ buttonText, signUpContent }) => {
       </button>
       {showPopup && (
         <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex justify-center items-center z-10 ">
-          <div className="bg-black rounded-lg p-8 popup">
+          <div className="absolute bg-black rounded-lg p-8 popup ">
             <button
               id="closeButton"
               className="bg-black text-white rounded-full relative -top-11"
