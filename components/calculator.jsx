@@ -7,8 +7,6 @@ import InfoCirclePopup from '../components/atoms/infoCirclePopup'
 const MortgageCalculator = props => {
   const { CalculatorContent } = props
 
-  console.log(CalculatorContent)
-
   const [homeValue, setHomeValue] = useState(0);
   const [downPayment, setDownPayment] = useState(0);
   const [downPaymentPercentage, setDownPaymentPercentage] = useState(0);
