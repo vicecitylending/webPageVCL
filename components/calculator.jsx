@@ -194,7 +194,7 @@ const MortgageCalculator = props => {
 
   return (
     <div className="flex sm:flex-row flex-col justify-center">
-        <div className="basis-1/4 padding bg-white rounded-lg sm:mr-5 mr-0">
+        <div className="xl:basis-1/4 basis-1/2 padding bg-white rounded-lg sm:mr-5 mr-0">
           <div className="flex flex-col">
             <div className="padding flex justify-between">
               <div>
@@ -532,7 +532,7 @@ const MortgageCalculator = props => {
           </div>
       </div>
       
-      <div className="basis-1/4 padding flex-col bg-white rounded-lg sm:ml-5 ml-0 sm:mt-0 mt-5">
+      <div className="xl:basis-1/4 basis-1/2 padding flex-col bg-white rounded-lg sm:ml-5 ml-0 sm:mt-0 mt-5">
         <div>
           <div className="flex mt-8 mb-10 text-black">
             <label className="text-2xl font-bold flex items-center">

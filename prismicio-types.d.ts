@@ -744,6 +744,28 @@ export type MenuDocument<Lang extends string = string> =
 /** Content for NON QM LOANS documents */
 interface NonQmLoansDocumentData {
   /**
+   * Title Text field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.title_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title_text: prismicT.KeyTextField;
+  /**
+   * Subtitle Text field in *NON QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: non_qm_loans.subtitle_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  subtitle_text: prismicT.KeyTextField;
+  /**
    * Loan1 Image field in *NON QM LOANS*
    *
    * - **Field Type**: Image
@@ -1076,6 +1098,28 @@ export type PreApprovalProcessDocument<Lang extends string = string> =
   >;
 /** Content for QM LOANS documents */
 interface QmLoansDocumentData {
+  /**
+   * Title_text field in *QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.title_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title_text: prismicT.KeyTextField;
+  /**
+   * Subtitle Text field in *QM LOANS*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: qm_loans.subtitle_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  subtitle_text: prismicT.KeyTextField;
   /**
    * Loan1 Image field in *QM LOANS*
    *

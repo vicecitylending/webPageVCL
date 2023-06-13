@@ -1,5 +1,4 @@
 import React from "react";
-import Image from 'next/image'
 import Head from "../components/head";
 import NavBar from "../components/navbar";
 import Contact from "./contact"; //Different from component/contact.jsx. <Contact> in component folder is for Popup.
@@ -51,7 +50,7 @@ const Homepage = props => {
             <HomeSection generalInformation={generalInformation.data}/>
 
             <div className="flex flex-col items-center h-full">
-              <div id="team" className="sm:pr-5 pr-5 sm:pl-5 pl-5 sm:pt-20 pt-32 sm:w-1/2 w-full">
+              <div id="team" className="sm:pr-5 pr-5 sm:pl-5 pl-5 sm:pt-20 pt-32 xl:w-1/2 w-full">
                 <div className="w-full flex-col justify-center">
                   <div className="w-full">
                     <div className="text-white text-2xl sm:text-4xl font-semibold pb-5">{meetTeamContent.data.subtitle}</div>
@@ -61,12 +60,12 @@ const Homepage = props => {
                       <div className="w-full shadow-white text-white text-l sm:text-2xl">{meetTeamContent.data.text1}</div>
                     </div>
                   </div>
-                  <div className="text-center items-center w-full sm:mt-16 mt-10">
+                  <div className="text-center items-center w-full xl:mt-16 mt-10">
                     <div className="w-full text-center items-center text-white text-2xl sm:text-4xl font-semibold">{meetTeamContent.data.title}</div>
                   </div>
                 </div>
               </div>
-              <div className="w-full sm:mt-16 items-center">
+              <div className="w-full md:mt-16 items-center">
                 <MembersCarousel members={members}/>
               </div>
             </div>
@@ -77,12 +76,12 @@ const Homepage = props => {
             <div className="pr-5 pl-5 sm:mt-60 mt-32 w-full h-full 2xl:mb-20 xl:mb-20 sm:mb-32 mb-0">
               <div className="flex flex-col">
                   <div className="flex flex-col items-center">
-                    <div className="items-center sm:w-1/2 w-full">
-                      <div className="w-full items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text2}</div>
+                    <div className="items-center  xl:w-1/2 w-full">
+                      <div className="w-full items-center text-white text-l sm:text-2xl mb-14">{meetTeamContent.data.text2}</div>
                     </div>
                   </div>
                   <div className="circle-grid-xl">
-                    <div className="ml-0 sm:ml-20 circle-grid">
+                    <div className="2xl:ml-24 xl:ml-20 ml-0 lg:ml-9 md:ml-0 sm:ml-16 xl:ml-20 circle-grid mb-14">
                       <InfoGrid
                         image={CirclesGridContent.data.image}
                         infoCircles={CirclesGridContent.data}
@@ -91,7 +90,7 @@ const Homepage = props => {
                     </div>
                   </div>
                   <div className="flex flex-col items-center">
-                    <div className="items-center sm:w-1/2 w-full">
+                    <div className="items-center xl:w-1/2 w-full">
                       <div className="w-full items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
                     </div>
                   </div>

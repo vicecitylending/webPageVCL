@@ -8,10 +8,10 @@ const LoansGrid = props => {
     <div className="flex w-full h-full items-center mt-10 mb-20">
     <div className="flex flex-col">
       <div className="text-white sm:text-2xl font-bold">
-        {"QM QUALIFIED MORTGAGE LOANS "}
+        {qmLoans.data.title_text}
       </div>
       <div className="text-white sm:text-2xl mb-10">
-        {"A QM loan is a type of mortgage loan that meets certain standards and requirements set by the Consumer Financial Protection Bureau (CFPB) in the United States. These loans are designed to ensure the borrower's ability to repay and provide consumer protection."}
+        {qmLoans.data.subtitle_text}
       </div>
       <div className="grid grid-cols-2 gap-2">
         <LoanCircle imageSource={qmLoans.data.loan1_image.url}

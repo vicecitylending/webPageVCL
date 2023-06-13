@@ -22,15 +22,17 @@ const MembersCarousel = (props) => {
   };
 
   return (
-    <Carousel
-      className="rounded-xl"
-      autoplay={true} // activar el autoplay
-      // autoplayHoverPause={false} // continuar el autoplay aunque el mouse esté encima
-      loop={true} // hacer el carrusel infinito
-      animation="slide" // elegir la animación de slide
-    >
-      {renderMembers()}
-    </Carousel>
+    <div className="h-full">
+      <Carousel
+        className="rounded-xl"
+        autoplay={true} // activar el autoplay
+        // autoplayHoverPause={false} // continuar el autoplay aunque el mouse esté encima
+        loop={true} // hacer el carrusel infinito
+        animation="slide" // elegir la animación de slide
+      >
+        {renderMembers()}
+      </Carousel>
+    </div>
   );
 };
 
