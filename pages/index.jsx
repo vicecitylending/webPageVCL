@@ -50,7 +50,7 @@ const Homepage = props => {
 
             <HomeSection generalInformation={generalInformation.data}/>
 
-            <div className="flex flex-col items-center h-screen mb-32">
+            <div className="flex flex-col items-center h-screen sm:mb-32 mb-60">
               <div id="team" className="sm:pr-5 pr-5 sm:pl-5 pl-5 sm:pt-20 pt-32 sm:w-1/2 w-full">
                 <div className="w-full flex-col justify-center">
                   <div className="w-full">
