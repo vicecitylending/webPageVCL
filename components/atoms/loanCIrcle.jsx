@@ -1,5 +1,7 @@
 import React from "react";
 import Image from 'next/image'
+import { PrismicRichText } from "@prismicio/react"
+ 
 
 
 const LoanCircle = props => {
@@ -16,9 +18,11 @@ const LoanCircle = props => {
               />
             </div>
             <div className="items-center w-auto">
-              <div className="">
+              <div className="text-white">
                 <div className="text-left text-white sm:text-2xl break-words font-bold">{title}</div>
-                <div className="text-left  text-white sm:text-2xl break-words ">{description}</div>
+                <PrismicRichText
+                  field={description}
+                />
               </div>
             </div>
           </div> 

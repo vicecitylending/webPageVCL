@@ -790,14 +790,14 @@ interface NonQmLoansDocumentData {
   /**
    * Loan1 Description field in *NON QM LOANS*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: non_qm_loans.loan1_description
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  loan1_description: prismicT.KeyTextField;
+  loan1_description: prismicT.RichTextField;
   /**
    * Loan2 Image field in *NON QM LOANS*
    *
@@ -823,14 +823,14 @@ interface NonQmLoansDocumentData {
   /**
    * Loan2 Description field in *NON QM LOANS*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: non_qm_loans.loan2_description
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  loan2_description: prismicT.KeyTextField;
+  loan2_description: prismicT.RichTextField;
   /**
    * Loan3 Image field in *NON QM LOANS*
    *
@@ -856,14 +856,14 @@ interface NonQmLoansDocumentData {
   /**
    * Loan3 Description field in *NON QM LOANS*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: non_qm_loans.loan3_description
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  loan3_description: prismicT.KeyTextField;
+  loan3_description: prismicT.RichTextField;
   /**
    * Loan4 Image field in *NON QM LOANS*
    *
@@ -889,14 +889,14 @@ interface NonQmLoansDocumentData {
   /**
    * Loan4 Description field in *NON QM LOANS*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: non_qm_loans.loan4_description
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  loan4_description: prismicT.KeyTextField;
+  loan4_description: prismicT.RichTextField;
   /**
    * Loan5 Image field in *NON QM LOANS*
    *
@@ -922,14 +922,14 @@ interface NonQmLoansDocumentData {
   /**
    * Loan5 Description field in *NON QM LOANS*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: non_qm_loans.loan5_description
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  loan5_description: prismicT.KeyTextField;
+  loan5_description: prismicT.RichTextField;
   /**
    * Loan6 Image field in *NON QM LOANS*
    *
@@ -955,47 +955,14 @@ interface NonQmLoansDocumentData {
   /**
    * Loan6 Description field in *NON QM LOANS*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: non_qm_loans.loan6_description
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  loan6_description: prismicT.KeyTextField;
-  /**
-   * Loan7 Image field in *NON QM LOANS*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: non_qm_loans.loan7_image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/image
-   *
-   */
-  loan7_image: prismicT.ImageField<never>;
-  /**
-   * Loan7 Title field in *NON QM LOANS*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: non_qm_loans.loan7_title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  loan7_title: prismicT.KeyTextField;
-  /**
-   * Loan7Description field in *NON QM LOANS*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: non_qm_loans.loan7_description
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  loan7_description: prismicT.KeyTextField;
+  loan6_description: prismicT.RichTextField;
 }
 /**
  * NON QM LOANS document from Prismic
@@ -1145,14 +1112,14 @@ interface QmLoansDocumentData {
   /**
    * Loan1 Description field in *QM LOANS*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: qm_loans.loan1_description
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  loan1_description: prismicT.KeyTextField;
+  loan1_description: prismicT.RichTextField;
   /**
    * Loan2 Image field in *QM LOANS*
    *
@@ -1178,14 +1145,14 @@ interface QmLoansDocumentData {
   /**
    * Loan2 Description field in *QM LOANS*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: qm_loans.loan2_description
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  loan2_description: prismicT.KeyTextField;
+  loan2_description: prismicT.RichTextField;
   /**
    * Loan3 Image field in *QM LOANS*
    *
@@ -1211,14 +1178,14 @@ interface QmLoansDocumentData {
   /**
    * Loan3 Description field in *QM LOANS*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: qm_loans.loan3_description
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  loan3_description: prismicT.KeyTextField;
+  loan3_description: prismicT.RichTextField;
   /**
    * Loan4 Image field in *QM LOANS*
    *
@@ -1244,14 +1211,14 @@ interface QmLoansDocumentData {
   /**
    * Loan4 Description field in *QM LOANS*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: qm_loans.loan4_description
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  loan4_description: prismicT.KeyTextField;
+  loan4_description: prismicT.RichTextField;
   /**
    * Loan5 Image field in *QM LOANS*
    *
@@ -1277,14 +1244,14 @@ interface QmLoansDocumentData {
   /**
    * Loan5 Description field in *QM LOANS*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: qm_loans.loan5_description
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  loan5_description: prismicT.KeyTextField;
+  loan5_description: prismicT.RichTextField;
   /**
    * Slice Zone field in *QM LOANS*
    *

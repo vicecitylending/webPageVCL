@@ -38,11 +38,6 @@ $menu-item-active-background-color: $app-color1;
   display: flex;
 }
 
-// .logo-size-m {
-//   width: 70%;
-//   height: auto;
-// }
-
 .padding{
   padding: 1rem;
 }
@@ -91,15 +86,11 @@ $menu-item-active-background-color: $app-color1;
 }
 
 
-
 @media screen and (max-width: 1920px) {
   .circle-grid-xl {
     position: relative;
     left:5%
   }
-
-
-
 }
 
 @media screen and (max-width: 1400px) {
@@ -150,9 +141,6 @@ $menu-item-active-background-color: $app-color1;
     left: 20%
 
   }
-
-
-
 }
 
 @media screen and (max-width: 720px) {
@@ -239,7 +227,6 @@ $menu-item-active-background-color: $app-color1;
   .hard-pr {
     left: 0%
   }
-
 }
 
 @media screen and (max-width: 350px) {
@@ -286,7 +273,5 @@ $menu-item-active-background-color: $app-color1;
 
     .hard-pr {
       left: 0%
-  
     }
-
 }

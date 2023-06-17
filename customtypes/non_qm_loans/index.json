@@ -23,8 +23,13 @@
         "config": { "label": "Loan1 Title", "placeholder": "" }
       },
       "loan1_description": {
-        "type": "Text",
-        "config": { "label": "Loan1 Description", "placeholder": "" }
+        "type": "StructuredText",
+        "config": {
+          "label": "Loan1 Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
       },
       "loan2_image": {
         "type": "Image",
@@ -35,8 +40,13 @@
         "config": { "label": "Loan2 Title", "placeholder": "" }
       },
       "loan2_description": {
-        "type": "Text",
-        "config": { "label": "Loan2 Description", "placeholder": "" }
+        "type": "StructuredText",
+        "config": {
+          "label": "Loan2 Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
       },
       "loan3_image": {
         "type": "Image",
@@ -47,8 +57,13 @@
         "config": { "label": "Loan3 Title", "placeholder": "" }
       },
       "loan3_description": {
-        "type": "Text",
-        "config": { "label": "Loan3 Description", "placeholder": "" }
+        "type": "StructuredText",
+        "config": {
+          "label": "Loan3 Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
       },
       "loan4_image": {
         "type": "Image",
@@ -59,8 +74,13 @@
         "config": { "label": "Loan4 Title", "placeholder": "" }
       },
       "loan4_description": {
-        "type": "Text",
-        "config": { "label": "Loan4 Description", "placeholder": "" }
+        "type": "StructuredText",
+        "config": {
+          "label": "Loan4 Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
       },
       "loan5_image": {
         "type": "Image",
@@ -71,8 +91,13 @@
         "config": { "label": "Loan5 Title", "placeholder": "" }
       },
       "loan5_description": {
-        "type": "Text",
-        "config": { "label": "Loan5 Description", "placeholder": "" }
+        "type": "StructuredText",
+        "config": {
+          "label": "Loan5 Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
       },
       "loan6_image": {
         "type": "Image",
@@ -83,20 +108,13 @@
         "config": { "label": "Loan6 Title", "placeholder": "" }
       },
       "loan6_description": {
-        "type": "Text",
-        "config": { "label": "Loan6 Description", "placeholder": "" }
-      },
-      "loan7_image": {
-        "type": "Image",
-        "config": { "label": "Loan7 Image", "constraint": {}, "thumbnails": [] }
-      },
-      "loan7_title": {
-        "type": "Text",
-        "config": { "label": "Loan7 Title", "placeholder": "" }
-      },
-      "loan7_description": {
-        "type": "Text",
-        "config": { "label": "Loan7Description", "placeholder": "" }
+        "type": "StructuredText",
+        "config": {
+          "label": "Loan6 Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
       }
     }
   }

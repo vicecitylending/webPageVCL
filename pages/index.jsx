@@ -20,7 +20,7 @@ import { createClient } from "../prismicio"
 
 const Homepage = props => {
     
-  const { QmLoansContent, actualLocale, locales, seo, generalInformation, menuContent, members, footerContent, meetTeamContent, CirclesGridContent, RealtorsResourceContent, PreApprovalProcessContent, BuyingRefinancingProcessContent, signUpContent } = props
+  const { NonQmLoansContent, QmLoansContent, actualLocale, locales, seo, generalInformation, menuContent, members, footerContent, meetTeamContent, CirclesGridContent, RealtorsResourceContent, PreApprovalProcessContent, BuyingRefinancingProcessContent, signUpContent } = props
   return<div className="main overflow-x-hidden">
           <Head
             title={seo.data.title}
@@ -109,7 +109,7 @@ const Homepage = props => {
             </div>
 
             <div className="w-full h-auto">
-              <LoansSection RealtorsContent={RealtorsResourceContent} QmLoans={QmLoansContent}/>
+              <LoansSection RealtorsContent={RealtorsResourceContent} QmLoans={QmLoansContent} NonQmLoans={NonQmLoansContent}/>
             </div>
             
             <div className="w-full h-full">
@@ -154,6 +154,7 @@ const getStaticProps = async ({ params, locale, previewData }) => {
         signUpContent : await getPrismicData('sign_up', locale),
         CirclesGridContent : await getPrismicData('circle_grid_info', locale),
         QmLoansContent : await getPrismicData('qm_loans', locale),
+        NonQmLoansContent : await getPrismicData('non_qm_loans', locale),
         locales: locales,
         actualLocale: locale
       }
