@@ -99,18 +99,14 @@
           "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
-      "loan6_image": {
-        "type": "Image",
-        "config": { "label": "Loan6 Image", "constraint": {}, "thumbnails": [] }
-      },
-      "loan6_title": {
+      "other_services_title": {
         "type": "Text",
-        "config": { "label": "Loan6 Title", "placeholder": "" }
+        "config": { "label": "Other Services Title", "placeholder": "" }
       },
-      "loan6_description": {
+      "other_services_description": {
         "type": "StructuredText",
         "config": {
-          "label": "Loan6 Description",
+          "label": "Other Services Description",
           "placeholder": "",
           "allowTargetBlank": true,
           "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"

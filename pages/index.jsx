@@ -97,12 +97,12 @@ const Homepage = props => {
               </div>
             </div>
 
-            <div className="h-1/2 2xl_mt-0 xl:mt-80"></div>
+            <div className="h-1/2 2xl:mt-0 xl:mt-80"></div>
 
             <PreapprovalSection PreapprovalContent={PreApprovalProcessContent}/>
             
             <div className="flex flex-col items-center mt-72 mb-0 text-white ">
-              <div className="mb-2">
+              <div className="mb-3 sm:text-2xl">
                {generalInformation.data.upside_button_message}
               </div>
               <ViceButton className="" buttonText={generalInformation.data.button_message} actualLanguage={actualLocale}/>

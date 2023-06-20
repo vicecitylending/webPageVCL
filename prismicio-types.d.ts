@@ -931,38 +931,27 @@ interface NonQmLoansDocumentData {
    */
   loan5_description: prismicT.RichTextField;
   /**
-   * Loan6 Image field in *NON QM LOANS*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: non_qm_loans.loan6_image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/image
-   *
-   */
-  loan6_image: prismicT.ImageField<never>;
-  /**
-   * Loan6 Title field in *NON QM LOANS*
+   * Other Services Title field in *NON QM LOANS*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: non_qm_loans.loan6_title
+   * - **API ID Path**: non_qm_loans.other_services_title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
    *
    */
-  loan6_title: prismicT.KeyTextField;
+  other_services_title: prismicT.KeyTextField;
   /**
-   * Loan6 Description field in *NON QM LOANS*
+   * Other Services Description field in *NON QM LOANS*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: non_qm_loans.loan6_description
+   * - **API ID Path**: non_qm_loans.other_services_description
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  loan6_description: prismicT.RichTextField;
+  other_services_description: prismicT.RichTextField;
 }
 /**
  * NON QM LOANS document from Prismic
