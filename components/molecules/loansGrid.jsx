@@ -10,7 +10,7 @@ const LoansGrid = props => {
       <div className="text-white sm:text-2xl font-bold">
         {Loans.data.title_text}
       </div>
-      <div className="text-white sm:text-2xl mb-10">
+      <div className="text-white sm:text-2xl mb-10 text-justify">
         {Loans.data.subtitle_text}
       </div>
       <div className="grid grid-cols-2 gap-2">
@@ -38,12 +38,21 @@ const LoansGrid = props => {
               title={Loans.data.loan4_title}
               description={Loans.data.loan4_description}
         />
-        <LoanCircle
-              imageSource={Loans.data.loan5_image.url}
-              imageAlt={Loans.data.loan5_image.alt}
-              title={Loans.data.loan5_title}
-              description={Loans.data.loan5_description}
-        />
+
+      </div>
+      <div className="flex w-full h-full items-center mt-20 mb-20">
+        <div className="flex flex-col">
+            <div className="grid grid-cols-2 gap-1">
+              <div className="3xl:translate-x-60 2xl:translate-x-48 xl:translate-x-40 lg:translate-x-56 md:translate-x-44 sm:translate-x-36 translate-x-20">
+                <LoanCircle
+                  imageSource={Loans.data.loan5_image.url}
+                  imageAlt={Loans.data.loan5_image.alt}
+                  title={Loans.data.loan5_title}
+                  description={Loans.data.loan5_description}
+                />
+              </div>
+            </div>
+        </div>
       </div>
     </div>
   </div>

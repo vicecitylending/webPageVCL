@@ -11,16 +11,16 @@ const PreapprovalSection = props => {
     <div id ="preapproval" className="pr-5 pl-5 sm:pt-20 pt-32 xl:w-1/2 w-full h-screen">
       <div className="flex flex-col justify-center">
         <div className="text-white text-white text-2xl sm:text-4xl pb-5 font-semibold">{PreapprovalContent.data.title}</div>
-        <div className="text-white text-l sm:text-2xl">{PreapprovalContent.data.text}</div>
+        <div className="text-white text-l sm:text-2xl text-justify">{PreapprovalContent.data.text}</div>
         <div className="self-center">
-          <div className="flex">
-            <div className="pr-2">
+          <div className="grid grid-cols-2">
+            <div className="pr-4">
               <GeneralCircle imageSource={PreapprovalContent.data.icon1.url}
                       imageAlt={PreapprovalContent.data.icon1.alt}
                       text={PreapprovalContent.data.second_text}
                       />
             </div>
-            <div className="pr-2">
+            <div className="pl-4">
               <GeneralCircle imageSource={PreapprovalContent.data.icon2.url}
                           imageAlt={PreapprovalContent.data.icon2.alt}
                           text={PreapprovalContent.data.third_text}

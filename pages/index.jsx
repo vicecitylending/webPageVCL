@@ -57,7 +57,7 @@ const Homepage = props => {
                   </div>
                   <div>
                     <div className="">
-                      <div className="w-full shadow-white text-white text-l sm:text-2xl">{meetTeamContent.data.text1}</div>
+                      <div className="w-full shadow-white text-white text-l sm:text-2xl text-justify">{meetTeamContent.data.text1}</div>
                     </div>
                   </div>
                   <div className="text-center items-center w-full xl:mt-16 mt-10">
@@ -77,11 +77,11 @@ const Homepage = props => {
               <div className="flex flex-col">
                   <div className="flex flex-col items-center">
                     <div className="items-center  xl:w-1/2 w-full">
-                      <div className="w-full items-center text-white text-l sm:text-2xl mb-14">{meetTeamContent.data.text2}</div>
+                      <div className="w-full items-center text-white text-l sm:text-2xl mb-14 text-justify">{meetTeamContent.data.text2}</div>
                     </div>
                   </div>
                   <div className="circle-grid-xl">
-                    <div className="2xl:ml-24 xl:ml-20 ml-0 lg:ml-9 md:ml-0 sm:ml-16 xl:ml-20 circle-grid mb-14">
+                    <div className="3xl:ml-24 2xl:ml-12 xl:ml-20 ml-0 lg:ml-9 md:ml-0 sm:ml-16 xl:ml-20 circle-grid mb-14">
                       <InfoGrid
                         image={CirclesGridContent.data.image}
                         infoCircles={CirclesGridContent.data}
@@ -91,7 +91,7 @@ const Homepage = props => {
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="items-center xl:w-1/2 w-full">
-                      <div className="w-full items-center text-white text-l sm:text-2xl">{meetTeamContent.data.text3}</div>
+                      <div className="w-full items-center text-white text-l sm:text-2xl text-justify">{meetTeamContent.data.text3}</div>
                     </div>
                   </div>
               </div>
@@ -117,8 +117,8 @@ const Homepage = props => {
                 <div className="flex sm:flex-row flex-col justify-center">
                   <div className="sm:translate-x-0 translate-x-5 items-center text-white sm:w-1/4 w-full">
                     <div className="text-4xl">{signUpContent.data.title}</div>
-                    <div className="mt-1 text-white text-xl pb-6 ">{signUpContent.data.subtitle}</div>
-                    <div className="mt-1 text-white text-sm pb-6 mr-7">{signUpContent.data.body_text}</div>
+                    <div className="mt-1 text-white text-xl pb-6">{signUpContent.data.subtitle}</div>
+                    <div className="mt-1 text-white text-sm pb-6 mr-7 text-justify">{signUpContent.data.body_text}</div>
                   </div>
                   <div className="">
                     <Contact signUpContent={signUpContent.data}/>
