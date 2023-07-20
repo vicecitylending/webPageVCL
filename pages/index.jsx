@@ -117,8 +117,8 @@ const Homepage = props => {
                 <div className="flex sm:flex-row flex-col justify-center">
                   <div className="sm:translate-x-0 translate-x-5 items-center text-white sm:w-1/4 w-full">
                     <div className="text-4xl">{signUpContent.data.title}</div>
-                    <div className="mt-1 text-white text-xl pb-6">{signUpContent.data.subtitle}</div>
-                    <div className="mt-1 text-white text-sm pb-6 mr-7 text-justify">{signUpContent.data.body_text}</div>
+                    <div className="mt-1 text-white sm:text-2xl pb-6">{signUpContent.data.subtitle}</div>
+                    <div className="mt-1 text-white sm:text-2xl pb-6 mr-7 text-justify">{signUpContent.data.body_text}</div>
                   </div>
                   <div className="">
                     <Contact signUpContent={signUpContent.data}/>

@@ -76,7 +76,7 @@ const Contact = props => {
 
                   {/* Name Field */}
                   <div className="mb-4">
-                    <label className="block text-white text-sm  mb-2" htmlFor="name">
+                    <label className="block text-white sm:text-2xl mb-2" htmlFor="name">
                       {signUpContent.name}
                     </label>
                     <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text"  placeholder={signUpContent.name_placeholder}></input>
@@ -84,7 +84,7 @@ const Contact = props => {
 
                   {/* Lastname Field */}
                   <div className="mb-6">
-                    <label className="block text-white text-sm  mb-2" htmlFor="lastname">
+                    <label className="block text-white sm:text-2xl  mb-2" htmlFor="lastname">
                       {signUpContent.lastname}
                     </label>
                     <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastname" type="text" placeholder={signUpContent.lastname_placeholder}></input>
@@ -92,7 +92,7 @@ const Contact = props => {
 
                   {/* Email Field */}
                   <div className="mb-6">
-                    <label className="block text-white text-sm  mb-2" htmlFor="email">
+                    <label className="block text-white sm:text-2xl  mb-2" htmlFor="email">
                       {signUpContent.email}
                     </label>
                     <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder={signUpContent.email_placeholder}></input>
@@ -100,7 +100,7 @@ const Contact = props => {
 
                   {/* Phone Field */}
                   <div className="mb-6">
-                    <label className="block text-white text-sm  mb-2" htmlFor="phone">
+                    <label className="block text-white sm:text-2xl  mb-2" htmlFor="phone">
                       {signUpContent.phone}
                     </label>
                     <input onChange={handleOnChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder={signUpContent.phone_placeholder}></input>
