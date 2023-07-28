@@ -12,22 +12,6 @@ const Footer = (props) => {
           <div className="pl-2 pr-2">|</div>
           <div>{content.instagram}</div>
         </div>
-        <div className="flex flex-row items-center justify-center  translate-y-32">
-          <Image 
-            className=""
-            src={content.logo2.url}
-            alt={content.logo2.alt} 
-            width={200}
-            height={200}
-          />
-          <Image 
-            className=""
-            src={content.logo3.url}
-            alt={content.logo3.alt} 
-            width={200}
-            height={200}
-          />
-        </div>
         <Image 
           className="translate-y-32"
           src={content.logo.url}
