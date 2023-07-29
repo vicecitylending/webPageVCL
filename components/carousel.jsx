@@ -13,7 +13,6 @@ const MembersCarousel = (props) => {
         lastName={member.data.surname}
         position={member.data.position}
         nmls={member.data.nmls}
-        email={member.data.email}
         phone={member.data.phone}
         instagram={member.data.instagram}
         imageSrc={member.data.photo.url}

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image"
 import { useRouter } from 'next/router';
-import Link from "next/link";
 import { PrismicNextLink } from '@prismicio/next'
 
 
@@ -41,7 +40,7 @@ const NavBar = props => {
       if(index  === (array.length - 1)) {
         navBarLinks.push(
           <li className="" key = {index}>
-              <PrismicNextLink href={`/${element.link}`}>
+              <PrismicNextLink href={`${element.link}`}>
                 <div className="text-shadow shadow-white text-white hover:text-blue-100 bg-pink-400 font-semibold sm:pl-1 sm:pr-1" >{element.label}</div>
               </PrismicNextLink>
           </li>

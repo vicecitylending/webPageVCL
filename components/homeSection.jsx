@@ -6,7 +6,7 @@ const HomeSection = props => {
     const { generalInformation } = props
   return (
     <div className="w-full h-screen place-items-center justify-items-stretch">
-    <div id="start" className="w-full flex flex-col text-white place-items-center justify-items-stretch 3xl:mt-64 2xl:mt-60 lg:mt-64 xs:mt-60">
+    <div id="start" className="w-full flex flex-col text-white place-items-center justify-items-stretch 3xl:mt-64 2xl:mt-60 lg:mt-64 xs:mt-48">
         <div className="basis-1/3 flex items-center justify-center">
           <Image  className="lg:scale-125"
                   src={generalInformation.small_logo.url}

@@ -18,14 +18,6 @@
         "type": "Image",
         "config": { "label": "Logo", "constraint": {}, "thumbnails": [] }
       },
-      "logo2": {
-        "type": "Image",
-        "config": { "label": "Logo2", "constraint": {}, "thumbnails": [] }
-      },
-      "logo3": {
-        "type": "Image",
-        "config": { "label": "Logo3", "constraint": {}, "thumbnails": [] }
-      },
       "team": {
         "type": "Image",
         "config": { "label": "Team", "constraint": {}, "thumbnails": [] }
@@ -33,6 +25,58 @@
       "footer_text": {
         "type": "Text",
         "config": { "label": "Footer Text", "placeholder": "" }
+      },
+      "instagram_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Instagram Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "instagram_link": {
+        "type": "Link",
+        "config": {
+          "label": "Instagram Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "facebook_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Facebook Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "facebook_link": {
+        "type": "Link",
+        "config": {
+          "label": "Facebook Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "tiktok_logo": {
+        "type": "Image",
+        "config": { "label": "TikTok Logo", "constraint": {}, "thumbnails": [] }
+      },
+      "tiktok_link": {
+        "type": "Link",
+        "config": { "label": "TikTok Link", "placeholder": "", "select": null }
+      },
+      "youtube_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Youtube Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "youtube_link": {
+        "type": "Link",
+        "config": { "label": "Youtube Link", "placeholder": "", "select": null }
       }
     }
   }

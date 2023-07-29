@@ -283,28 +283,6 @@ interface FooterDocumentData {
    */
   logo: prismicT.ImageField<never>;
   /**
-   * Logo2 field in *Footer*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.logo2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/image
-   *
-   */
-  logo2: prismicT.ImageField<never>;
-  /**
-   * Logo3 field in *Footer*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.logo3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/image
-   *
-   */
-  logo3: prismicT.ImageField<never>;
-  /**
    * Team field in *Footer*
    *
    * - **Field Type**: Image
@@ -326,6 +304,94 @@ interface FooterDocumentData {
    *
    */
   footer_text: prismicT.KeyTextField;
+  /**
+   * Instagram Logo field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.instagram_logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  instagram_logo: prismicT.ImageField<never>;
+  /**
+   * Instagram Link field in *Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.instagram_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  instagram_link: prismicT.LinkField;
+  /**
+   * Facebook Logo field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.facebook_logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  facebook_logo: prismicT.ImageField<never>;
+  /**
+   * Facebook Link field in *Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.facebook_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  facebook_link: prismicT.LinkField;
+  /**
+   * TikTok Logo field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.tiktok_logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  tiktok_logo: prismicT.ImageField<never>;
+  /**
+   * TikTok Link field in *Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.tiktok_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  tiktok_link: prismicT.LinkField;
+  /**
+   * Youtube Logo field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.youtube_logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  youtube_logo: prismicT.ImageField<never>;
+  /**
+   * Youtube Link field in *Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.youtube_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  youtube_link: prismicT.LinkField;
 }
 /**
  * Footer document from Prismic

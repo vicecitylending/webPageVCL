@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 
 const MemberCard = props => {
-    const { name, lastName, position, nmls, email, phone, instagram, imageSrc} = props
+    const { name, lastName, position, nmls, phone, instagram, imageSrc} = props
   return (
     <div className="h-full">
         <div className="flex md:flex-row flex-col items-center justify-center h-full">
@@ -20,9 +20,12 @@ const MemberCard = props => {
                     <div className="basis-1/6 text-xl lg:text-base xl:text-lg md:text-xs sm:text-3xl text-cyan-300">{`${name} ${lastName}`}</div>
                     <div className="basis-1/6 text-xs lg:text-base xl:text-lg md:text-xs sm:text-lg text-white">{`${position}`}</div>
                     <div className="basis-1/6 text-xs lg:text-base xl:text-lg md:text-xs sm:text-lg text-white">{`NMLS:${nmls}`}</div>
-                    <div className="basis-1/6 text-xs lg:text-base xl:text-lg md:text-xs sm:text-lg text-white">{`${email}`}</div>
-                    <div className="basis-1/6 text-xs lg:text-base xl:text-lg md:text-xs sm:text-lg text-white">{`${phone}`}</div>
-                    <div className="basis-1/6 text-xs lg:text-base xl:text-lg md:text-xs sm:text-lg text-white">{`${instagram}`}</div>
+                    <div className="basis-1/6 text-xs lg:text-base xl:text-lg md:text-xs sm:text-lg text-white">
+                        <a href={`tel:+1${phone}`}>{phone}</a>
+                    </div>
+                    <div className="basis-1/6 text-xs lg:text-base xl:text-lg md:text-xs sm:text-lg text-white">
+                        <a href={`https://www.instagram.com/${instagram}/`}>@{instagram}</a>
+                    </div>
                 </div>
             </div>
             <div className="basis 1/4"></div>
