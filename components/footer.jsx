@@ -5,8 +5,7 @@ import { PrismicNextLink } from '@prismicio/next'
 
 const Footer = (props) => {
   const { content } = props;
-  console.log(content)
-
+  
   return (
       <div className="flex flex-col items-center">
         <div className="flex flex-row justify-center text-white font-semibold translate-y-32">

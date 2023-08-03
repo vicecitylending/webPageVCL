@@ -112,17 +112,15 @@ const Homepage = props => {
               <LoansSection RealtorsContent={RealtorsResourceContent} QmLoans={QmLoansContent} NonQmLoans={NonQmLoansContent}/>
             </div>
             
-            <div className="w-full h-full">
+            <div className="xl:w-1/2 w-full h-full self-center">
               <div id ="contact" className="pr-5 pl-5 sm:pt-20 pt-32">
                 <div className="flex sm:flex-row flex-col justify-center">
-                  <div className="sm:translate-x-0 translate-x-5 items-center text-white sm:w-1/4 w-full">
+                  <div className="sm:translate-x-0 translate-x-5 items-center text-white w-full">
                     <div className="text-4xl">{signUpContent.data.title}</div>
                     <div className="mt-1 text-white sm:text-2xl pb-6">{signUpContent.data.subtitle}</div>
-                    <div className="mt-1 text-white sm:text-2xl pb-6 mr-7 text-justify">{signUpContent.data.body_text}</div>
+                    <div className="mt-1 text-white sm:text-2xl pb-6 sm:mr-0 mr-7 text-justify">{signUpContent.data.body_text}</div>
                   </div>
-                  <div className="">
-                    <Contact signUpContent={signUpContent.data}/>
-                  </div>
+                  <Contact signUpContent={signUpContent.data}/>
                 </div>
               </div>
             </div>

@@ -85,6 +85,11 @@ $menu-item-active-background-color: $app-color1;
   margin-left: 2.5rem;
 }
 
+/* Ajusta el tamaño del checkbox */
+.custom-checkbox {
+  transform: scale(1.5); /* Puedes ajustar este valor para cambiar el tamaño */
+  margin-right: 8px; /* Agrega espacio entre el checkbox y el texto */
+}
 
 @media screen and (max-width: 1920px) {
   .circle-grid-xl {

@@ -57,6 +57,10 @@
       "sent_message_text": {
         "type": "Text",
         "config": { "label": "Sent Message Text", "placeholder": "" }
+      },
+      "checkbox_text": {
+        "type": "Text",
+        "config": { "label": "Checkbox Text", "placeholder": "" }
       }
     }
   }

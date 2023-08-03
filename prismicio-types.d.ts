@@ -1615,6 +1615,17 @@ interface SignUpDocumentData {
    *
    */
   sent_message_text: prismicT.KeyTextField;
+  /**
+   * Checkbox Text field in *Sign Up*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.checkbox_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  checkbox_text: prismicT.KeyTextField;
 }
 /**
  * Sign Up document from Prismic
