@@ -154,7 +154,7 @@ const Contact = props => {
                       style={{
                         cursor: !status.checkboxApproved ? "not-allowed" : "pointer",
                       }}
-                      className="bg-orange-400 hover:bg-orange-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline text-xs md:text-sm"
+                      className="bg-orange-400 hover:bg-orange-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline text-xs md:text-sm hover:scale-110 transition duration-500 cursor-pointer object-cover"
                       type="button"
                     >
                       {signUpContent.submit_text}

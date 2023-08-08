@@ -64,8 +64,8 @@ $menu-item-active-background-color: $app-color1;
 .popup {    
   position: absolute;
   height: 60%;
-  width: 70%;
-  left: 15%;
+  width: 50%;
+  left: 25%;
   right: 25%;
   top: 15%;
   bottom: 25%;
@@ -96,6 +96,22 @@ $menu-item-active-background-color: $app-color1;
     position: relative;
     left:5%
   }
+
+  .popup {    
+    position: absolute;
+    height: 75%;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    top: 15%;
+    bottom: 25%;
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color: white;
+    text-align: center;
+    z-index: 999;
+    // margin-left:62px;
+  }
 }
 
 @media screen and (max-width: 1400px) {
@@ -108,8 +124,8 @@ $menu-item-active-background-color: $app-color1;
   .popup {    
     position: absolute;
     height: 80%;
-    width: 80%;
-    left: 10%;
+    width: 50%;
+    left: 25%;
     right: 25%;
     top: 15%;
     bottom: 25%;
@@ -159,9 +175,9 @@ $menu-item-active-background-color: $app-color1;
   .popup {    
     position: absolute;
     height: 80%;
-    width: 100%;
+    width: 90%;
     left: 5%;
-    right: 25%;
+    right: 5%;
     top: 15%;
     bottom: 25%;
     border-radius: 5px;

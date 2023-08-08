@@ -7,7 +7,7 @@ import { PrismicRichText } from "@prismicio/react"
 const LoanCircle = props => {
     const { imageSource, imageAlt, title, description } = props
   return (
-        <div className="w-full h-full">
+        <div className="w-full h-full hover:scale-105 transition duration-500 object-cover">
           <div className="flex flex-col">
             <div className="w-auto h-auto">
               <Image  className=""

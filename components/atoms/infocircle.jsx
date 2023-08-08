@@ -5,7 +5,7 @@ import Image from 'next/image'
 const InfoCircle = props => {
     const { image, text } = props
   return (
-<div className="relative">
+<div className="relative hover:scale-105 transition duration-500 object-cover">
   <Image  className="sm:scale-100 scale-125 sm:w-80 w-auto h-auto"
                             src={image.url}
                             alt={image.alt} 

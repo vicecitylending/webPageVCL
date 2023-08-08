@@ -5,7 +5,7 @@ import Image from 'next/image'
 const GeneralCircle = props => {
     const { imageSource, imageAlt, text} = props
   return (
-        <div className="w-full h-full">
+        <div className="w-full h-full hover:scale-105 transition duration-500 object-cover">
           <div className="flex flex-col">
             <div className="w-auto h-auto">
               <Image  className=""
