@@ -8,7 +8,7 @@ const MemberCard = props => {
     <div className="h-full">
         <div className="flex md:flex-row flex-col items-center justify-center h-full">
             <div className="flex basis-1/4 items-center justify-center">
-                <Image  className="md:scale-75 sm:scale-50 scale-50 xl:scale-90 -translate-y-8 hover:scale-95 transition duration-500 object-cover"
+                <Image  className="md:scale-75 sm:scale-50 scale-50 xl:scale-90 -translate-y-8 transition duration-500 object-cover"
                             src={imageSrc}
                             alt={`${name} ${lastName}`} 
                             width={700}

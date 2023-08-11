@@ -156,7 +156,7 @@ const Contact = props => {
                                 className="custom-checkbox"
                               />
                             </div>
-                            <div className="ml-2 text-justify">
+                            <div className="ml-2 text-justify sm:text-md text-xs">
                               {signUpContent.checkbox_text}
                             </div>
                           </div>
