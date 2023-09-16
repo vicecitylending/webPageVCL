@@ -37,7 +37,7 @@ const NavBar = props => {
   if (content !== undefined) {
     content.forEach((element, index, array)  => {
 
-      if(index  === (array.length - 1)) {
+      if((index  === (array.length - 1) || index === 0)) {
         navBarLinks.push(
           <li className="" key = {index}>
               <PrismicNextLink href={`${element.link}`}>
@@ -46,15 +46,7 @@ const NavBar = props => {
           </li>
         )
       }
-      if(index  == 0) {
-        navBarLinks.push(
-          <li className="" key = {index}>
-              <PrismicNextLink href={`${element.link}`}>
-                <div className="text-shadow shadow-white text-white hover:text-blue-100 bg-pink-400 font-semibold sm:pl-1 sm:pr-1 hover:scale-125 transition duration-200 cursor-pointer object-cover" >{element.label}</div>
-              </PrismicNextLink>
-          </li>
-        )
-      }
+
       else {
         navBarLinks.push(
           <li className="" key = {index}>
