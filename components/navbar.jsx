@@ -46,6 +46,15 @@ const NavBar = props => {
           </li>
         )
       }
+      if(index  == 0) {
+        navBarLinks.push(
+          <li className="" key = {index}>
+              <PrismicNextLink href={`${element.link}`}>
+                <div className="text-shadow shadow-white text-white hover:text-blue-100 bg-pink-400 font-semibold sm:pl-1 sm:pr-1 hover:scale-125 transition duration-200 cursor-pointer object-cover" >{element.label}</div>
+              </PrismicNextLink>
+          </li>
+        )
+      }
       else {
         navBarLinks.push(
           <li className="" key = {index}>
@@ -73,13 +82,13 @@ const NavBar = props => {
           <svg className="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
         </button>
         <div className={`w-full xl:block xl:w-auto ${isOpen && "hidden"}`} id="mobile-menu">
-          <ul className="flex flex-col mt-4 xl:flex-row xl:space-x-8 xl:mt-0 xl:text-sm xl:font-medium items-end xl:items-start">
+          <ul className="flex flex-col mt-10 xl:flex-row xl:space-x-8 xl:mt-0 xl:text-sm xl:font-medium items-end xl:items-start">
             {navBarLinks}
-            <div className="pl-5 flex flex-row">
+            <div className="flex flex-row text-white">
                 {locales.map((locale) => (
-                  <div className="" key={locale.id}>
+                  <div className="text-blue" key={locale.id}>
                     <PrismicNextLink href={`/${locale.id}${router.pathname}`}>
-                      <div className="shadow-white text-white hover:text-blue-100 font-semibold pl-1 pr-1">
+                      <div className="text-blue font-semibold pl-1 pr-1">
                       {locale.id === 'en-us' ? 'English' : locale.id === 'es-co' ? 'Español' : locale.id}
                       </div>
                     </PrismicNextLink>
