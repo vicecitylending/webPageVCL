@@ -45,10 +45,13 @@ const Homepage = props => {
             <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-500 opacity-70 w-full h-full object-fill"></div>
           </div>
 
-          <div id="home" className="flex flex-col w-full relative">
+          <div id="home" className="flex flex-col w-full relative h-full">
 
-            <HomeSection generalInformation={generalInformation.data}/>
 
+
+            <HomeSection content={footerContent.data}/>
+            {/* <HomeSection generalInformation={generalInformation.data}/> */}
+            {/* 
             <div className="flex flex-col items-center h-full">
               <div id="team" className="sm:pr-5 pr-5 sm:pl-5 pl-5 sm:pt-20 pt-32 xl:w-1/2 w-full">
                 <div className="w-full flex-col justify-center">
@@ -68,12 +71,12 @@ const Homepage = props => {
               <div className="w-full md:mt-16 items-center">
                 <MembersCarousel members={members}/>
               </div>
-            </div>
+            </div> */}
 
-            <BuyingSection BuyingRefinancingContent={ BuyingRefinancingProcessContent}/>
+            {/* <BuyingSection BuyingRefinancingContent={ BuyingRefinancingProcessContent}/> */}
 
 
-            <div className="pr-5 pl-5 sm:mt-60 mt-32 w-full h-full 2xl:mb-20 xl:mb-20 sm:mb-32 mb-0">
+            {/* <div className="pr-5 pl-5 sm:mt-60 mt-32 w-full h-full 2xl:mb-20 xl:mb-20 sm:mb-32 mb-0">
               <div className="flex flex-col">
                   <div className="flex flex-col items-center">
                     <div className="items-center  xl:w-1/2 w-full">
@@ -95,24 +98,24 @@ const Homepage = props => {
                     </div>
                   </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="h-1/2 2xl:mt-0 xl:mt-80"></div>
+            {/* <div className="h-1/2 2xl:mt-0 xl:mt-80"></div> */}
 
-            <PreapprovalSection PreapprovalContent={PreApprovalProcessContent}/>
+            {/* <PreapprovalSection PreapprovalContent={PreApprovalProcessContent}/> */}
             
-            <div className="flex flex-col items-center mt-72 mb-0 text-white ">
+            {/* <div className="flex flex-col items-center mt-72 mb-0 text-white ">
               <div className="mb-3 sm:text-2xl">
                {generalInformation.data.upside_button_message}
               </div>
               <ViceButton className="" buttonText={generalInformation.data.button_message} actualLanguage={actualLocale}/>
-            </div>
+            </div> */}
 
-            <div className="w-full h-auto">
+            {/* <div className="w-full h-auto">
               <LoansSection RealtorsContent={RealtorsResourceContent} QmLoans={QmLoansContent} NonQmLoans={NonQmLoansContent}/>
-            </div>
+            </div> */}
             
-            <div className="xl:w-1/2 w-full h-full self-center">
+            {/* <div className="xl:w-1/2 w-full h-full self-center">
               <div id ="contact" className="pr-5 pl-5 sm:pt-20 pt-32">
                 <div className="flex sm:flex-row flex-col justify-center">
                   <div className="sm:translate-x-0 translate-x-5 items-center text-white w-full">
@@ -123,14 +126,13 @@ const Homepage = props => {
                   <Contact signUpContent={signUpContent.data}/>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="">
+            {/* <div className="">
               <div className="">
                 <Footer content={footerContent.data}/>
               </div>
-            </div>
-
+            </div> */}
           </div>
         </div>
 }

@@ -8,6 +8,13 @@ const Footer = (props) => {
   
   return (
       <div className="flex flex-col items-center">
+        <Image 
+          className="mb-10 translate-y-32 hover:scale-110 transition duration-500 object-cover"
+          src={content.logo.url}
+          alt={content.logo.alt} 
+          width={300}
+          height={300}
+        />
         <div className="flex flex-row justify-center text-white font-semibold translate-y-32 hover:scale-110 transition duration-500 cursor-pointer object-cover">
           <a href={`mailto:${content.email}`}>{content.email}</a>
         </div>
@@ -50,14 +57,7 @@ const Footer = (props) => {
           </PrismicNextLink>
         </div>
         <Image 
-          className="mt-32 translate-y-32 hover:scale-110 transition duration-500 object-cover"
-          src={content.logo.url}
-          alt={content.logo.alt} 
-          width={300}
-          height={300}
-        />
-        <Image 
-          className=""
+          className="mt-20"
           src={content.team.url}
           alt={content.team.alt} 
           width={400}
