@@ -1,17 +1,17 @@
 import React from "react";
 import Head from "../components/head";
 import NavBar from "../components/navbar";
+import Modal from "../components/Modal";
 import Prismic from 'prismic-javascript'
-import Contact from "../components/contactSection"; //Different from component/contact.jsx. <Contact> in component folder is for Popup.
-
+import BuyingSection from "../components/buyingSection";
 import { PrismicClient } from '../prismic-configuration'
 import Footer from "../components/footer";
 import { getLocales } from "../lib/getLocales";
 import { createClient } from "../prismicio"
 
-const contact = props => {
+const Buying = props => {
 
-  const { locale, locales, seo, generalInformation, menuContent, footerContent, signUpContent } = props
+  const { locale, locales, seo, generalInformation, menuContent, footerContent, signUpContent, SimulatorContent, BuyingRefinancingProcessContent } = props
 
   
   return<div className="main overflow-x-hidden">
@@ -39,21 +39,12 @@ const contact = props => {
             </div>
 
             <div className="relative  flex flex-col w-full">
-              <div className="xl:w-1/2 w-full h-full self-center">
-                <div id ="contact" className="pr-5 pl-5 sm:pt-20 pt-32 xl:mt-20">
-                  <div className="flex sm:flex-row flex-col justify-center">
-                    <div className="sm:translate-x-0 translate-x-5 items-center text-white w-full">
-                      <div className="text-4xl">{signUpContent.data.title}</div>
-                      <div className="mt-1 text-white sm:text-2xl pb-6">{signUpContent.data.subtitle}</div>
-                      <div className="mt-1 text-white sm:text-2xl pb-6 sm:mr-0 mr-7 text-justify">{signUpContent.data.body_text}</div>
-                    </div>
-                    <Contact signUpContent={signUpContent.data}/>
-                  </div>
+
+                <BuyingSection BuyingRefinancingContent={ BuyingRefinancingProcessContent}/>
+
+                <div className="w-full">
+                    <Footer content={footerContent.data}/>
                 </div>
-              </div>
-              <div className="w-full">
-                  <Footer content={footerContent.data}/>
-              </div>
             </div>
         </div>
 }
@@ -66,11 +57,15 @@ const getStaticProps = async ({ params, locale, previewData }) => {
         seo: await getPrismicData('seo', locale),
         generalInformation: await getPrismicData('general_information', locale),
         menuContent: await getPrismicData('menu', locale),
+        members: await getPrismicCustomTypeData('member', locale), // Different Function to query multi instances.
         footerContent: await getPrismicData('footer', locale),
+        meetTeamContent: await getPrismicData('meet_team', locale),
         RealtorsResourceContent: await getPrismicData('realtors_resource', locale),
-        QmLoansContent : await getPrismicData('qm_loans', locale),
-        NonQmLoansContent : await getPrismicData('non_qm_loans', locale),
+        PreApprovalProcessContent: await getPrismicData('pre_approval_process', locale),
+        BuyingRefinancingProcessContent: await getPrismicData('buying_refinancing_process', locale), 
         signUpContent : await getPrismicData('sign_up', locale),
+        CirclesGridContent : await getPrismicData('circle_grid_info', locale),
+        SimulatorContent : await getPrismicData('simulator', locale),
         locales: locales,
         locale:locale
       }
@@ -96,5 +91,5 @@ const getPrismicCustomTypeData = async (name, lang) => {
   return CustomTypeDoc
 }
 
-export default contact
+export default Buying
 export { getStaticProps }

@@ -8,7 +8,7 @@ const PreapprovalSection = props => {
     const { PreapprovalContent} = props
   return (
     <div className="flex flex-col items-center h-screen sm:mb-32 mb-0">
-    <div id ="preapproval" className="pr-5 pl-5 sm:pt-20 pt-32 xl:w-1/2 w-full h-screen">
+    <div id ="preapproval" className="pr-5 pl-5 sm:pt-20 pt-32 xl:w-1/2 w-full h-screen xl:mt-10">
       <div className="flex flex-col justify-center">
         <div className="text-white text-white text-2xl sm:text-4xl pb-5 font-semibold">{PreapprovalContent.data.title}</div>
         <div className="text-white text-l sm:text-2xl text-justify">{PreapprovalContent.data.text}</div>

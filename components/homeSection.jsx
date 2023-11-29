@@ -4,7 +4,7 @@ import { PrismicNextLink } from '@prismicio/next'
 
 
 const HomeSection = props => {
-  const { content } = props;
+  const { generalContent, content } = props;
 
 
   const redirectToCalendly = () => {
@@ -15,22 +15,30 @@ const HomeSection = props => {
   return (
       <div className="flex flex-col items-center min-h-screen">
         <Image 
-          className="mb-10 translate-y-32 hover:scale-110 transition duration-500 object-cover"
-          src={content.logo.url}
-          alt={content.logo.alt} 
+          className="mt-24 hover:scale-110 transition duration-500 object-cover"
+          src={content.logo_no_background.url}
+          alt={content.logo_no_background.alt} 
           width={300}
           height={300}
         />
 
-      <div className="flex mt-28">
+      <div className="flex flex-row text-center justify-center text-white font-semibold xl:mt-28 mt-10 object-cover pl-5 pr-5 text-3xl">
+        {generalContent.title}
+      </div>
+      <div className="flex flex-row text-center justify-center text-gray-300 font-semibold mt-5  object-cover text-3xl">
+        {generalContent.subtitle}
+      </div>
+
+      <div className="flex mt-10">
       <a href='https://www.calendly.com/vicecitylending' target="_blank" rel="noopener noreferrer">
         <button
           id="submitButton"
-          className="bg-orange-400 text-white active:bg-orange-500 font-bold uppercase text-xl px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 hover:scale-110 transition duration-500 cursor-pointer object-cover"
+          className="border-4 border-white border-opacity-80 text-black relative z-10 bg-gradient-to-b from-yellow-200 to-yellow-800 hover:from-yellow-300 hover:to-yellow-800 active:from-yellow-400 active:to-yellow-700 uppercase text-lg px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 hover:scale-110 transition duration-500 cursor-pointer object-cover"
           type="button"
           aria-label="Submit"
         >
-          {"CLAIM YOUR FREE STRATEGY CALL"}
+          {generalContent.button_message}
+
         </button>
       </a>
         </div>

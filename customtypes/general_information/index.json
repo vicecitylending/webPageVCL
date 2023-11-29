@@ -10,6 +10,14 @@
         "type": "Image",
         "config": { "label": "Small Logo", "constraint": {}, "thumbnails": [] }
       },
+      "logo_no_background": {
+        "type": "Image",
+        "config": {
+          "label": "Logo No Background",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "small_logo_width": {
         "type": "Text",
         "config": { "label": "Small Logo Width", "placeholder": "" }
@@ -45,6 +53,14 @@
       "button_message": {
         "type": "Text",
         "config": { "label": "Button Message", "placeholder": "" }
+      },
+      "title": {
+        "type": "Text",
+        "config": { "label": "Title", "placeholder": "" }
+      },
+      "subtitle": {
+        "type": "Text",
+        "config": { "label": "Subtitle", "placeholder": "" }
       }
     }
   }

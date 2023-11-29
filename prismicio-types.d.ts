@@ -283,6 +283,17 @@ interface FooterDocumentData {
    */
   logo: prismicT.ImageField<never>;
   /**
+   * Logo No Background field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.logo_no_background
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  logo_no_background: prismicT.ImageField<never>;
+  /**
    * Team field in *Footer*
    *
    * - **Field Type**: Image
@@ -418,6 +429,17 @@ interface GeneralInformationDocumentData {
    */
   small_logo: prismicT.ImageField<never>;
   /**
+   * Logo No Background field in *General Information*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: general_information.logo_no_background
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  logo_no_background: prismicT.ImageField<never>;
+  /**
    * Small Logo Width field in *General Information*
    *
    * - **Field Type**: Text
@@ -516,6 +538,28 @@ interface GeneralInformationDocumentData {
    *
    */
   button_message: prismicT.KeyTextField;
+  /**
+   * Title field in *General Information*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: general_information.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismicT.KeyTextField;
+  /**
+   * Subtitle field in *General Information*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: general_information.subtitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  subtitle: prismicT.KeyTextField;
 }
 /**
  * General Information document from Prismic

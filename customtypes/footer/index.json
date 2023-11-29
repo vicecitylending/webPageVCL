@@ -18,6 +18,14 @@
         "type": "Image",
         "config": { "label": "Logo", "constraint": {}, "thumbnails": [] }
       },
+      "logo_no_background": {
+        "type": "Image",
+        "config": {
+          "label": "Logo No Background",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "team": {
         "type": "Image",
         "config": { "label": "Team", "constraint": {}, "thumbnails": [] }

@@ -37,7 +37,7 @@ const NavBar = props => {
   if (content !== undefined) {
     content.forEach((element, index, array)  => {
 
-      if((index  === (array.length - 1) || index === 0)) {
+      if(index  === (array.length - 1) ) {
         navBarLinks.push(
           <li className="" key = {index}>
               <PrismicNextLink href={`${element.link}`}>
@@ -63,7 +63,7 @@ const NavBar = props => {
   return (
     <nav className="fixed flex inset-x-0 px-2 sm:px-4 xl:py-1 bg-black w-full z-50">
       <div className="flex translate-y-11 ml-3">
-        <PrismicNextLink href="/#home" className="xl:hidden">
+        <PrismicNextLink href="/#home" className="">
           <Image className="scale-150" src={logo} width={imageWidth} height={imageHeight} alt="Vice-City-Lending-Logo"/>
         </PrismicNextLink>
       </div>

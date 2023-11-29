@@ -8,7 +8,7 @@ const BuyingSection = props => {
   return (
   
     <div className="flex flex-col items-center h-full">
-    <div id ="buying" className="sm:pr-5 pr-5 sm:pl-5 pl-5 sm:pt-52 pt-32 xl:w-1/2 w-full  sm:mt-52 sm:mb-52">
+    <div id ="buying" className="sm:pr-5 pr-5 sm:pl-5 pl-5 sm:pt-0 pt-32 xl:w-1/2 w-full sm:mt-24 sm:mb-20 xl:mt-32">
       <div className="flex flex-col justify-center">
         <div className="text-white text-white text-2xl sm:text-4xl pb-5 font-semibold text-justify">{BuyingRefinancingContent.data.title}</div>
         <div className="text-white text-l sm:text-2xl text-justify">{BuyingRefinancingContent.data.text}</div>
