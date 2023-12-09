@@ -19,7 +19,7 @@ const Footer = (props) => {
           <a href={`mailto:${content.email}`}>{content.email}</a>
         </div>
         <div className="flex flex-row justify-center text-white font-semibold translate-y-32">
-          <PrismicNextLink href={`${content.instagram_link.url}`}>
+          <a href={`${content.instagram_link.url}`} target="_blank" rel="noopener noreferrer">
             <Image 
                 className="mt-5 mr-1 ml-1 hover:scale-110 transition duration-500 cursor-pointer object-cover"
                 src={content.instagram_logo.url}
@@ -27,8 +27,8 @@ const Footer = (props) => {
                 width={50}
                 height={50}
               />
-          </PrismicNextLink>
-          <PrismicNextLink href={`${content.facebook_link.url}`}>
+          </a>
+          <a href={`${content.facebook_link.url}`} target="_blank" rel="noopener noreferrer">
             <Image 
               className="mt-5 mr-1 ml-1 hover:scale-110 transition duration-500 cursor-pointer object-cover"
               src={content.facebook_logo.url}
@@ -36,8 +36,8 @@ const Footer = (props) => {
               width={50}
               height={50}
             />
-          </PrismicNextLink>
-          <PrismicNextLink href={`${content.tiktok_link.url}`}>
+          </a>
+          <a href={`${content.tiktok_link.url}`} target="_blank" rel="noopener noreferrer">
             <Image 
               className="mt-5 mr-1 ml-1 hover:scale-110 transition duration-500 cursor-pointer object-cover"
               src={content.tiktok_logo.url}
@@ -45,8 +45,8 @@ const Footer = (props) => {
               width={50}
               height={50}
             />
-          </PrismicNextLink>
-          <PrismicNextLink href={`${content.youtube_link.url}`}>
+          </a>
+          <a href={`${content.youtube_link.url}`} target="_blank" rel="noopener noreferrer">
             <Image 
               className="mt-5 mr-1 ml-1 hover:scale-110 transition duration-500 cursor-pointer object-cover"
               src={content.youtube_logo.url}
@@ -54,7 +54,7 @@ const Footer = (props) => {
               width={50}
               height={50}
             />
-          </PrismicNextLink>
+          </a>
         </div>
         <Image 
           className="mt-20"
