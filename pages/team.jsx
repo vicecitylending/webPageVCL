@@ -1,10 +1,11 @@
 import React from "react";
 import Head from "../components/head";
 import NavBar from "../components/navbar";
-import Modal from "../components/Modal";
 import Prismic from 'prismic-javascript'
 import MembersCarousel from "../components/carousel";
 import InfoGrid from "../components/molecules/infogrid";
+import CalendlyButton from "../components/calendlyButton";
+
 
 import { PrismicClient } from '../prismic-configuration'
 import Footer from "../components/footer";
@@ -88,6 +89,12 @@ const Buying = props => {
                   </div>
               </div>
             </div>
+
+
+            
+                <div className="flex-col self-center">
+                  <CalendlyButton ButtonMessage={generalInformation.data.button_message}/>
+                </div>
 
 
 

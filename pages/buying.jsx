@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "../components/head";
 import NavBar from "../components/navbar";
-import Modal from "../components/Modal";
+import CalendlyButton from "../components/calendlyButton";
 import Prismic from 'prismic-javascript'
 import BuyingSection from "../components/buyingSection";
 import { PrismicClient } from '../prismic-configuration'
@@ -41,6 +41,10 @@ const Buying = props => {
             <div className="relative  flex flex-col w-full">
 
                 <BuyingSection BuyingRefinancingContent={ BuyingRefinancingProcessContent}/>
+
+                <div className="flex-col self-center">
+                  <CalendlyButton ButtonMessage={generalInformation.data.button_message}/>
+                </div>
 
                 <div className="w-full">
                     <Footer content={footerContent.data}/>

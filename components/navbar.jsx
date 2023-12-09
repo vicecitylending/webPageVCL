@@ -40,9 +40,12 @@ const NavBar = props => {
       if(index  === (array.length - 1) ) {
         navBarLinks.push(
           <li className="" key = {index}>
-              <PrismicNextLink href={`${element.link}`}>
+              {/* <PrismicNextLink href={`${element.link}`}>
                 <div className="text-shadow shadow-white text-white hover:text-blue-100 bg-pink-400 font-semibold sm:pl-1 sm:pr-1 hover:scale-125 transition duration-200 cursor-pointer object-cover" >{element.label}</div>
-              </PrismicNextLink>
+              </PrismicNextLink> */}
+              <a href={`${element.link}`} target="_blank" rel="noopener noreferrer">
+                <div className="text-shadow shadow-white text-white hover:text-blue-100 bg-pink-400 font-semibold sm:pl-1 sm:pr-1 hover:scale-125 transition duration-200 cursor-pointer object-cover" >{element.label}</div>
+              </a>
           </li>
         )
       }

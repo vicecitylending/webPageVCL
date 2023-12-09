@@ -3,6 +3,7 @@ import Head from "../components/head";
 import NavBar from "../components/navbar";
 import Prismic from 'prismic-javascript'
 import LoansSection from "../components/loansSection";
+import CalendlyButton from "../components/calendlyButton";
 
 import { PrismicClient } from '../prismic-configuration'
 import Footer from "../components/footer";
@@ -41,6 +42,10 @@ const LoansPage = props => {
             <div className="relative  flex flex-col w-full">
 
             <LoansSection RealtorsContent={RealtorsResourceContent} QmLoans={QmLoansContent} NonQmLoans={NonQmLoansContent}/> 
+
+            <div className="flex-col self-center xl:-mt-40 -mt-16">
+              <CalendlyButton ButtonMessage={generalInformation.data.button_message}/>
+            </div>
 
                 <div className="w-full">
                     <Footer content={footerContent.data}/>

@@ -1,21 +1,18 @@
 import * as React from "react";
 import Image from 'next/image'
 import { PrismicNextLink } from '@prismicio/next'
+import CalendlyButton from "../components/calendlyButton";
+
 
 
 const HomeSection = props => {
   const { generalContent, content } = props;
 
-
-  const redirectToCalendly = () => {
-    // Redirigir a Calendly.com
-    window.location.href = 'https://www.calendly.com/vicecitylending';
-  };
   
   return (
       <div className="flex flex-col items-center min-h-screen">
         <Image 
-          className="mt-24 hover:scale-110 transition duration-500 object-cover"
+          className="mt-24    hover:scale-110 transition duration-500 object-cover"
           src={content.logo_no_background.url}
           alt={content.logo_no_background.alt} 
           width={300}
@@ -29,19 +26,21 @@ const HomeSection = props => {
         {generalContent.subtitle}
       </div>
 
-      <div className="flex mt-10">
-      <a href='https://www.calendly.com/vicecitylending' target="_blank" rel="noopener noreferrer">
-        <button
-          id="submitButton"
-          className="border-4 border-white border-opacity-80 text-black relative z-10 bg-gradient-to-b from-yellow-200 to-yellow-800 hover:from-yellow-300 hover:to-yellow-800 active:from-yellow-400 active:to-yellow-700 uppercase text-lg px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 hover:scale-110 transition duration-500 cursor-pointer object-cover"
-          type="button"
-          aria-label="Submit"
-        >
-          {generalContent.button_message}
+      {/* <div className="flex mt-10">
+        <a href='https://www.calendly.com/vicecitylending' target="_blank" rel="noopener noreferrer">
+          <button
+            id="submitButton"
+            className="border-4 border-white border-opacity-80 text-black relative z-10 bg-gradient-to-b from-yellow-200 to-yellow-800 hover:from-yellow-300 hover:to-yellow-800 active:from-yellow-400 active:to-yellow-700 uppercase text-lg px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 hover:scale-110 transition duration-500 cursor-pointer object-cover"
+            type="button"
+            aria-label="Submit"
+          >
+            {generalContent.button_message}
 
-        </button>
-      </a>
-        </div>
+          </button>
+        </a>
+      </div> */}
+
+      <CalendlyButton ButtonMessage={generalContent.button_message}/>
 
         <div className="flex flex-row justify-center text-white font-semibold mt-5 hover:scale-110 transition duration-500 cursor-pointer object-cover">
           <a href={`mailto:${content.email}`}>{content.email}</a>

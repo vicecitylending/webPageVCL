@@ -3,6 +3,8 @@ import Head from "../components/head";
 import NavBar from "../components/navbar";
 import Prismic from 'prismic-javascript'
 import Contact from "../components/contactSection"; //Different from component/contact.jsx. <Contact> in component folder is for Popup.
+import CalendlyButton from "../components/calendlyButton";
+
 
 import { PrismicClient } from '../prismic-configuration'
 import Footer from "../components/footer";
@@ -51,6 +53,11 @@ const contact = props => {
                   </div>
                 </div>
               </div>
+
+              <div className="flex-col self-center">
+                <CalendlyButton ButtonMessage={generalInformation.data.button_message}/>
+              </div>
+
               <div className="w-full">
                   <Footer content={footerContent.data}/>
               </div>

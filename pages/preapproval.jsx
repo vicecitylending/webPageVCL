@@ -3,6 +3,7 @@ import Head from "../components/head";
 import NavBar from "../components/navbar";
 import Prismic from 'prismic-javascript'
 import PreapprovalSection from "../components/preapprovalSection";
+import CalendlyButton from "../components/calendlyButton";
 
 import { PrismicClient } from '../prismic-configuration'
 import Footer from "../components/footer";
@@ -41,6 +42,10 @@ const Preapproval = props => {
             <div className="relative  flex flex-col w-full">
 
             <PreapprovalSection PreapprovalContent={PreApprovalProcessContent}/> 
+
+            <div className="flex-col self-center mt-24">
+                  <CalendlyButton ButtonMessage={generalInformation.data.button_message}/>
+            </div>
 
                 <div className="w-full">
                     <Footer content={footerContent.data}/>
