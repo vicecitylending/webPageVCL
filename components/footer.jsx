@@ -10,8 +10,8 @@ const Footer = (props) => {
       <div className="flex flex-col items-center">
         <Image 
           className="mb-10 translate-y-32 hover:scale-110 transition duration-500 object-cover"
-          src={content.logo.url}
-          alt={content.logo.alt} 
+          src={content.logo_no_background.url}
+          alt={content.logo_no_background.alt} 
           width={300}
           height={300}
         />
