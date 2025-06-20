@@ -17,7 +17,7 @@ const Buying = props => {
   const { locale, locales, seo, generalInformation, menuContent, footerContent, meetTeamContent, CirclesGridContent, members } = props
 
   
-  return<div className="main overflow-x-hidden">
+  return <div className="main min-h-screen flex flex-col overflow-x-hidden">
             <Head
               title={seo.data.title}
               description={seo.data.default_description}
@@ -41,7 +41,7 @@ const Buying = props => {
               <div className="fixed inset-0 bg-gradient-to-r from-blue-800 to-purple-500 opacity-70 object-fill"></div>
             </div>
 
-            <div className="relative  flex flex-col w-full">
+            <div className="relative flex flex-col flex-1 w-full">
 
             
             <div className="flex flex-col items-center h-full">
@@ -98,9 +98,7 @@ const Buying = props => {
 
 
 
-                <div className="w-full">
-                    <Footer content={footerContent.data}/>
-                </div>
+                <Footer content={footerContent.data}/>
             </div>
         </div>
 }
