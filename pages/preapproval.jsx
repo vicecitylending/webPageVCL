@@ -17,18 +17,18 @@ const Preapproval = props => {
   
   return<div className="main overflow-x-hidden">
             <Head
-              title={seo.data.title}
-              description={seo.data.default_description}
-              keywords={seo.data.default_keywords}
-              url={seo.data.default_url}
-              ogImage={seo.data.default_image}
+              title={seo?.data?.title || ""}
+              description={seo?.data?.default_description || ""}
+              keywords={seo?.data?.default_keywords || ""}
+              url={seo?.data?.default_url || ""}
+              ogImage={seo?.data?.default_image || ""}
             />
 
             <NavBar
-                content={menuContent.data.menu_links} 
-                logo={generalInformation.data.small_logo.url}
-                imageWidth={generalInformation.data.small_logo_width}
-                imageHeight={generalInformation.data.small_logo_height}
+                content={menuContent?.data?.menu_links || []}
+                logo={generalInformation?.data?.small_logo?.url || ""}
+                imageWidth={generalInformation?.data?.small_logo_width || 0}
+                imageHeight={generalInformation?.data?.small_logo_height || 0}
                 locales={locales}
             />
 
@@ -44,11 +44,11 @@ const Preapproval = props => {
             <PreapprovalSection PreapprovalContent={PreApprovalProcessContent}/> 
 
             <div className="flex-col self-center mt-24">
-                  <CalendlyButton ButtonMessage={generalInformation.data.button_message}/>
+                  <CalendlyButton ButtonMessage={generalInformation?.data?.button_message || ""}/>
             </div>
 
                 <div className="w-full">
-                    <Footer content={footerContent.data}/>
+                    <Footer content={footerContent?.data || {}}/>
                 </div>
             </div>
         </div>
@@ -59,18 +59,18 @@ const getStaticProps = async ({ params, locale, previewData }) => {
   const locales = await getLocales(client)
   return {
       props: {
-        seo: await getPrismicData('seo', locale),
-        generalInformation: await getPrismicData('general_information', locale),
-        menuContent: await getPrismicData('menu', locale),
-        members: await getPrismicCustomTypeData('member', locale), // Different Function to query multi instances.
-        footerContent: await getPrismicData('footer', locale),
-        meetTeamContent: await getPrismicData('meet_team', locale),
-        RealtorsResourceContent: await getPrismicData('realtors_resource', locale),
-        PreApprovalProcessContent: await getPrismicData('pre_approval_process', locale),
-        BuyingRefinancingProcessContent: await getPrismicData('buying_refinancing_process', locale), 
-        signUpContent : await getPrismicData('sign_up', locale),
-        CirclesGridContent : await getPrismicData('circle_grid_info', locale),
-        SimulatorContent : await getPrismicData('simulator', locale),
+        seo: (await getPrismicData('seo', locale)) || null,
+        generalInformation: (await getPrismicData('general_information', locale)) || null,
+        menuContent: (await getPrismicData('menu', locale)) || null,
+        members: (await getPrismicCustomTypeData('member', locale)) || [],
+        footerContent: (await getPrismicData('footer', locale)) || null,
+        meetTeamContent: (await getPrismicData('meet_team', locale)) || null,
+        RealtorsResourceContent: (await getPrismicData('realtors_resource', locale)) || null,
+        PreApprovalProcessContent: (await getPrismicData('pre_approval_process', locale)) || null,
+        BuyingRefinancingProcessContent: (await getPrismicData('buying_refinancing_process', locale)) || null,
+        signUpContent : (await getPrismicData('sign_up', locale)) || null,
+        CirclesGridContent : (await getPrismicData('circle_grid_info', locale)) || null,
+        SimulatorContent : (await getPrismicData('simulator', locale)) || null,
         locales: locales,
         locale:locale
       }

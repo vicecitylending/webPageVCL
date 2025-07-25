@@ -1,19 +1,19 @@
-@import './colors.scss';
-@import './components/navbar.scss';
+@use './colors.scss';
+@use './components/navbar.scss';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-$danger: $app-color1;
-$theme-shadow: $app-color1;
+$danger: colors.$app-color1;
+$theme-shadow: colors.$app-color1;
 $card-radius: 0rem;
 
 $navbar-item-hover-color: white;
-$navbar-item-hover-background-color: $app-hover-color;
-$navbar-item-color: $app-color1;
-$menu-item-active-background-color: $app-color1;
+$navbar-item-hover-background-color: colors.$app-hover-color;
+$navbar-item-color: colors.$app-color1;
+$menu-item-active-background-color: colors.$app-color1;
 
 * {
   margin: 0;

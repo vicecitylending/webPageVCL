@@ -18,18 +18,18 @@ const contact = props => {
   
   return<div className="main overflow-x-hidden">
             <Head
-              title={seo.data.title}
-              description={seo.data.default_description}
-              keywords={seo.data.default_keywords}
-              url={seo.data.default_url}
-              ogImage={seo.data.default_image}
+              title={seo?.data?.title || ""}
+              description={seo?.data?.default_description || ""}
+              keywords={seo?.data?.default_keywords || ""}
+              url={seo?.data?.default_url || ""}
+              ogImage={seo?.data?.default_image || ""}
             />
 
             <NavBar
-                content={menuContent.data.menu_links} 
-                logo={generalInformation.data.small_logo.url}
-                imageWidth={generalInformation.data.small_logo_width}
-                imageHeight={generalInformation.data.small_logo_height}
+                content={menuContent?.data?.menu_links || []}
+                logo={generalInformation?.data?.small_logo?.url || ""}
+                imageWidth={generalInformation?.data?.small_logo_width || 0}
+                imageHeight={generalInformation?.data?.small_logo_height || 0}
                 locales={locales}
             />
 
@@ -45,21 +45,21 @@ const contact = props => {
                 <div id ="contact" className="pr-5 pl-5 sm:pt-20 pt-32 xl:mt-20">
                   <div className="flex sm:flex-row flex-col justify-center">
                     <div className="sm:translate-x-0 translate-x-5 items-center text-white w-full">
-                      <div className="text-4xl">{signUpContent.data.title}</div>
-                      <div className="mt-1 text-white sm:text-2xl pb-6">{signUpContent.data.subtitle}</div>
-                      <div className="mt-1 text-white sm:text-2xl pb-6 sm:mr-0 mr-7 text-justify">{signUpContent.data.body_text}</div>
+                      <div className="text-4xl">{signUpContent?.data?.title || ""}</div>
+                      <div className="mt-1 text-white sm:text-2xl pb-6">{signUpContent?.data?.subtitle || ""}</div>
+                      <div className="mt-1 text-white sm:text-2xl pb-6 sm:mr-0 mr-7 text-justify">{signUpContent?.data?.body_text || ""}</div>
                     </div>
-                    <Contact signUpContent={signUpContent.data}/>
+                    <Contact signUpContent={signUpContent?.data || {}}/>
                   </div>
                 </div>
               </div>
 
               <div className="flex-col self-center">
-                <CalendlyButton ButtonMessage={generalInformation.data.button_message}/>
+                <CalendlyButton ButtonMessage={generalInformation?.data?.button_message || ""}/>
               </div>
 
               <div className="w-full">
-                  <Footer content={footerContent.data}/>
+                  <Footer content={footerContent?.data || {}}/>
               </div>
             </div>
         </div>
@@ -70,14 +70,14 @@ const getStaticProps = async ({ params, locale, previewData }) => {
   const locales = await getLocales(client)
   return {
       props: {
-        seo: await getPrismicData('seo', locale),
-        generalInformation: await getPrismicData('general_information', locale),
-        menuContent: await getPrismicData('menu', locale),
-        footerContent: await getPrismicData('footer', locale),
-        RealtorsResourceContent: await getPrismicData('realtors_resource', locale),
-        QmLoansContent : await getPrismicData('qm_loans', locale),
-        NonQmLoansContent : await getPrismicData('non_qm_loans', locale),
-        signUpContent : await getPrismicData('sign_up', locale),
+        seo: (await getPrismicData('seo', locale)) || null,
+        generalInformation: (await getPrismicData('general_information', locale)) || null,
+        menuContent: (await getPrismicData('menu', locale)) || null,
+        footerContent: (await getPrismicData('footer', locale)) || null,
+        RealtorsResourceContent: (await getPrismicData('realtors_resource', locale)) || null,
+        QmLoansContent : (await getPrismicData('qm_loans', locale)) || null,
+        NonQmLoansContent : (await getPrismicData('non_qm_loans', locale)) || null,
+        signUpContent : (await getPrismicData('sign_up', locale)) || null,
         locales: locales,
         locale:locale
       }
